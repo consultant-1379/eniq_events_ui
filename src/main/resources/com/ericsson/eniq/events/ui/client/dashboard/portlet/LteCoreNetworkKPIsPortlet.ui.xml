@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <ui:style>
+        table.container>tbody>tr:first-child>td:first-child>div:first-child {
+            height: 65px;
+            padding: 0;
+        }
+
+        table.container>tbody>tr:first-child+tr>td:first-child>div:first-child {
+            height: 110px;
+            padding: 0;
+        }
+
+        .chart {
+            width: 100%;
+            height: 61px;
+        }
+
+        .middleChart {
+            width: 100%;
+            height: 57px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            table-layout: fixed;
+        }
+
+        table.container>tbody>tr>td:first-child {
+            padding-left: 15px;
+            padding-right: 25px;
+        }
+    </ui:style>
+
+    <g:VerticalPanel styleName="{style.container}">
+        <g:cell>
+            <g:HTMLPanel>
+                <g:SimplePanel styleName="{style.chart}" ui:field="supportedSubscribersContainer"/>
+                <g:SimplePanel styleName="{style.chart}" ui:field="attachedSubscribersContainer"/>
+            </g:HTMLPanel>
+        </g:cell>
+        <g:cell>
+            <g:HTMLPanel>
+                <g:SimplePanel styleName="{style.chart}" ui:field="attachFailureContainer"/>
+                <g:SimplePanel styleName="{style.middleChart}" ui:field="serviceRequestFailureContainer"/>
+                <g:SimplePanel styleName="{style.chart}" ui:field="pagingFailureContainer"/>
+            </g:HTMLPanel>
+        </g:cell>
+    </g:VerticalPanel>
+
+
+</ui:UiBinder>

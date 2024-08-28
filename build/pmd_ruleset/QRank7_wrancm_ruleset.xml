@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="QRank7 rules">
+
+    <description>
+        This ruleset contains QRank level 7 related rules as detailed in 7/0363-FCP 103 5028 Uen Rev. PD1
+    </description>
+
+    <rule ref="rulesets/coupling.xml/LooseCoupling">
+        <priority>5</priority>
+    </rule>
+
+    <rule ref="rulesets/coupling.xml/CouplingBetweenObjects">
+        <priority>5</priority>
+    </rule>
+
+</ruleset>
+

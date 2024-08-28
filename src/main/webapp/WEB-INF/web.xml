@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII"?>
+<web-app>
+
+	<!-- Servlets required for running the UI in hosted mode locally against 
+		real services, not used by the UI in production mode -->
+	<servlet>
+		<servlet-name>servicesProxyServlet</servlet-name>
+		<servlet-class>com.ericsson.eniq.events.common.server.servicesproxy.ServicesProxyServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>servicesProxyServlet</servlet-name>
+		<url-pattern>/EniqEventsUI/servicesProxy</url-pattern>
+	</servlet-mapping>
+	<filter>
+		<filter-name>CacheFilter</filter-name>
+		<filter-class>com.ericsson.eniq.events.ui.server.filter.CacheFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>CacheFilter</filter-name>
+		<url-pattern>/resources/*</url-pattern>
+		<url-pattern>/EniqEventsUI/js/*</url-pattern>
+		<url-pattern>/EniqEventsUI/gwt/*</url-pattern>
+		<url-pattern>/gxt/*</url-pattern>
+		<url-pattern>*.css</url-pattern>
+		<url-pattern>*.cache.js</url-pattern>
+	</filter-mapping>
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>EniqEventsUI.html</welcome-file>
+	</welcome-file-list>
+	<!-- HighCharts Exporting Servlet for printing/exporting charts -->
+	<servlet>
+		<servlet-name>HighChartsExporterServlet</servlet-name>
+		<servlet-class>com.ericsson.eniq.events.common.server.chartexporter.HighChartsExporterServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HighChartsExporterServlet</servlet-name>
+		<url-pattern>/highcharts/exporter</url-pattern>
+	</servlet-mapping>
+
+    <context-param>
+        <param-name>PARAMETER_ENCODING</param-name>
+        <param-value>UTF-8</param-value>
+    </context-param>
+
+</web-app>

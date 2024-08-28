@@ -1,0 +1,74 @@
+@sprite .plusButton {
+    gwt-image: 'plusButton';
+    background-position: 5px 5px;
+    height: 21px;
+    width: 21px;
+}
+
+@sprite .minusButton {
+    gwt-image: 'minusButton';
+    background-position: 5px 5px;
+    height: 21px;
+    width: 21px;
+}
+
+@sprite .plusButtonHover {
+    gwt-image: 'plusButtonHover';
+    background-position: 5px 5px;
+    height: 21px;
+    width: 21px;
+}
+
+@sprite .plusButtonDisable {
+    gwt-image: 'plusButtonDisable';
+    background-position: 5px 5px;
+    height: 21px;
+    width: 21px;
+}
+
+@sprite .minusButtonHover {
+    gwt-image: 'minusButtonHover';
+    background-position: 6px 6px;
+    height: 21px;
+    width: 21px;
+}
+
+@sprite .minusButtonDisable {
+    gwt-image: 'minusButtonDisable';
+    background-position: 5px 5px;
+    height: 21px;
+    width: 21px;
+}
+
+.gridStyle {
+}
+
+.gridStyle >tbody>tr {
+    vertical-align: top;
+}
+
+.gridStyle >tbody>tr:nth-child\(odd\) {
+    background: white;
+}
+
+.gridStyle >tbody>tr:nth-child\(even\) {
+    background: #f1f1f1;
+}
+
+.gridStyle >tbody>tr>td {
+    border: 0px;
+    border-top: 1px solid lightgrey;
+}
+
+.gridStyle >tbody>tr>td:first-child {
+    border-right: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+}
+
+.gridStyle >tbody>tr>td:last-child {
+    border-top: 1px solid lightgrey;
+}
+
+.warningButton {
+    border: 1px solid #f09823 !important;
+}

@@ -1,0 +1,872 @@
+/*Ericsson Logo at top*/
+.floatLogo {
+    background-image: url(../images/whiteTheme/logo_transparent.png);
+}
+
+.x-tab-panel-header-plain .x-tab-strip-top {
+    padding-top: 2px !important;
+}
+
+/***Tabs & Area At top*/
+.x-tab-panel-header {
+    background-image: url("../images/whiteTheme/tabs/Tab_Support_Bar.png") !important; /* Needs important */
+}
+
+.x-tab-strip-top .x-tab-right,
+.x-tab-strip-top .x-tab-left,
+.x-tab-strip-top .x-tab-strip-inner {
+    background-image: url(../images/whiteTheme/tabs/tab-sprites.png);
+}
+
+/* Inactive tab text color */
+.x-tab-strip span.x-tab-strip-text {
+    color: #333333;
+}
+
+/* Active tab text color */
+.x-tab-strip-active span.x-tab-strip-text {
+    color: #202f58;
+}
+
+.x-window-tbar .x-toolbar-cell .x-btn {
+    background-color: transparent;
+    opacity: .9 !important;
+}
+
+.dlgBody,
+.x-window-tbar .x-toolbar-ct .x-toolbar-right,
+.x-window-tbar .x-toolbar-ct .x-toolbar-left,
+.x-window-bbar .x-toolbar-cell .x-btn,
+.x-window-footer {
+    background-color: transparent;
+}
+
+/***Grids*/
+.gridToolbar {
+    color: #333333;
+}
+
+.x-grid3-row {
+    color: #000000;
+    border-color: #f1f2f4 !important;
+    background-color: white;
+}
+
+.x-grid3-hd-row .x-grid3-hd, .x-grid3-row .x-grid3-cell, .x-grid3-summary-row .x-grid3-cell {
+    font-weight: 500 !important;
+}
+
+.x-grid3-row-selected {
+    background-color: #dfe8f6 !important;
+}
+
+.x-grid3-header {
+    background-image: url(../images/whiteTheme/grid/grid3-hrow.gif);
+}
+
+.x-grid3-hd-inner {
+    color: #333333;
+}
+
+.x-grid3-hd-row .x-grid3-hd {
+    border-left-color: #d0d0d0;
+    border-right-color: #d0d0d0;
+}
+
+/*Styling for color coded status in grids (red fonts for example)*/
+.gridCellLinkCodeRed {
+    color: #FF0000;
+}
+
+.gridCellLinkCodeAmber {
+    color: #FBB117;
+}
+
+.gridCellPlainCodeRed {
+    color: #FF0000;
+}
+
+.gridCellPlainCodeAmber {
+    color: #FBB117;
+}
+
+.gridCellPlain {
+    color: #000000;
+}
+
+/*Styling for color coded grids*/
+.x-grid3-row-alt {
+    background-color: #f2f5f8;
+}
+
+.row-SUCCESS.x-grid3-row {
+    background-color: #d7e0dc !important;
+}
+
+.row-SUCCESS.x-grid3-row-selected {
+    background-color: #afc1ba !important;
+}
+
+.row-SUCCESS.x-grid3-row-over {
+    background-color: #cdd8d4 !important;
+    background-image: none !important;
+}
+
+.row-REJECT.x-grid3-row {
+    background-color: #d8d8d8 !important;
+}
+
+.row-REJECT.x-grid3-row-selected {
+    background-color: #bcbcbc !important;
+}
+
+.row-REJECT.x-grid3-row-over {
+    background-color: #d2d2d2 !important;
+    background-image: none !important;
+}
+
+.row-DROPPED.x-grid3-row {
+    background-color: #e0dae3 !important;
+}
+
+.row-DROPPED.x-grid3-row-selected {
+    background-color: #c1b5c7 !important;
+}
+
+.row-DROPPED.x-grid3-row-over {
+    background-color: #d8d0dc !important;
+    background-image: none !important;
+}
+
+.row-BLOCKED.x-grid3-row {
+    background-color: #dce9f0 !important;
+}
+
+.row-BLOCKED.x-grid3-row-selected {
+    background-color: #bad3e1 !important;
+}
+
+.row-BLOCKED.x-grid3-row-over {
+    background-color: #d4e3ec !important;
+    background-image: none !important;
+}
+
+.row-ERROR.x-grid3-row {
+    background-color: #e0d2d2 !important;
+}
+
+.row-ERROR.x-grid3-row-selected {
+    background-color: #c1afaf !important;
+}
+
+.row-ERROR.x-grid3-row-over {
+    background-color: #d7c6c6 !important;
+    background-image: none !important;
+}
+
+.row-ABORT.x-grid3-row {
+    background-color: #ccccde !important;
+}
+
+.row-ABORT.x-grid3-row-selected {
+    background-color: #abacbe !important;
+}
+
+.row-ABORT.x-grid3-row-over {
+    background-color: #c3c4d4 !important;
+    background-image: none !important;
+}
+
+.row-IGNORE.x-grid3-row {
+    background-color: #f6f6ec !important;
+}
+
+.row-IGNORE.x-grid3-row-selected {
+    background-color: #e5e4c7 !important;
+}
+
+.row-IGNORE.x-grid3-row-over {
+    background-color: #efefd8 !important;
+    background-image: none !important;
+}
+
+/** Using important here to prevent GXT applying disabling styles to this item when disabling the parent toolbar **/
+.lastRefreshLabel {
+    color: #505359 !important;
+    background-color: transparent;
+    opacity: 1 !important;
+}
+
+.gridCellLink, .gridCellLauncherLink {
+    text-decoration: underline;
+    color: #0066cc;
+    cursor: pointer;
+}
+
+.x-grid3-row-table, .timeDlgLbs, .x-form-cb-label {
+    color: #000000 !important;
+}
+
+.x-grid3-row-table{
+    height: 100%;
+}
+
+/* The following 3 styles is needed to fix a bug in IE to
+set the correct height on the main content window **/
+.x-panel {
+     border-color: #E5E5E5 !important;
+}
+
+.x-panel-body {
+     border-color:#E5E5E5!important;
+}
+
+.x-panel-header{
+    background-image: none;
+    background-color: #BFBFBF;
+    border: 1px solid #E6E6E6;
+}
+
+/***Buttons / Icons, Textboxes ..form elements*/
+
+/** Arrow on drop down of search fields of toolbar .. white/input possible ***/
+.x-form-field-wrap .x-form-trigger {
+    background-image: url(../images/whiteTheme/form/dropdownArrowButton.png);
+}
+
+.x-form-field-wrap .x-form-trigger-active {
+    background-image: url(../images/whiteTheme/form/dropdownArrowButtonClicked.png);
+}
+
+.x-form-field-wrap .x-form-trigger-over {
+    background-image: url(../images/whiteTheme/form/dropdownArrowButtonhover.png);
+}
+
+/*Drop down arrow on the dropdowns (Select Input  and Data/Voice)*/
+.x-date-middle  .x-btn-mc em.x-btn-arrow,
+.x-btn-mc em.x-btn-arrow
+{
+    border-color: #9a9999;
+
+    background-color: #dadada;
+    background-image: url(../images/whiteTheme/form/dropdownArrowButton_NoBorder.png), linear-gradient(top, #ffffff 0%, #dadada 100%);
+    background-image: url(../images/whiteTheme/form/dropdownArrowButton_NoBorder.png), -moz-linear-gradient(top, #ffffff 0%, #dadada 100%);
+    background-image: url(../images/whiteTheme/form/dropdownArrowButton_NoBorder.png), -webkit-linear-gradient(top, #ffffff 0%, #dadada 100%);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.x-date-middle .x-btn-mc em.x-btn-arrow:hover,
+.x-btn-mc em.x-btn-arrow:hover {
+    background-image: url(../images/whiteTheme/form/dropdownArrowButtonhover_NoBorder.png), linear-gradient(top, #ffffff 0%, #dadada 100%);
+    background-image: url(../images/whiteTheme/form/dropdownArrowButtonhover_NoBorder.png), -moz-linear-gradient(top, #ffffff 0%, #dadada 100%);
+    background-image: url(../images/whiteTheme/form/dropdownArrowButtonhover_NoBorder.png), -webkit-linear-gradient(top, #ffffff 0%, #dadada 100%);
+}
+
+.x-date-middle  .x-btn-mc em.x-btn-arrow:active,
+.x-btn-mc em.x-btn-arrow:active {
+    background-image: url(../images/whiteTheme/form/dropdownArrowButtonClicked_NoBorder.png), linear-gradient(top, #ffffff 0%, #dadada 100%);
+    background-image: url(../images/whiteTheme/form/dropdownArrowButtonClicked_NoBorder.png), -moz-linear-gradient(top, #ffffff 0%, #dadada 100%);
+    background-image: url(../images/whiteTheme/form/dropdownArrowButtonClicked_NoBorder.png), -webkit-linear-gradient(top, #ffffff 0%, #dadada 100%);
+}
+
+/* Launch Button on each tab */
+/* Different style to highlight it's different function */
+.launch .x-btn-mc em.x-btn-arrow {
+    box-shadow: 0px 1px 0px rgba(250, 250, 250, 0.65) inset;
+    -webkit-box-shadow: 0px 1px 0px rgba(250, 250, 250, 0.65); /* Safari and Chrome */
+
+    background-color: #ececec;
+    background-image: url(../images/whiteTheme/form/down_arrow.png), linear-gradient(top, #ececec 0%, #a3a3a2 100%);
+    background-image: url(../images/whiteTheme/form/down_arrow.png), -moz-linear-gradient(top, #ececec 0%, #a3a3a2 100%);
+    background-image: url(../images/whiteTheme/form/down_arrow.png), -webkit-linear-gradient(top, #ececec 0%, #a3a3a2 100%);
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.launch .x-btn-mc em.x-btn-arrow:hover {
+    background-image: url(../images/whiteTheme/form/down_arrow.png), linear-gradient(top, #fdfdfd 0%, #b2b2b1 100%);
+    background-image: url(../images/whiteTheme/form/down_arrow.png), -moz-linear-gradient(top, #fdfdfd 0%, #b2b2b1 100%);
+    background-image: url(../images/whiteTheme/form/down_arrow.png), -webkit-linear-gradient(top, #fdfdfd 0%, #b2b2b1 100%);
+}
+
+.launch .x-btn-mc em.x-btn-arrow:active {
+    background-image: url(../images/whiteTheme/form/down_arrow.png), linear-gradient(top, #e6e6e6 0%, #e4e4e4 100%);
+    background-image: url(../images/whiteTheme/form/down_arrow.png), -moz-linear-gradient(top, #e6e6e6 0%, #e4e4e4 100%);
+    background-image: url(../images/whiteTheme/form/down_arrow.png), -webkit-linear-gradient(top, #e6e6e6 0%, #e4e4e4 100%);
+}
+
+.menuTaskBarButton .x-btn-mc{
+    border-color: #9a9999 !important;
+    border-radius: 6px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+
+    height: 16px !important;
+    margin-right: 8px !important;
+    width: 65px;
+
+    background-color: #dadada;
+    background: linear-gradient(top, #ffffff 0%, #dadada 100%) !important;
+    background: -moz-linear-gradient(top, #ffffff 0%, #dadada 100%) !important;
+    background: -webkit-linear-gradient(top, #ffffff 0%, #dadada 100%) !important;
+
+    padding-top:1px;
+    padding-bottom: 1px;
+}
+
+.menuTaskBarButton .x-btn-text {
+    background-color: transparent;
+    border: none;
+}
+
+/**** Drop down part of menus/combos and liveload options ****/
+/*Menu*/
+.x-menu {
+    background-color: white;
+    border-color: #9a9999;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Safari and Chrome */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.x-menu a.x-menu-item {
+    color: #333333;
+}
+
+.x-menu-list .x-menu-item-active,
+.x-combo-list .x-combo-selected {
+    border: 1px solid white;
+    background-image: none !important;
+    background-color: #dfdfdf !important;
+}
+
+/*Combo Menu*/
+.x-combo-list {
+    border-color: #9a9999;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Safari and Chrome */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Liveload Menu */
+.x-liveload {
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Safari and Chrome */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.x-liveload-item {
+    border: solid 1px white;
+}
+
+.x-view-highlightrow {
+    border: solid 1px white !important;;
+}
+
+.x-liveload-ft {
+    border-color: #999988 !important;
+    background-color: #eff0f0; /*Fallback*/
+    background: -moz-linear-gradient(top, #eff0f0, #ffffff) !important;
+    background: -webkit-linear-gradient(top, #eff0f0, #ffffff) !important;
+    background: linear-gradient(top, #eff0f0, #ffffff) !important;
+}
+
+.x-liveload-inner {
+    background-color: #fff;
+    border-color: #999988;
+}
+
+.x-liveload .x-combo-selected {
+    background-color: #dfdfdf;
+    border-color: #ffffff !important;
+}
+
+.x-border {
+    border: 1px none #cccccc !important;
+}
+
+/***Windows*/
+/*Close, Minimise, Maximise*/
+.x-tool {
+    background-image: url(../images/whiteTheme/panel/tool-sprites.png);
+}
+
+.x-info-header-text,
+.x-window-header-text {
+    color: #333333;
+}
+
+/*Window Toolbar*/
+.dialogBox,
+.x-window,
+.x-info {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Mozilla */
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Safari and Chrome */
+}
+
+.x-info-mc,
+.x-window-mc {
+    background-color: transparent;
+    border: none;
+}
+
+/* Main Tool bar beneath tabs */
+.x-toolbar {
+    border-bottom-color: #c7c7c7 !important;
+    background: #ffffff;
+}
+
+.x-toolbar-ct,
+.x-panel-mc,
+.x-toolbar-right,
+.x-toolbar-left {
+    background-color: transparent;
+}
+
+.x-panel-ml,
+.x-panel-mr,
+.x-window-mr,
+.x-window-ml,
+.x-info-mr,
+.x-info-ml {
+    background-image: none;
+    background-color: transparent;
+}
+
+.x-window-bbar .x-toolbar-ct,
+.x-window-bbar .x-small-editor .x-toolbar .x-toolbar-layout-ct,
+.x-window-mc .x-window-tbar,
+.x-window-mc .x-window-bbar {
+    background-color: transparent;
+}
+
+.x-window-tbar .x-toolbar {
+    background-color: #bfbfbf;
+    border-top: 1px solid #e6e6e6 !important;
+}
+
+.x-window-bbar .x-toolbar {
+    background: -moz-linear-gradient(top, #eff0f0, #ffffff) !important;
+    background: -webkit-linear-gradient(top, #eff0f0, #ffffff) !important;
+    background: linear-gradient(top, #eff0f0, #ffffff) !important;
+    border-top-color: #cfcece;
+
+}
+
+/*Window and dialog borders*/
+.x-window-tc,
+.x-window-bc,
+.x-panel-tc,
+.x-panel-bc,
+.x-info-tc,
+.x-info-bc {
+    background-color: transparent;
+    background-image: none;
+}
+
+.x-info-tc,
+.x-window-tc {
+    border-bottom-color: #b0afaf;
+    background:  #bfbfbf;/*fallback*/
+    background: -moz-linear-gradient(top, #e3e3e2, #bfbfbf);
+    background: -webkit-linear-gradient(top, #e3e3e2, #bfbfbf);
+    background: linear-gradient(top, #e3e3e2, #bfbfbf);
+}
+
+.x-panel-tl,
+.x-panel-bl,
+.x-window-tl,
+.x-window-bl,
+.x-info-bl,
+.x-info-tl {
+    background-image: none;
+    background-color: transparent;
+}
+
+.x-panel-tr,
+.x-panel-br,
+.x-window-tr,
+.x-window-br,
+.x-info-br,
+.x-info-tr {
+    background-color: transparent;
+    background-image: none;
+}
+
+.x-info-mc .x-info-body {
+    color: #232323 !important;
+    background-color: transparent !important;
+}
+
+.x-info-header {
+    color: #232323 !important;
+}
+
+.x-toolbar-ct .x-toolbar-right .x-toolbar-right-ct .x-toolbar-right-row .x-toolbar-cell .x-btn {
+    border: 1px solid !important;
+    border-color: #999988 !important;
+}
+
+.x-panel,
+.x-panel-body-noheader,
+.x-panel-mc .x-panel-body {
+    border-color: transparent !important;
+    border-width: 0px;
+}
+
+/*About dialog*/
+.about .x-window-tc,
+.about .x-info-tc
+{
+    background: none !important;
+    background-color:white !important;
+    border-bottom: none !important;
+}
+
+
+
+/***Loading Indicator on refresh/startup*/
+.cancelMask {
+    color: #333333 !important;
+    background: #FFFFFF !important;
+    border-color: #999988 !important;
+}
+
+.ext-el-mask-msg {
+    background-color: #666666 !important;
+    border-color: #e5e5e5 !important;
+}
+
+.ext-el-mask,
+.x-mask-loading div {
+    background-color: #333333 !important;
+    border-radius: 0 0 10px 10px;
+}
+
+.ext-el-mask-msg div {
+    background-color: #e5e5e5 !important;
+    border-color: #e5e5e5 !important;
+}
+
+#loading .loading-indicator {
+    background: none repeat scroll 0 0 #e5e5e5 !important;
+    color: #666666 !important;
+}
+
+/***Wizard Overlay styles**/
+.wizard {
+    background-color: white;
+    border-color: #dadada !important;
+}
+
+.wizard-top {
+    border-color: #dadada !important;
+}
+
+.wizard-content {
+    border-color: #dadada !important;
+}
+
+.wizard-content-body label,
+.chk-all label {
+    color: #232323 !important;
+}
+
+.wizard-top .x-panel-header {
+    background-image: url(../images/whiteTheme/panel/white-top-bottom-wizard.gif) !important;
+    color: #232323 !important;
+    border-color: #dadada !important;
+}
+
+.wizard-top-expand {
+    background: url(../images/whiteTheme/panel/arrow_down.png) no-repeat center left !important;
+}
+
+.wizard-top-collapse {
+    background: url(../images/whiteTheme/panel/arrow_across.png) no-repeat center left !important;
+}
+
+.wizard-content-body .wizard-top .x-panel-header
+{
+    padding-left:15px;
+}
+
+.wizard-content-body .wizard-top-body
+{
+    padding-left:20px;
+}
+
+
+/*** Dash Boards / Portlets **/
+.dashboardPorletOwner {
+    background-color: #FFFFFF !important;
+}
+
+.dashboardMapPanel {
+    color: #FF0000 !important;
+    background-color: #FF0000 !important;
+}
+
+/*** Tooltips **/
+.x-tip .x-tip-tc,
+.x-tip .x-tip-tl,
+.x-tip .x-tip-tr,
+.x-tip .x-tip-bc,
+.x-tip .x-tip-bl,
+.x-tip .x-tip-br,
+.x-tip .x-tip-ml,
+.x-tip .x-tip-mr
+{
+    background-image:none !important;
+}
+
+.x-form-invalid-tip .x-tip-tc,
+.x-form-invalid-tip .x-tip-tl,
+.x-form-invalid-tip .x-tip-tr,
+.x-form-invalid-tip .x-tip-bc,
+.x-form-invalid-tip .x-tip-bl,
+.x-form-invalid-tip .x-tip-br,
+.x-form-invalid-tip .x-tip-ml,
+.x-form-invalid-tip .x-tip-mr
+{
+     background-image:none !important;
+}
+
+.x-tip
+{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #767676;
+    border-radius:4px;
+    background-color: #e4e5f0;
+    background-image: linear-gradient(top, #ffffff 0%, #e4e5f0 100%);
+    background-image:-moz-linear-gradient(top, #ffffff 0%, #e4e5f0 100%);
+    background-image:-webkit-linear-gradient(top, #ffffff 0%, #e4e5f0 100%);
+
+    padding:0px;
+}
+
+.x-tip-body,
+.x-form-invalid-tip .x-tip-body
+{
+      background: none !important;
+      background-image: none !important;
+      border: none;
+      font-size: 11px;
+      color: black !important;
+}
+
+.x-tip .x-tip-ml
+{
+    background-color: transparent;
+}
+
+/********Misc Mixed styles etc*******************************/
+
+/*New Date Time Picker Stuff*/
+.x-panel-header-text {
+    color: #333333;
+}
+
+.date-picker-fbar .x-toolbar-ct {
+    background-color: transparent !important;
+}
+
+.date-picker-btn {
+    border-color: #999988 !important;
+}
+
+.date-picker-btn button {
+    background-color: #FFFFFF;
+}
+
+.date-time-field .x-btn-over {
+    background: none repeat scroll 0 0 transparent !important;
+}
+
+.date-picker-item .x-panel-mc {
+    background: transparent none repeat scroll 0 0 !important;
+}
+
+.date-picker-item .x-panel-tl {
+    border-bottom-color: #999988 !important;
+}
+
+/*Specific CSS changes for ranking grids*/
+.rankingRow {
+    height:30px;
+}
+
+.rankingOne .x-grid3-cell{
+    font-size:14px !important;
+    font-weight: 600 !important;
+}
+
+.rankingTwo .x-grid3-cell {
+    font-size:13px !important;
+    font-weight: 600 !important;
+}
+
+.rankingThree .x-grid3-cell {
+    font-size:12px !important;
+    font-weight: 600 !important;
+}
+
+.rankingFour .x-grid3-cell {
+    font-size:12px !important;
+}
+
+.rankingFive .x-grid3-cell {
+    font-size:11px !important;
+}
+
+/*Time Gap Grids Styling*/
+.timeGapGrid .x-grid3 .x-grid3-viewport .x-grid3-scroller .x-grid3-body{
+    /*background-color: white;   */
+    background-image: url("../images/whiteTheme/grid/dot.png");
+    background-repeat:repeat-y;
+    background-position: 40px 0px;
+}
+
+.timeGapOne{
+    margin-top: 22px;
+}
+
+.timeGapTwo{
+    margin-top: 44px;
+}
+
+.timeGapThree{
+    margin-top: 66px;
+}
+
+/*NOT RANKING SPECIFIC*/
+.x-window-bbar .x-toolbar .gwt-TextBox {
+    background-color: transparent;
+    border: none;
+    width: 20px !important;
+}
+
+.x-grid3-row td.x-grid3-cell, .x-grid3-summary-row td.x-grid3-cell {
+    box-shadow: inset -1px 0 #ececec;
+    vertical-align: middle;
+    padding-left: 0;
+}
+
+.x-grid3-header-offset{
+    padding-left:0px;
+}
+
+/*set row height and padding in an empty grid to size 0*/
+.x-grid-empty{
+    padding:0;
+    height:0;
+}
+
+/*paging buttons updates*/
+.NEXT_BUTTON .x-btn-small tr .x-btn-mc em .x-btn-text .x-btn-image{
+     background: url('../icons/R_Enable.png') !important;
+    background-repeat: no-repeat;
+    margin-right: -1px;
+ }
+
+.PREVIOUS_BUTTON .x-btn-small tr .x-btn-mc em .x-btn-text .x-btn-image{
+    background: url('../icons/L_Enable.png') !important;
+    background-repeat: no-repeat;
+}
+
+.FIRST_BUTTON .x-btn-small tr .x-btn-mc em .x-btn-text .x-btn-image{
+    background: url('../icons/L_Enable_First.png') !important;
+    background-repeat: no-repeat;
+    margin-right: -1px;
+}
+
+.LAST_BUTTON .x-btn-small tr .x-btn-mc em .x-btn-text .x-btn-image{
+    background: url('../icons/R_Enable_Last.png') !important;
+    background-repeat: no-repeat;
+}
+
+.REFRESH .x-btn-small tr .x-btn-mc em .x-btn-text .x-btn-image{
+    background: url('../icons/Refresh.png')  no-repeat  !important;
+    background-repeat: no-repeat !important;
+}
+
+.currentPage{
+    padding: 0px !important;
+    padding-left:2px !important;
+}
+
+/*styling for grid color blocks*/
+.colorBlock{
+    overflow:visible;
+    float:left;
+    margin-left:-5px;
+    margin-top:-3px;
+    height:20px;
+    margin-bottom:-3px;
+    width:4px;
+}
+
+/*Event Result Type - success*/
+.colorBlockSuccess{
+    background-color: #43E09A;
+}
+
+/*Event Result Type - reject*/
+.colorBlockReject{
+    background-color: #D95757;
+}
+
+/*Event Result Type - dropped*/
+.colorBlockDropped{
+    background-color: #AE44E3;
+}
+
+/*Event Result Type - blocked*/
+.colorBlockBlocked{
+    background-color: #48B5F0;
+}
+
+/*Event Result Type - error*/
+.colorBlockError{
+    background-color: #B33636;
+}
+
+/*Event Result Type - abort*/
+.colorBlockAbort{
+    background-color: #4343DE;
+}
+
+/*Event Result Type - ignore*/
+.colorBlockIgnore{
+    background-color: #F5F562;
+}
+
+/*styling for grid trend cells*/
+.trendCell{
+    overflow:visible;
+    float:left;
+    margin-left:20px;
+    margin-top:-3px;
+    height:22px;
+    margin-bottom:-3px;
+    width:22px;
+    background-repeat: no-repeat;
+}
+
+.trendDown{
+    background: url('../images/grids/Down22.png');
+}
+
+.trendNoChange{
+    background: url('../images/grids/Right22.png');
+}
+
+.trendUp{
+    background: url('../images/grids/Up22.png');
+}
+
+.fixHeaderWidth .x-grid3-hd-inner{
+    width: auto !important ;
+}

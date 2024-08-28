@@ -1,0 +1,66 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:e="urn:import:com.ericsson.eniq.events.widgets.client.textbox">
+    <ui:style>
+        .container {
+            padding: 20px;
+            -webkit-user-select: none;
+            -moz-user-select: -moz-none;
+            user-select: none;
+        }
+
+        .realFileUpload {
+            opacity: 0;
+            position: absolute;
+            width: 212px;
+            height: 22px;
+        }
+
+        .fakeBrowseButton {
+
+        }
+
+        .fakeUploadTextBox {
+            width: 212px;
+            margin-right: 10px;
+            margin-left: 0;
+        }
+
+        .container button {
+            width: 110px;
+            height: 22px;
+        }
+
+        .buttonBar {
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .submitButton {
+            margin-right: 13px;
+        }
+
+        .cancelButton {
+
+        }
+    </ui:style>
+    <g:HTMLPanel ui:field="container" styleName="{style.container}">
+        <g:FileUpload ui:field="fileUpload" styleName="{style.realFileUpload}"/>
+        <e:ExtendedTextBox ui:field="fakeUploadTextBox"
+                           addStyleNames="{style.fakeUploadTextBox}" defaultText="xml file name..."/>
+        <g:Button ui:field="fakeSelectButton" text="Browse"
+                  addStyleNames="{style.fakeBrowseButton}"/>
+        <g:HorizontalPanel styleName="{style.buttonBar}">
+            <g:cell horizontalAlignment="ALIGN_CENTER">
+                <g:Button ui:field="submitButton" text="Upload File"
+                          addStyleNames="{style.submitButton}"/>
+            </g:cell>
+            <g:cell horizontalAlignment="ALIGN_CENTER">
+                <g:Button ui:field="cancelButton" text="Cancel"
+                          addStyleNames="{style.cancelButton}"/>
+            </g:cell>
+        </g:HorizontalPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 

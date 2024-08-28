@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:e="urn:import:com.ericsson.eniq.events.widgets.client.textbox">
+    <ui:with field='resourceBundle'
+             type='com.ericsson.eniq.events.ui.client.groupmanagement.resources.GroupMgmtResourceBundle'/>
+    <ui:style>
+        .header {
+            padding-left: 5px;
+            line-height: 20px;
+        }
+    </ui:style>
+    <g:HTMLPanel>
+        <div class="{resourceBundle.style.expandableListHeader}">
+            <g:Label ui:field="header" styleName="{style.header}"></g:Label>
+        </div>
+        <div>
+            <g:HTMLPanel ui:field="filterBoxHolder"
+                         styleName="{resourceBundle.style.filterBoxHolder}">
+                <e:ExtendedTextBox ui:field="filter" defaultText="type to filter"></e:ExtendedTextBox>
+            </g:HTMLPanel>
+        </div>
+        <div class="{resourceBundle.style.elementListContainer}">
+            <g:HTMLPanel ui:field="glassPanel" styleName="{resourceBundle.style.glassPanel}"></g:HTMLPanel>
+            <g:ScrollPanel alwaysShowScrollBars="true"
+                           styleName="{resourceBundle.style.elementScrollPanel}">
+                <g:SimplePanel ui:field="elementList"></g:SimplePanel>
+            </g:ScrollPanel>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

@@ -1,0 +1,26 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:gxt='urn:import:com.extjs.gxt.ui.client.widget'
+	xmlns:tb='urn:import:com.extjs.gxt.ui.client.widget.toolbar'>
+
+	<ui:style>
+		@external .x-panel-bwrap, .x-panel-body;
+		.workspaceContainer {
+			background-color: transparent;
+			height: 100%;
+			position: relative;
+		}
+		
+		.container,.container>.x-panel-bwrap>.x-panel-body {
+			background-color: transparent;
+			position: relative;
+		}
+	</ui:style>
+
+	<g:AbsolutePanel ui:field="workspaceContainer"
+		styleName="{style.workspaceContainer}">
+		<tb:ToolBar ui:field="toolbar" />
+		<gxt:ContentPanel ui:field="windowContainer"
+			addStyleNames="{style.container}" headerVisible="false" />
+	</g:AbsolutePanel>
+</ui:UiBinder>

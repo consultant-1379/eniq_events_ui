@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:d="urn:import:com.ericsson.eniq.events.widgets.client.dropdown">
+
+    <ui:style>
+        @external .container;
+        .container {
+            padding: 15px 15px 25px;
+            position: relative;
+        }
+
+        .checkbox {
+        }
+
+        .checkbox>label {
+            padding-left: 10px;
+        }
+
+        .checkBoxOne {
+            position: relative;
+        }
+
+        .checkBoxTwo {
+            position: relative;
+        }
+
+        .dropdown {
+            margin-bottom: 10px;
+        }
+
+    </ui:style>
+    <g:VerticalPanel styleName="{style.container}">
+        <d:DropDownMenu ui:field="dropDownMenu" width="240px" addStyleNames="{style.dropdown}"/>
+        <g:CheckBox ui:field="drops" text="Call Drops" styleName="{style.checkbox}"
+                    addStyleNames="{style.checkBoxOne}"/>
+        <g:CheckBox ui:field="setup" text="Call Setup Failures" styleName="{style.checkbox}"
+                    addStyleNames="{style.checkBoxTwo}"/>
+    </g:VerticalPanel>
+</ui:UiBinder>

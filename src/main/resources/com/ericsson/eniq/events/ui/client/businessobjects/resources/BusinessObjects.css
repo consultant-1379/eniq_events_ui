@@ -1,0 +1,35 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2011 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ */
+/*business object portlet*/
+
+.boPortletImage {
+	background-position: center 21px !important;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.windowContainer {
+	height: 100%;
+	margin-left: 20px;
+	background: transparent;
+}
+
+.filler {
+	height: 100%;
+	width: 10px;
+	float:left;
+}
+
+/** Externalize in order to non-obfuscate the GXT css **/
+@external .x-panel-bwrap .x-panel-body;
+.windowContainer > .x-panel-bwrap > .x-panel-body {
+	height: 100%;
+	background: transparent;
+}
+
+@sprite .windowIconImage{
+	gwt-image: 'windowIcon';
+}

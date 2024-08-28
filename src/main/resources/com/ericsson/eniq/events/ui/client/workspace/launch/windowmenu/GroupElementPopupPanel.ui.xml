@@ -1,0 +1,64 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		.popup {
+			background-color: white;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+			border-radius: 10px;
+			border: 1px solid white;
+			margin: 20px;
+			z-index: 10000;
+            padding: 0px !important;
+		}
+		
+		.header {
+			background: #E3E3E2;
+			background: literal('-moz-linear-gradient(top, #e3e3e2, #bfbfbf)');
+			background: literal('-webkit-linear-gradient(top, #e3e3e2, #bfbfbf)');
+			background: literal('linear-gradient(top, #e3e3e2, #bfbfbf)');
+			border-bottom: 1px solid #B0AFAF;
+			border-radius: 10px 10px 0 0;
+			height: 21px;
+			width: 100%;
+		}
+		
+		.footer {
+			background: #EFF0F0;
+			background: literal('-moz-linear-gradient(top, #EFF0F0, #FFFFFF)');
+			background: literal('-webkit-linear-gradient(top, #EFF0F0, #FFFFFF)');
+			background: literal('linear-gradient(top, #EFF0F0, #FFFFFF)');
+			border-top: 1px solid #B0AFAF;
+			border-radius: 0 0 10px 10px;
+			height: 21px;
+			width: 100%;
+		}
+		
+		.headerLabel {
+			color: #232323;
+			font-size: 11px;
+			font-family: arial, helvetica, "sans serif";
+			padding-left: 10px;
+			padding-top: 5px;
+			font-weight: bold;
+		}
+		
+		.elementScrollPanel {
+			height: 300px;
+			width: 200px;
+            padding: 3px;
+		}
+	</ui:style>
+	<g:PopupPanel addStyleNames="{style.popup}" ui:field="popupPanel" autoHideEnabled="false">
+		<g:VerticalPanel>
+			<g:HorizontalPanel addStyleNames="{style.header}">
+				<g:Label addStyleNames="{style.headerLabel}" ui:field="headerLabel" />
+			</g:HorizontalPanel>
+			<g:ScrollPanel alwaysShowScrollBars="true"
+				styleName="{style.elementScrollPanel}">
+				<c:CellList ui:field="groupElementList"></c:CellList>
+			</g:ScrollPanel>
+			<g:SimplePanel addStyleNames="{style.footer}" />
+		</g:VerticalPanel>
+	</g:PopupPanel>
+</ui:UiBinder> 

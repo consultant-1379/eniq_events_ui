@@ -1,0 +1,93 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:tb="urn:import:com.ericsson.eniq.events.widgets.client.textbox"
+             xmlns:c="urn:import:com.ericsson.eniq.events.ui.client.groupmanagement">
+    <ui:with field='resourceBundle'
+             type='com.ericsson.eniq.events.ui.client.groupmanagement.resources.GroupMgmtResourceBundle'/>
+    <ui:style>
+        .wrapper {
+            height: 100%;
+            position: relative;
+            padding: 10px;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: -moz-none;
+            user-select: none;
+        }
+
+        .inner {
+            height: 100%;
+            position: relative;
+        }
+
+        .list {
+            overflow: visible;
+        }
+
+        .groupNameBox {
+            width: 100%;
+        }
+
+        .saveAsListContainer {
+            position: absolute;
+            top: 30px;
+            bottom: 31px;
+            left: 0;
+            right: 0;
+            border: 1px solid #C7C7C7;
+        }
+
+        .saveAsGroupNameBoxHolder {
+            padding: 0 10px;
+        }
+
+        .saveAsButtonHolder {
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .buttonHolder {
+            padding-top: 10px;
+            width: 100%;
+            height: 30px;
+            table-layout: fixed;
+        }
+
+        .buttonHolder tr td{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        table.buttonHolder>tbody>tr>td>button {
+            width: 111px;
+        }
+    </ui:style>
+    <g:HTMLPanel styleName="{style.wrapper}">
+        <div class="{style.inner}">
+            <div class="{style.saveAsGroupNameBoxHolder}">
+                <tb:ExtendedTextBox ui:field="saveAsGroupName" addStyleNames="{style.groupNameBox}"
+                                    defaultText="enter new group name"></tb:ExtendedTextBox>
+            </div>
+            <div class="{style.saveAsListContainer}">
+                <g:ScrollPanel alwaysShowScrollBars="true"
+                               styleName="{resourceBundle.style.elementScrollPanel}">
+                    <c:GroupManagementCellList ui:field="groupNameList"
+                                addStyleNames="{style.list} {resourceBundle.style.suggestionItem}"></c:GroupManagementCellList>
+                </g:ScrollPanel>
+            </div>
+            <g:HorizontalPanel styleName="{style.buttonHolder}"
+                               addStyleNames="{style.saveAsButtonHolder}">
+                <g:cell>
+                    <g:Button ui:field="saveButton" text="Save" enabled="false"></g:Button>
+                </g:cell>
+                <g:cell>
+                    <g:Button ui:field="cancelButton" text="Cancel"></g:Button>
+                </g:cell>
+            </g:HorizontalPanel>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder> 

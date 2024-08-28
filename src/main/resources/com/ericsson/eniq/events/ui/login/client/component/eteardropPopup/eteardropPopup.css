@@ -1,0 +1,50 @@
+.ETeardropPopup-Border-tl {
+	width: 23px;
+	height: 48px;
+}
+
+.ETeardropPopup-Border-t {
+	height: 48px;
+}
+
+.ETeardropPopup-Border-tr {
+	width: 23px;
+	height: 48px;	
+}
+
+.ETeardropPopup-Border-teardrop {
+	height: 48px;
+	width: 64px;
+	
+}
+
+.ETeardropPopup-Border-l {
+	width: 17px;
+}
+
+.ETeardropPopup-Border-r {
+	width: 23px;
+}
+
+.ETeardropPopup-Border-bl {
+	width: 23px;
+	height: 23px;
+}
+
+.ETeardropPopup-Border-b {
+	height: 23px;
+	width:100%;
+}
+
+.ETeardropPopup-Border-br {
+	width: 23px;
+	height: 23px;
+}
+
+.ETeardropPopup-Text {
+	margin: 0px !important;
+	\-webkit-margin:0px !important;
+	padding: 3px !important;
+	font-size: 11px;
+}
+

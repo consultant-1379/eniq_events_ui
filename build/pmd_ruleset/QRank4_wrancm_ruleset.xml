@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="QRank4 rules">
+
+    <description>
+        This ruleset contains QRank level 4 related rules as detailed in 7/0363-FCP 103 5028 Uen Rev. PD2
+    </description>
+
+    <rule ref="rulesets/unusedcode.xml/UnusedPrivateField">
+        <priority>2</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/SimplifyBooleanExpressions">
+        <priority>2</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/SimplifyBooleanReturns">
+        <priority>2</priority>
+    </rule>
+
+    <rule ref="rulesets/unusedcode.xml/UnusedFormalParameter">
+        <priority>2</priority>
+    </rule>
+
+    <!-- In GWT it doesn't matter, as it is compiled into javascript and there is no finals -->
+    <!--<rule ref="rulesets/optimizations.xml/LocalVariableCouldBeFinal" >
+            <priority>2</priority>
+        </rule>-->
+
+    <!-- In GWT it doesn't matter, as it is compiled into javascript and there is no finals -->
+    <!--<rule ref="rulesets/optimizations.xml/MethodArgumentCouldBeFinal">
+            <priority>2</priority>
+        </rule>-->
+
+    <rule ref="rulesets/naming.xml/SuspiciousConstantFieldName">
+        <priority>2</priority>
+    </rule>
+
+</ruleset>
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="QRank3 rules">
+
+    <description>
+        This ruleset contains QRank level 3 related rules as detailed in 7/0363-FCP 103 5028 Uen Rev. PD2
+    </description>
+
+    <rule ref="rulesets/finalizers.xml/AvoidCallingFinalize">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/imports.xml/DontImportJavaLang">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/AvoidDollarSigns">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/MethodWithSameNameAsEnclosingClass">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml/UnusedModifier">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/basic.xml/ReturnFromFinallyBlock">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/imports.xml/UnusedImports">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/imports.xml/ImportFromSamePackage">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/imports.xml/DuplicateImports">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/basic.xml/UnnecessaryConversionTemporary">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml/UnnecessaryConstructor">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/finalizers.xml/FinalizeShouldBeProtected">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/controversial.xml/DontImportSun">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/AvoidProtectedFieldInFinalClass">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/CloseResource">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/finalizers.xml/FinalizeDoesNotCallSuperFinalize">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/naming.xml/ClassNamingConventions">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/braces.xml/ForLoopsMustUseBraces">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/unusedcode.xml/UnusedLocalVariable">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/basic.xml/OverrideBothEqualsAndHashcode">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/unusedcode.xml/UnusedPrivateMethod">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/braces.xml/IfStmtsMustUseBraces">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/braces.xml/IfElseStmtsMustUseBraces">
+        <priority>1</priority>
+    </rule>
+
+    <rule ref="rulesets/braces.xml/WhileLoopsMustUseBraces">
+        <priority>1</priority>
+    </rule>
+
+</ruleset>
+

@@ -1,0 +1,31 @@
+/************************************* ETabBar *****************************************/
+@sprite .eTabBar-light {
+	gwt-image: 'tabBarBgLight';
+}
+
+@sprite .eTabBar-light .gwt-TabBarItem-selected {
+	gwt-image: 'tabLight';
+}
+
+.eTabBar-light .gwt-TabBarItem-selected .gwt-Label {
+	color: #232323 !important;
+}
+
+.eTabBar-light .gwt-Label { 
+	color:#282828!important;
+	
+}
+
+/************************************* ETabPanel *****************************************/
+@sprite .eTabPanel-light .gwt-TabPanelBottom {
+	gwt-image: 'tabPanelBgLight';
+	border-top: 0px solid #EAEAEA !important;
+	border-left: 0px solid #EAEAEA !important;
+	border-right: 0px solid #EAEAEA !important;
+	border-bottom: 1px solid #B1B1B1 !important;
+}
+
+/************************************* tablayoutpanel **********************************/
+gwt-TabLayoutPanelTab-light gwt-TabLayoutPanelTab-selected {
+	
+}

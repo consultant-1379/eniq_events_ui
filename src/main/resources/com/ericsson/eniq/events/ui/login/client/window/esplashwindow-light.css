@@ -1,0 +1,83 @@
+@sprite .ewf-light-Window-Border-tl-splash {
+	gwt-image: 'topLeftLight';
+	width: 30px;
+	height: 43px;
+}
+
+@sprite .ewf-light-Window-Border-t-splash {
+	gwt-image: 'topLight';
+	height: 43px;
+}
+
+@sprite .ewf-light-Window-Border-tr-splash {
+	gwt-image: 'topRightLight';
+	width: 30px;
+	height: 43px;
+}
+
+@sprite .ewf-light-Window-Border-Collapsible-tl-splash {
+	gwt-image: 'collapsibleTopLeftLight';
+	width: 30px;
+	height: 26px;
+}
+
+@sprite .ewf-light-Window-Border-Collapsible-tr-splash {
+	gwt-image: 'collapsibleTopRightLight';
+	width: 30px;
+	height: 26px;
+}
+
+@sprite .ewf-light-Window-Border-Collapsible-bl-splash {
+	gwt-image: 'collapsibleBottomLeftLight';
+	width: 30px;
+	height: 56px;
+}
+
+@sprite .shadowOverlay-light {
+	gwt-image: 'shadowOverlayLight';
+	position: absolute;
+	top: 0px;
+	left: 21px;
+	z-index: 100;
+}
+
+@sprite .ewf-light-Window-Border-Collapsible-br-splash {
+	gwt-image: 'collapsibleBottomRightLight';
+	width: 30px;
+	height: 56px;
+}
+
+@sprite .ewf-light-Window-Border-l-splash {
+	gwt-image: 'leftLight';
+	width: 22px;
+}
+
+@sprite .ewf-light-Window-Border-r-splash {
+	gwt-image: 'rightLight';
+	width: 22px;
+}
+
+@sprite .ewf-light-Window-Border-bl-splash {
+	gwt-image: 'bottomLeftLight';
+	width: 30px;
+	height: 33px;
+}
+
+@sprite .ewf-light-Window-Border-b-splash {
+	gwt-image: 'bottomLight';
+	height: 33px;
+}
+
+@sprite .ewf-light-Window-Border-br-splash {
+	gwt-image: 'bottomRightLight';
+	width: 30px;
+	height: 33px;
+}
+
+.gwt-PopupPanelGlass {
+	background-color: #000000 !important;
+	filter: literal("alpha(opacity = 15)");
+	\-moz-opacity : 0.15 !important;
+	\-webkit-opacity : 0.15 !important;
+	opacity :	0.15 !important;
+}

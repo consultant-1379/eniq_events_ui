@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sun-web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Application Server 8.1 Servlet 2.4//EN" "http://www.sun.com/software/appserver/dtds/sun-web-app_2_4-1.dtd">
+<sun-web-app>
+  <parameter-encoding default-charset="UTF-8"/>
+  <context-root>/EniqEventsUI</context-root>
+  <security-role-mapping>
+    <role-name>secure</role-name>
+    <group-name>UI Users</group-name>
+  </security-role-mapping>
+</sun-web-app>

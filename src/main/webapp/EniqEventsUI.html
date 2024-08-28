@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+    <title>Ericsson OSS TEST</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="resources/icons/favicon.ico" />
+
+	<link href="./gxt/css/gxt-all.css" type="text/css" rel="stylesheet"/>
+    <link href="./EniqEventsUI.css" type="text/css" rel="stylesheet"/>
+	<link href="./resources/css/whiteTheme.css" type="text/css" rel="stylesheet"/>
+	<link href="./resources/css/dashboard.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript">
+        /* set the start time as this is used in profiling to detail the length of time loadup takes */
+        window.startTime = new Date().getTime();
+        window.userName = "admin";
+        window.userPassword = "admin";
+        userPassword = "admin";
+        window.ipAddress = "not_set";
+        window.appServicesURI = "https://atclvm636.athtem.eei.ericsson.se:18080/EniqEventsServices/"
+       // window.appServicesURI = "http://atrcxb2338.athtem.eei.ericsson.se:18080/EniqEventsServices/";
+       // window.appServicesURI = "http://localhost:3000/";
+        window.geoServerURI = "http://atrcxb1362.athtem.eei.ericsson.se:18080/geoserver/";
+        window.appCopyright = "Copyright Info!!!!";
+        window.appVersion = "Nearly There!!";
+        window.appRequestTimoutTime = 120000;
+        window.adminMsg = "You are running in local mode!";
+        window.kpiAmberThreshold = 97;
+        window.kpiRedThreshold = 95;
+        window.successRAWToggle = "true";   //JNDI parameter ENIQ_EVENTS_SUC_RAW
+        window.dashboardRefreshFromMidniteMin = 360;
+		window.devConfigOn = false;
+        window.maxRowCounts = new Array();
+        window.maxRowCounts["ENIQ_EVENTS_MAX_JSON_RESULT_SIZE"] = "5000";
+        window.maxRowCounts["ENIQ_EVENTS_IMSI_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_IMSI_CALL_SETUP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_IMSI_CALL_DROP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_ACCESS_AREA_CALL_DROP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_ACCESS_AREA_CALL_SETUP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_ENODEB_CALL_DROP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_ENODEB_CALL_SETUP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_SUBSCRIBER_REOCCURING_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_CAUSE_CODE_CALL_SETUP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_CAUSE_CODE_CALL_DROP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_TRACKING_AREA_CALL_SETUP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_TRACKING_AREA_CALL_DROP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_TERMINAL_CALL_SETUP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_CFA_TERMINAL_CALL_DROP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_TERMINAL_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_DURATION_CALLS_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_UNANSWERED_CALLS_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_CELL_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_MSC_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_BSC_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_CAUSE_CODE_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_APN_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_ENODEB_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_TERMINAL_GROUP_ANALYSIS_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_TERMINAL_ANALYSIS_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_RNC_EVENT_FAILURE_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_SUBBI_COUNT"] = "30";
+        window.maxRowCounts["ENIQ_EVENTS_PDP_STATISTICS_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LIVE_LOAD_COUNT"] = "40";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_SUBSCRIBER_EXEC_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_SUBSCRIBER_PREP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_DATA_VOLUME_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_ENODEB_EXEC_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_ENODEB_PREP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_SOURCE_CELL_EXEC_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_SOURCE_CELL_PREP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_TARGET_CELL_EXEC_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_TARGET_CELL_PREP_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_CAUSE_CODE_EXEC_RANKING_COUNT"] = "50";
+        window.maxRowCounts["ENIQ_EVENTS_LTE_HFA_CAUSE_CODE_PREP_RANKING_COUNT"] = "50";
+        function onLogout() {
+            window.location = "<%= application.getContextPath() %>/login/Logout.jsp";
+        }
+
+        var sessionXMLDefindedTimeOutTimeInMilliSeconds = '<%= session.getMaxInactiveInterval() %>' * 1000;
+        /**
+         * Utility Javascript Methods
+         * for use with dynamically adding the
+         * css style sheets based on theme and image manipulations
+         * based on browser resizing
+         *
+         * @author eendmcm
+         * @since Oct 2010
+         */
+
+            //Global vars moved from EniqEventsUI\SessionTimeOutManagment.js
+        var sessionNextTimeToExpireEpochDateTime = 0;
+        var dateTimeNow;
+        var epochDateTimeNow;
+
+        /* eendmcm - NOTE: MOVED FROM EniqEventsUI\SessionTimeOutManagment.js as this is a compiled folder */
+        //Handles session timeout interval. The function updates the session timeout time
+        //each time a user presses the mouse button on the page.
+        //If the current time has exceeded the time session set timeout time "sessionNextTimeToExpireEpochDateTime"
+        //then it is deemed that the session is expired and the user need to login.
+        function checkSessionTimeoutHasExpired() {
+
+            dateTimeNow = new Date();
+            epochDateTimeNow = dateTimeNow.getTime();
+
+            if (sessionNextTimeToExpireEpochDateTime == 0 || epochDateTimeNow < sessionNextTimeToExpireEpochDateTime) {
+                sessionNextTimeToExpireEpochDateTime = epochDateTimeNow + sessionXMLDefindedTimeOutTimeInMilliSeconds;
+            }
+            else {
+                onLogout();
+            }
+        }
+    </script>
+    <!-- OpenLayers -->
+    <script type="text/javascript" src="./resources/openlayers/OpenLayers.js"></script>
+
+    <!-- This script loads your compiled module. No meta tags after this one. -->
+    <script type="text/javascript" language="javascript" src="EniqEventsUI/EniqEventsUI.nocache.js"></script>
+</head>
+<body class="eniq">
+<div class="fakeTabBackground"></div>
+<div id='floatLogo' class='floatLogo'></div>
+<div id='headerPnl' class='headerPnl'></div>
+
+<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+        style="position:absolute;width:0;height:0;border:0"></iframe>
+<noscript>
+    <div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        Your web browser must have JavaScript enabled
+        in order for this application to display correctly.
+    </div>
+</noscript>
+
+
+<div id="loading" class="loadingDisplay">
+    <div class="background">
+        <div class="indicatorBackground">
+            <img src='./resources/images/whiteTheme/nightRider.gif'/>
+        </div>
+        <div class="loadingMsg">Loading...</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.widgets.client.collapse.CollapsePanelResourceBundle' />
+
+	<ui:style>
+		.header {
+			background-color: #e8e8e8;
+			background-image: literal('linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)'
+				);
+			background-image: literal('-moz-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)'
+				);
+			background-image: literal('-webkit-linear-gradient(top, rgb(253,253,253) 0%, rgb(232,232,232) 100%)'
+				);
+			background-image: literal('-webkit-gradient( linear, left top, left bottom, color-stop(0, rgb(253, 253, 253)), color-stop(1, rgb(232, 232, 232)))'
+				);
+			border: 1px solid #c5c6c7;
+			color: #333;
+			cursor: pointer;
+			padding-top: 2px;
+			padding-left: 2px;
+			padding-bottom: 2px;
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: -moz-none;
+			white-space: nowrap;
+			height: 14px;
+		}
+		
+		.collapseText {
+			padding-right: 25px;
+			padding-left: 6px;
+		}
+	</ui:style>
+	<g:FlowPanel styleName="{resourceBundle.style.wrapper}">
+		<g:HTMLPanel ui:field="headerWrapper" addStyleNames="{style.header}">
+			<span ui:field="header" class="{style.collapseText}" />
+			<span class="{resourceBundle.style.icon}" />
+		</g:HTMLPanel>
+		<g:SimplePanel ui:field="content" visible="false" />
+	</g:FlowPanel>
+
+</ui:UiBinder>

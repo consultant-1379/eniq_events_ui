@@ -1,0 +1,35 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2011 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ */
+
+@sprite .optionsMenu {
+    gwt-image: 'arrow';
+    background-position: top right;
+    background-color: transparent;
+
+    border: 1px solid transparent;
+    color: #202f58;
+    cursor: pointer;
+
+    font-family: Arial,serif;
+    font-size: 12px;
+
+    margin: 0 12px;
+    padding: 3px 9px 2px;
+
+    width: 54px;
+}
+
+.optionsMenu.open, .optionsMenu:hover {
+    background-color: #fff;
+    border-color: #a3a3a3;
+
+    position: relative;
+    z-index: 5102;
+}
+
+.optionsMenu.open {
+    border-bottom: 0;
+}

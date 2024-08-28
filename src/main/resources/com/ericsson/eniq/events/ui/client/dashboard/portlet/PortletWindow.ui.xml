@@ -1,0 +1,24 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder' xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    
+    <ui:with field='resourceBundle' type='com.ericsson.eniq.events.widgets.client.window.title.TitleWindowResourceBundle' />
+
+    <g:SimplePanel styleName="{resourceBundle.style.outer}">
+        <g:FlowPanel styleName="{resourceBundle.style.inner}">
+            <g:HTMLPanel styleName="{resourceBundle.style.portlet}">
+                <g:HorizontalPanel styleName="{resourceBundle.style.topContainer} {resourceBundle.style.noButton}" ui:field="topContainer">
+                    <g:SimplePanel ui:field="buttonContainer"/>
+                    <g:FocusPanel ui:field="dragHandle" styleName="{resourceBundle.style.dragHandle}">
+                        <g:Label ui:field="titleLabel" styleName="{resourceBundle.style.title}"/>
+                    </g:FocusPanel>
+                    <g:cell width="17px" verticalAlignment="middle">
+                        <g:SimplePanel ui:field="closeButtonContainer" styleName="{resourceBundle.style.closeButtonContainer}"/>
+                    </g:cell>
+                </g:HorizontalPanel>
+                <g:SimplePanel styleName="{resourceBundle.style.bodyContainer}" ui:field="bodyContainer"/>
+                <g:SimplePanel styleName="{resourceBundle.style.bodyContainer}" visible="false" ui:field="messageContainer"/>
+            </g:HTMLPanel>
+        </g:FlowPanel>
+    </g:SimplePanel>
+
+</ui:UiBinder>

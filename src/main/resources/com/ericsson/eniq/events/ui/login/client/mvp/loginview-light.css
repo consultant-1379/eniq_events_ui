@@ -1,0 +1,59 @@
+.gwt-TabPanelBottom .gwt-Label-light {
+	color: #004d7c !important;
+	font-family: Arial;
+	font-size: 10px;
+}
+
+.gwt-TabPanelBottom .gwt-Label-error-light {
+	color: #e22118 !important;
+    font-size: 11.1px;
+    padding-top:1px;
+    height: 12px !important;
+}
+
+
+@sprite .capslockon-light {
+	gwt-image: 'capsLockLight';
+}
+
+@sprite .changePasswordPageSeparator-light {
+	gwt-image: 'changePasswordPageSepLight';
+	height: 24px;
+	width: 1px;	
+}
+
+@sprite .upperSplashPanel-light {
+	gwt-image: 'upperSplashPanelLight';
+}
+
+@sprite .passwordHelpIndicator-light {
+	gwt-image: 'passwordStrengthHelpLight';
+}
+
+@sprite .lowerSplashPanel-light {
+	gwt-image: 'lowerSplashPanelLight';
+	font-family :   arial !important;
+	font-size: 10px !important;
+	line-height: 0.8;
+	color: #969696;
+}
+
+@sprite .tradeMarkPanel-light {
+	gwt-image: 'logoLight';
+}
+
+/*@sprite .globesPanel-light {
+	gwt-image: 'globesLight';
+}*/
+
+@sprite .eniqPanel-light {
+	gwt-image: 'eniqLight';
+}
+
+@sprite .navigationOn-light {
+	gwt-image: 'navOnLight';
+}
+
+@sprite .navigationOff-light {
+	gwt-image: 'navOffLight';
+}

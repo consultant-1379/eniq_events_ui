@@ -1,0 +1,69 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:f="urn:import:com.ericsson.eniq.events.widgets.client.launch"
+	xmlns:ee="urn:import:com.ericsson.eniq.events.ui.client.workspace.launch.windowmenu">
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.ui.client.workspace.launch.WorkspaceLaunchMenuResourceBundle' />
+
+	<ui:style>
+		.headerLabel {
+			float: left;
+		}
+		
+		.statusLabel {
+			color: #333333;
+			font-family: "Arial";
+			font-size: 11px;
+			margin-left: 5px;
+			float: left;
+		}
+		
+		.infoIcon {
+			float: left;
+			margin-left: 45px;
+		}
+		
+		.workspaceLaunch {
+			width: 278px;
+			top: 50px;
+			bottom: 120px;
+		}
+		
+		.statusBar {
+			vertical-align: middle;
+			display: table-cell;
+			height: 21px;
+		}
+	</ui:style>
+
+	<g:FlowPanel styleName="{resourceBundle.style.container} {style.workspaceLaunch}"
+		ui:field="container">
+		<g:FlowPanel styleName="{resourceBundle.style.header}">
+			<g:Label ui:field="header" styleName="{style.headerLabel}"
+				text="Launch Menu"></g:Label>
+			<g:ToggleButton ui:field="pin"
+				addStyleNames="{resourceBundle.workspaceLaunchStyle.pin}">
+				<g:upFace image="{resourceBundle.pinNormal}" />
+				<g:downFace image="{resourceBundle.pinPinned}" />
+			</g:ToggleButton>
+		</g:FlowPanel>
+		<f:LaunchResizerPanel styleName="{resourceBundle.style.resizer}"
+			ui:field="resizerPanel" resizingEnabled="false">
+			<g:Image styleName="{resourceBundle.style.handle}" ui:field="handle"></g:Image>
+		</f:LaunchResizerPanel>
+		<g:SimplePanel styleName="{resourceBundle.style.inner}"
+			ui:field="menuContent">
+			<g:DecoratedTabPanel styleName="{resourceBundle.workspaceLaunchStyle.tabPanel}"
+				ui:field="tabPanel">
+			</g:DecoratedTabPanel>
+		</g:SimplePanel>
+		<g:SimplePanel styleName="{resourceBundle.style.footer}">
+			<g:HTMLPanel styleName="{style.statusBar}">
+				<g:Image resource="{resourceBundle.infoIcon}" styleName="{style.infoIcon}" />
+				<g:Label ui:field="statusLabel" text="0 Analysis Windows Selected"
+					styleName="{style.statusLabel}" />
+			</g:HTMLPanel>
+		</g:SimplePanel>
+	</g:FlowPanel>
+
+</ui:UiBinder>

@@ -1,0 +1,45 @@
+/**** TextBox styles*******************************************/
+.EInputBox 
+{
+	height: 21px;
+    line-height: 21px;
+	width: 139px;
+
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px; /**rounded corners**/
+	padding-left: 7px;
+	padding-right: 6px;
+	box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2);
+	font-family: Arial;
+	font-size: 11px;
+}
+
+
+.EInputBox:focus 
+{
+		outline: none;
+}
+
+.EInputBox:disabled 
+{
+	\-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
+	filter: "progid :DXImageTransform.Microsoft.Alpha (opacity=50 )";
+	opacity: 0.5;
+}
+
+.EInputBox-prompt 
+{
+color: #7f7f7f !important;
+}
+
+.EInputBox-prompt:disabled 
+{
+	\-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=50)";
+	filter: "progid :DXImageTransform.Microsoft.Alpha (opacity=50 )";
+	opacity: 0.50;
+}

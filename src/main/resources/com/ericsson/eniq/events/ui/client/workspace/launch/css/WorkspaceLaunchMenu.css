@@ -1,0 +1,286 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2012 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ */
+.tabPanelBottom {
+	overflow: visible;
+	padding: 10px 19px 2px 19px;
+	height: 100%;
+	\-moz-box-sizing: border-box;
+	\-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.glassPanel {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0.8;
+	background-color: #ffffff;
+	z-index: 10;
+}
+
+.glassPanel.enabled {
+	display: block;
+}
+
+.windowFilterPanelDisabled {
+	opacity: 0.1;
+    cursor: default;
+}
+
+.windowListItem {
+	height: 20px;
+	line-height: 180%;
+	margin-top: 1px;
+	outline: medium none;
+	color: #333333;
+	font-family: "Arial";
+	font-size: 11px;
+	white-space: nowrap;
+	overflow: visible;
+	padding-left: 7px;
+}
+
+.windowListItem:hover {
+    background-color: #d5f1fe;
+}
+
+.windowListItem > strong {
+	font-weight: bold;
+}
+
+.showSelectionItem {
+	display: block;
+}
+
+.hideSelectionItem {
+	display: none;
+}
+
+.liveloadPopup {
+	z-index: 1000000;
+	border: 1px solid rgb(163, 163, 163);
+	border-radius: 0 0 6px 6px;
+	box-shadow: 1px 1px 10px rgb(170, 170, 170);
+	padding: 2px;
+	min-width: 195px;	
+	background-color: white;
+}
+
+.liveloadPopup > div {
+	cursor: pointer;
+}
+
+.liveloadPopup table {
+	width: 100%;
+}
+
+@external suggestPopupTopCenter, suggestPopupMiddleLeft, suggestPopupMiddleRight,suggestPopupBottomCenter,suggestPopupTopLeftInner,suggestPopupTopRightInner,suggestPopupBottomLeftInner,suggestPopupBottomRightInner;
+.liveloadPopup .suggestPopupTopCenter,.liveloadPopup .suggestPopupMiddleLeft,.liveloadPopup .suggestPopupMiddleRight,.liveloadPopup .suggestPopupBottomCenter,.liveloadPopup .suggestPopupTopLeftInner,.liveloadPopup .suggestPopupTopRightInner,.liveloadPopup .suggestPopupBottomRightInner,.liveloadPopup .suggestPopupBottomLeftInner
+	{
+	width: 0px;
+	height: 0px;
+}
+
+@external .x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-ml, .x-btn-mr, .x-btn-mc, .x-btn-bl, .x-btn-br, .x-btn-bc;
+.dimensionButton .x-btn-tl,.dimensionButton .x-btn-tc,.dimensionButton .x-btn-tr,.dimensionButton .x-btn-bl,.dimensionButton .x-btn-ml,.dimensionButton .x-btn-mr,.dimensionButton .x-btn-bc,.dimensionButton .x-btn-br
+	{
+	display: none;
+}
+
+@external .item-selected;
+.liveloadPopup .item-selected {
+	background: #badeee;
+}
+
+.tabPanel {
+	height: 100%;
+	width: 100%;
+}
+
+.tabPanel >tbody>tr>td {/*to fix launch menu issue on ie9*/
+	height:auto !important;
+}
+
+.tabBar {
+	background-color: #BFBFBF;
+    padding-left: 23px;
+}
+
+@external .gwt-TabBarItem-wrapper;
+.tabBar .gwt-TabBarItem-wrapper {
+	position: relative;
+}
+
+@external .gwt-TabBarItem-wrapper-selected;
+.tabBar td.gwt-TabBarItem-wrapper-selected {
+	z-index: 1;
+}
+
+@external .gwt-Label;
+.tabBar .gwt-Label {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	padding-top: 5px;
+	margin-left: -4px;
+    text-align: center;
+}
+
+@external .gwt-TabBarItem;
+@sprite .tabBar .gwt-TabBarItem {
+	gwt-image: 'tabInactive';
+	margin-right: -11px;
+	cursor: pointer;
+	cursor: hand;
+    color: #333333;
+}
+
+@external .gwt-TabBarItem-selected;
+@sprite .tabBar .gwt-TabBarItem-selected {
+	gwt-image: 'tabActive';
+	cursor: default;
+    color: #202f58;
+}
+
+@external .gwt-ToggleButton-down, .gwt-ToggleButton-down-hovering, .gwt-ToggleButton-up, .gwt-ToggleButton-up-hovering;
+.gwt-ToggleButton-down,.gwt-ToggleButton-down-hovering,.gwt-ToggleButton-up,.gwt-ToggleButton-up-hovering
+	{
+	padding: 0px;
+    outline: 0px;
+}
+
+@external .gwt-ToggleButton-down, .gwt-ToggleButton-down-hovering, .gwt-ToggleButton-up, .gwt-ToggleButton-up-hovering;
+.gwt-ToggleButton-up,.gwt-ToggleButton-up-hovering {
+	background: transparent;
+	padding: 0px;
+	border: 0px;
+	border-radius: 0px;
+	box-shadow: none;
+}
+
+.pin {
+	float: right;
+	margin: 2px 2px 0px 0px;
+	height: 18px;
+}
+
+@external .gwt-ToggleButton-down, .gwt-ToggleButton-down-hovering;
+.pin.gwt-ToggleButton-down,.pin.gwt-ToggleButton-down-hovering {
+	border: 1px solid #9A9999;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 1px 2px #BDBDBD inset;
+}
+
+@external .gwt-ToggleButton-up, .gwt-ToggleButton-up-hovering;
+.pin.gwt-ToggleButton-up,.pin.gwt-ToggleButton-up-hovering {
+	padding: 0px;
+	border: 0px;
+	border-radius: 0px;
+	box-shadow: none;
+}
+
+@external .gwt-ToggleButton-down, .gwt-ToggleButton-down-hovering;
+.gwt-ToggleButton-down,.gwt-ToggleButton-down-hovering {
+	border: 1px solid #9A9999;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 1px 2px #BDBDBD inset;
+}
+
+.groupInfoToggle {
+	height: 20px;
+	width: 26px;
+    margin-left: 5px;
+}
+
+@external .gwt-ToggleButton-up, .gwt-ToggleButton-up-hovering;
+.groupInfoToggle.gwt-ToggleButton-up,.groupInfoToggle.gwt-ToggleButton-up-hovering
+	{
+	background: none; /* To remove default background set by GWT */
+	background-color: #ececec;
+	background-image: linear-gradient(top, rgb(236, 236, 236) 0%,
+		rgb(163, 163, 162) 100% );
+	background-image: literal('-moz-linear-gradient(top, rgb(236, 236, 236) 0%, rgb(163, 163, 162) 100%)'
+		);
+	background-image: literal('-webkit-linear-gradient(top, rgb(236, 236, 236) 0%, rgb(163, 163, 162) 100%)'
+		);
+	background-image: literal('-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(236, 236, 236)), color-stop(1, rgb(163, 163, 162)))'
+		);
+	border: 1px solid #9a9999;
+	border-radius: 5px;
+	-moz-box-shadow: inset 0 1px 1px #f8f8f8;
+	-webkit-box-shadow: inset 0 1px 1px #f8f8f8;
+	box-shadow: inset 0 1px 1px #f8f8f8;
+	color: #232323;
+	font-family: Arial, serif;
+	font-size: 10.5px;
+	text-align: center;
+}
+
+@external .gwt-ToggleButton-up-hovering;
+.groupInfoToggle.gwt-ToggleButton-up-hovering {
+	background-image: linear-gradient(top, rgb(253, 253, 253) 0%,
+		rgb(178, 178, 177) 100% );
+	background-image: literal('-moz-linear-gradient(top, rgb(253, 253, 253) 0%, rgb(178, 178, 177) 100%)'
+		);
+	background-image: literal('-webkit-linear-gradient(top, rgb(253, 253, 253) 0%, rgb(178, 178, 177) 100%)'
+		);
+	background-image: literal('-webkit-gradient(linear, left top, left bottom, color-stop(0, rgb(253, 253, 253)), color-stop(1, rgb(178, 178, 177)))'
+		);
+}
+
+.workspaceFavourites {
+	float: left;
+	border-right: 1px solid #c7c7c7;
+}
+
+@sprite .addToFavourites {
+	gwt-image: 'addToFavourites';
+	background-position: 5px 5px;
+	height: 21px;
+	width: 20px;
+	background-color: #fafafa;
+}
+
+@sprite .removeFromFavourites {
+	gwt-image: 'removeFromFavourites';
+	background-position: 5px 5px;
+	height: 21px;
+	width: 20px;
+	background-color: #fafafa;
+}
+
+.noFavouritesIcon {
+	height: 21px;
+	width: 20px;
+	background-color: #fafafa;
+}
+
+.workspaceListItem {
+	height: 20px;
+	line-height: 180%;
+	margin-top: 1px;
+	outline: medium none;
+	color: #333333;
+	font-family: "Arial";
+	font-size: 11px;
+	white-space: nowrap;
+	overflow: visible;
+	margin-left: 29px;
+	height: 20px;
+}
+
+.workspaceListItem > strong {
+	font-weight: bold;
+}
+
+.workspaceItemHolder {
+	height: 20px;
+	width: 100%;
+	clear: both;
+}

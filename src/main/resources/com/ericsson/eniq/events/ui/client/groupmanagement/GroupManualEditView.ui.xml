@@ -1,0 +1,109 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:tb="urn:import:com.ericsson.eniq.events.widgets.client.textbox"
+	xmlns:d="urn:import:com.ericsson.eniq.events.widgets.client.dropdown"
+	xmlns:e="urn:import:com.ericsson.eniq.events.ui.client.groupmanagement">
+
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.ui.client.groupmanagement.resources.GroupMgmtResourceBundle' />
+
+	<ui:style>
+		.groupEntry {
+			width: 485px;
+			float: left;
+			height: 100%;
+		}
+
+		.addBoxHolder {
+			padding: 10px;
+			border-bottom: 1px solid #C7C7C7;
+		}
+		
+		.elementEntryBox {
+			width: 340px;
+		}
+		
+		.addButton {
+			float: right;
+			height: 20px;
+			width: 110px;
+		}
+		
+		.groupNameBox {
+			width: 312px;
+			float: right;
+		}
+
+		.groupSelectionItem {
+			width: 160px;
+			font-size: 11px;
+		}
+
+		.simpleContainer {
+			width: 100%;
+		}
+	</ui:style>
+	<g:HTMLPanel addStyleNames="{style.groupEntry}">
+		<g:HTMLPanel styleName="{resourceBundle.style.container}">
+			<div>
+				<g:HorizontalPanel styleName="{style.simpleContainer}">
+					<d:DropDown defaultText=" - Select Group type - "
+								addStyleNames="{style.groupSelectionItem}"
+								ui:field="groupTypeDropDown">
+					</d:DropDown>
+					<tb:ExtendedTextBox ui:field="groupName"
+										styleName="{resourceBundle.style.textBox}" addStyleNames="{style.groupNameBox}"
+										defaultText="untitled group 1">
+					</tb:ExtendedTextBox>
+				</g:HorizontalPanel>
+				<div class="{resourceBundle.style.separator}"></div>
+			</div>
+			<div>
+				<div class="{resourceBundle.style.expandableListContainer}">
+					<div>
+						<div class="{resourceBundle.style.expandableListHeader}">
+							<g:Label ui:field="header" styleName="{resourceBundle.style.header}">Current Group</g:Label>
+						</div>
+						<div>
+							<g:HTMLPanel ui:field="addBoxHolder" styleName="{style.addBoxHolder}">
+								<tb:ExtendedTextBox ui:field="elementEntryBox"
+									styleName="{resourceBundle.style.textBox}" addStyleNames="{style.elementEntryBox}"
+									defaultText="Enter Group Item">
+								</tb:ExtendedTextBox>
+								<g:Button ui:field="addButton" text="Add"
+									addStyleNames="{style.addButton}" enabled="false">
+								</g:Button>
+							</g:HTMLPanel>
+						</div>
+						<div class="{resourceBundle.style.elementListContainer}">
+							<g:ScrollPanel alwaysShowScrollBars="true"
+								styleName="{resourceBundle.style.elementScrollPanel}">
+								<e:GroupManagementCellList ui:field="elementList"
+									addStyleNames="{resourceBundle.style.suggestionItem}">
+								</e:GroupManagementCellList>
+							</g:ScrollPanel>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<g:HorizontalPanel styleName="{resourceBundle.style.buttonHolder}">
+					<g:cell horizontalAlignment="ALIGN_LEFT">
+						<g:Button ui:field="deleteButton" text="Delete Selected"
+							enabled="false"></g:Button>
+					</g:cell>
+					<g:cell horizontalAlignment="ALIGN_RIGHT">
+						<g:Button ui:field="saveAsButton" text="Save As"></g:Button>
+					</g:cell>
+					<g:cell horizontalAlignment="ALIGN_RIGHT">
+						<g:Button ui:field="saveButton" text="Save" enabled="false"></g:Button>
+					</g:cell>
+					<g:cell horizontalAlignment="ALIGN_RIGHT">
+						<g:Button ui:field="cancelButton" text="Cancel"></g:Button>
+					</g:cell>
+				</g:HorizontalPanel>
+			</div>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

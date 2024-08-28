@@ -1,0 +1,203 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2011 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ */
+.suggestionItem {
+    height: 20px;
+    line-height: 180%;
+    margin-top: 1px;
+    outline: medium none;
+    white-space: nowrap;
+}
+
+div.suggestionItem>strong {
+    font-weight: bold;
+}
+
+.header {
+    padding-left: 5px;
+    line-height: 20px;
+}
+
+.groupMenuBar {
+    overflow: visible !important;
+}
+
+.groupMenuBar>table {
+    width: 100%;
+}
+
+.comboHolder {
+    float: left;
+}
+
+.textBox {
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #9A9999;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2) inset;
+    white-space: nowrap;
+    color: #333333;
+    border-radius: 6px;
+    padding: 2px;
+    \-moz-box-sizing: border-box;
+    \-ms-box-sizing: border-box;
+    \-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    user-select: none;
+    \-webkit-user-select: none;
+    \-moz-user-select: -moz-none;
+}
+
+.textBox:focus {
+    user-select: text;
+    \-webkit-user-select: text;
+    \-moz-user-select: text;
+}
+
+.defaultText {
+    font-style: italic;
+    color: DarkGray !important;
+}
+
+.separator {
+    background-color: #C7C7C7;
+    height: 1px;
+    margin: 0px 10px;
+    position: relative;
+    top: 10px;
+    clear: both;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    \-moz-box-sizing: border-box;
+    \-webkit-box-sizing: border-box;
+}
+
+div.container>div:first-child {
+    height: 40px;
+}
+
+div.container>div {
+    display: table-row;
+}
+
+.buttonHolder {
+    padding-top: 10px;
+    width: 100%;
+    height: 30px;
+    table-layout: fixed;
+}
+
+table.buttonHolder>tbody>tr>td:first-child {
+    width: 111px;
+}
+
+table.buttonHolder>tbody>tr>td>button {
+    width: 111px;
+}
+
+.expandableListContainer {
+    display: table-cell;
+    /* height: 100%; */
+    border: 1px solid #C7C7C7;
+    position: relative;
+}
+
+.expandableListContainer>div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.elementListContainer {
+    /* position: absolute;
+    top: 63px;
+    bottom: 0; */
+    height:271px;
+    width: 100%;
+}
+
+.expandableListHeader {
+    height: 20px;
+    background: #bfbfbf; /*fallback*/
+    background: literal('-moz-linear-gradient(top, #e3e3e2, #bfbfbf);');
+    background: literal('-webkit-linear-gradient(top, #e3e3e2, #bfbfbf);');
+    background: linear-gradient(top, #e3e3e2, #bfbfbf);
+}
+
+.glassPanel {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+.glassPanel.enabled {
+    display: block;
+}
+
+.filterBoxHolder {
+    padding: 10px;
+    border-bottom: 1px solid #C7C7C7;
+}
+
+.elementScrollPanel {
+    height: 100%;
+}
+
+.filterBoxHolder>input {
+    width: 100%;
+    \-moz-box-sizing: border-box;
+    \-ms-box-sizing: border-box;
+    \-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #9A9999;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2) inset;
+    white-space: nowrap;
+    color: #333333;
+    border-radius: 6px;
+    user-select: none;
+    \-webkit-user-select: none;
+    \-moz-user-select: -moz-none;
+}
+
+.filterBoxHolder>input:FOCUS {
+    user-select: text;
+    \-webkit-user-select: text;
+    \-moz-user-select: text;
+}
+
+.groupNameFilter {
+    opacity: 0.1;
+}
+
+.wizardContainer {
+    height: 316px;
+    position: relative;
+    display: block !important;
+}
+
+.wizard {
+    border: 1px solid #C7C7C7;
+    float: left;
+    height: 100%;
+    margin-right: 30px;
+    position: relative;
+    width: 268px;
+}

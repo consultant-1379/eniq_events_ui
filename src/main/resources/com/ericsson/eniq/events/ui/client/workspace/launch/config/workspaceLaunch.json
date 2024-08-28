@@ -1,0 +1,3933 @@
+{
+    "workspaceConfiguration": {
+        "xmlns": "http://www.ericsson.com/eniqevents",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xsi:schemaLocation": "http://www.ericsson.com/eniqevents WorkspaceConfig.xsd",
+        "dimensions": {
+            "dimension": [
+                {
+                    "id": "RadioNetwork3G",
+                    "name": "3G Radio Network",
+                    "selectorType": "NO_SEARCH",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB",
+                            "NETWORK_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4011268",
+                            "CXC4011278"
+                        ]
+                    }
+                },
+                {
+                    "id": "RadioNetwork4G",
+                    "name": "4G Radio Network",
+                    "selectorType": "NO_SEARCH",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB",
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4011279",
+                            "CXC4011280"
+                        ]
+                    }
+                },
+                {
+                    "id": "CoreNetworkPS",
+                    "name": "Core(PS) Network",
+                    "selectorType": "NO_SEARCH",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB",
+                            "NETWORK_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640"
+                        ]
+                    }
+                },
+                {
+                    "id": "CoreNetworkCS",
+                    "name": "Core(CS) Network",
+                    "selectorType": "NO_SEARCH",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB",
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4011158"
+                        ]
+                    }
+                },
+                {
+                    "id": "APN",
+                    "urlParam": "node",
+                    "liveloadUrl": "LIVELOAD/APN",
+                    "name": "APN",
+                    "selectorType":"SINGLE_SEARCH",
+                    "supportedAccessGroups":{
+                        "accessGroup":[
+                            "NETWORK_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640"
+                        ]
+                    }
+                },
+                {
+                    "id": "SGSN",
+                    "urlParam": "node",
+                    "liveloadUrl": "LIVELOAD/SGSN",
+                    "name": "SGSN-MME",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933"
+                        ]
+                    }
+                },
+                {
+                    "id": "BSC",
+                    "urlParam": "node",
+                    "liveloadUrl": "LIVELOAD/BSC",
+                    "name": "Controller",
+                    "selectorType": "SINGLE_SEARCH",
+                    "liveloadTechnologyIndicator": "[^,]+$",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4010923",
+                            "CXC4011268",
+                            "CXC4011278",
+                            "CXC4011279",
+                            "CXC4011280",
+                            "CXC4011640"
+                        ]
+                    }
+                },
+                {
+                    "id": "CELL",
+                    "urlParam": "node",
+                    "liveloadUrl": "LIVELOAD/CELL",
+                    "name": "Access Area",
+                    "selectorType": "SINGLE_SEARCH",
+                    "liveloadTechnologyIndicator": "[^,]+$",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640",
+                            "CXC4011268",
+                            "CXC4011278",
+                            "CXC4011279",
+                            "CXC4011280",
+                            "CXC4011640"
+                        ]
+                    }
+                },
+                {
+                    "id": "MSC",
+                    "urlParam": "node",
+                    "liveloadUrl": "LIVELOAD/MSC",
+                    "name": "MSC",
+                    "selectorType": "SINGLE_SEARCH" ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4011158"
+                        ]
+                    }
+                },
+                {
+                    "id": "TAC",
+                    "urlParam": "node",
+                    "liveloadUrl": "LIVELOAD/HANDSET_MAKES",
+                    "name": "Terminal",
+                    "selectorType": "PAIRED_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640",
+                            "CXC4011268",
+                            "CXC4011278",
+                            "CXC4011279",
+                            "CXC4011280"
+                        ]
+                    }
+                },
+                {
+                    "id": "IMSI",
+                    "urlParam": "imsi",
+                    "name": "IMSI",
+                    "selectorType": "TEXT_ENTRY",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640",
+                            "CXC4011268",
+                            "CXC4011278",
+                            "CXC4011279",
+                            "CXC4011280",
+                            "CXC4011158"
+                        ]
+                    }
+                },
+                {
+                    "id": "PTMSI",
+                    "urlParam": "ptmsi",
+                    "name": "PTMSI",
+                    "selectorType": "TEXT_ENTRY",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933"
+                        ]
+                    }
+                },
+                {
+                    "id": "MSISDN",
+                    "urlParam": "msisdn",
+                    "name": "MSISDN",
+                    "selectorType": "TEXT_ENTRY",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933"
+                        ]
+                    }
+                },
+                {
+                    "id": "TRAC",
+                    "urlParam": "node",
+                    "liveloadUrl": "LIVELOAD/TRAC",
+                    "name": "Tracking Area",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4011279"
+                        ]
+                    }
+                },
+                {
+                    "id": "APNGroup",
+                    "urlParam": "node",
+                    "groupType": "APN",
+                    "liveloadUrl": "NETWORK/GROUP/APN",
+                    "name": "APN Group",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640"
+                        ]
+                    }
+                },
+                {
+                    "id": "BSCGroup",
+                    "urlParam": "node",
+                    "groupType": "BSC",
+                    "liveloadUrl": "NETWORK/GROUP/RAT_VEND_HIER3",
+                    "name": "Controller Group",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4010923",
+                            "CXC4011268",
+                            "CXC4011278",
+                            "CXC4011279",
+                            "CXC4011280",
+                            "CXC4011640",
+                            "CXC4010504"
+
+                        ]
+                    }
+                },
+                {
+                    "id": "CELLGroup",
+                    "urlParam": "node",
+                    "groupType": "CELL",
+                    "liveloadUrl": "NETWORK/GROUP/RAT_VEND_HIER321",
+                    "name": "Access Area Group",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640",
+                            "CXC4011268",
+                            "CXC4011278",
+                            "CXC4011279",
+                            "CXC4011280",
+                            "CXC4011640",
+                            "CXC4010504"
+                        ]
+                    }
+                },
+                {
+                    "id": "SGSNGroup",
+                    "urlParam": "node",
+                    "groupType": "SGSN",
+                    "liveloadUrl": "NETWORK/GROUP/EVNTSRC",
+                    "name": "SGSN-MME Group",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933"
+                        ]
+                    }
+                },
+                {
+                    "id": "TRACGroup",
+                    "urlParam": "node",
+                    "groupType": "TRAC",
+                    "liveloadUrl": "NETWORK/GROUP/LTE_TRAC",
+                    "name": "Tracking Area Group",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    } ,
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4011279"
+                        ]
+                    }
+                },
+                {
+                    "id": "TACGroup",
+                    "urlParam": "node",
+                    "groupType": "TAC",
+                    "liveloadUrl": "NETWORK/GROUP/TAC",
+                    "name": "Terminal Group",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640",
+                            "CXC4011268",
+                            "CXC4011278",
+                            "CXC4011279",
+                            "CXC4011280"
+                        ]
+                    }
+                },
+                {
+                    "id": "MSCGroup",
+                    "urlParam": "node",
+                    "groupType": "MSC",
+                    "liveloadUrl": "NETWORK/GROUP/EVNTSRC_CS",
+                    "name": "MSC Group",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4011158"
+                        ]
+                    }
+                },
+                {
+                    "id": "IMSIGroup",
+                    "urlParam": "imsi",
+                    "groupType": "IMSI",
+                    "liveloadUrl": "NETWORK/GROUP/IMSI",
+                    "name": "IMSI Group",
+                    "selectorType": "SINGLE_SEARCH",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    },
+                    "supportedLicenses": {
+                        "licenses": [
+                            "CXC4010923",
+                            "CXC4010924",
+                            "CXC4010933",
+                            "CXC4011640",
+                            "CXC4011268",
+                            "CXC4011278",
+                            "CXC4011279",
+                            "CXC4011280",
+                            "CXC4011158",
+                            "CXC4010504"
+                        ]
+                    }
+                }
+            ]
+        },
+        "windows": {
+            "window": [
+                {
+                    "id": "NETWORK_RAN_LTE_CFA_QOS_QCI_SUMM",
+                    "windowTitle": "Call Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL",
+                            "TRAC"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_HFA_QOS_QCI_SUMM",
+                    "windowTitle": "Handover Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "QOS_STATISTICS",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "APN",
+                            "BSC",
+                            "CELL",
+                            "SGSN",
+                            "TAC"
+                        ]
+                    },
+                    "supportedAccessGroups":{
+                        "accessGroup":[
+                            "TERMINAL_TAB",
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "windowType": "CHART"
+                },
+                {
+                    "id": "WCDMA_UERTT",
+                    "windowTitle": "UE Trace",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI"
+                        ]
+                    },
+                    "excludedDimensions": {
+                        "dimensionId": [
+                            "IMSIGroup"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "WCDMA_NETWORK_CAUSE_CODE_ANALYSIS",
+                    "windowTitle": "Call Failure (3G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "WCDMA_HFA_NETWORK_CAUSE_CODE_ANALYSIS",
+                    "windowTitle": "Handover Failure (3G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_CAUSE_CODE_ANALYSIS_LTE_CFA",
+                    "windowTitle": "Call Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL",
+                            "TRAC"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_CAUSE_CODE_ANALYSIS_LTE_HFA",
+                    "windowTitle": "Handover Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_NETWORK_DRILL_CAUSE_CODE_ANALYSIS",
+                    "windowTitle": "Call Failure (2G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_CAUSE_CODE_ANALYSIS",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "APN",
+                            "BSC",
+                            "CELL",
+                            "SGSN"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_NETWORK_CAUSE_CODE_ANALYSIS",
+                    "windowTitle": "Core CS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL",
+                            "MSC"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_EVENT_ANALYSIS_WCDMA_CFA_CONFIG",
+                    "windowTitle": "Call Failure (3G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_EVENT_ANALYSIS_WCDMA_CFA",
+                    "windowTitle": "Call Failure (3G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_EVENT_ANALYSIS_WCDMA_HFA",
+                    "windowTitle": "Handover Failure (3G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_CFA_SUMMARY",
+                    "windowTitle": "Call Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL",
+                            "TRAC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_HFA",
+                    "windowTitle": "Handover Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_GSM_EVENT_ANALYSIS_SUMMARY",
+                    "windowTitle": "Call Failure (2G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_EVENT_ANALYSIS",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "APN",
+                            "BSC",
+                            "CELL",
+                            "SGSN"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_NETWORK_EVENT_ANALYSIS",
+                    "windowTitle": "Core CS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL",
+                            "MSC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "ROAMING_ANALYSIS_RAN_WCDMA_OPERATOR",
+                    "windowTitle": "Call Failure (3G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "ROAMING_ANALYSIS_RAN_WCDMA_COUNTRY",
+                    "windowTitle": "Call Failure (3G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "ROAMING_ANALYSIS_RAN_GSM_OPERATOR",
+                    "windowTitle": "Call Failure (2G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "ROAMING_ANALYSIS_RAN_GSM_COUNTRY",
+                    "windowTitle": "Call Failure (2G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "ROAMING_BY_OPERATOR_EVENTS",
+                    "windowTitle": "Event Volume",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_ROAMING_BY_OPERATOR",
+                    "windowTitle": "Event Volume",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "ROAMING_BY_OPERATOR_DATAVOL",
+                    "windowTitle": "Data Volume",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "ROAMING_BY_COUNTRY_EVENTS",
+                    "windowTitle": "Event Volume",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_ROAMING_BY_COUNTRY",
+                    "windowTitle": "Event Volume",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "ROAMING_BY_COUNTRY_DATAVOL",
+                    "windowTitle": "Data Volume",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "EVENT_VOLUME_LTE_CFA",
+                    "windowTitle": "Call Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL",
+                            "TRAC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "windowType": "CHART"
+                },
+                {
+                    "id": "EVENT_VOLUME_LTE_HFA",
+                    "windowTitle": "Handover Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "windowType": "CHART"
+                },
+                {
+                    "id": "EVENT_VOLUME",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "APN",
+                            "BSC",
+                            "CELL",
+                            "SGSN"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "windowType": "CHART"
+                },
+                {
+                    "id": "CS_EVENT_VOLUME",
+                    "windowTitle": "Core CS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "BSC",
+                            "CELL",
+                            "MSC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    },
+                    "windowType": "CHART"
+                },
+                {
+                    "id": "DATAVOL_ANALYSIS",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "APN",
+                            "TAC"
+
+                        ]
+                    },
+
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DATAVOL_ANALYSIS_SUBSCRIBER",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "MSISDN",
+                            "IMSI"
+                        ]
+                    },
+
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_EVENT_VOLUME_LTE_CFA",
+                    "windowTitle": "Call Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_EVENT_VOLUME_LTE_HFA",
+                    "windowTitle": "Handover Failure (4G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_EVENT_VOLUME",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G",
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_NETWORK_EVENT_VOLUME",
+                    "windowTitle": "Core CS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_DATAVOL_ANALYSIS",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_CALL_SETUP_FAILURES",
+                    "windowTitle": "Call Setup Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_CALL_DROPS",
+                    "windowTitle": "Call Drops",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_MULTIPLE_RECURRING_FAILURES",
+                    "windowTitle": "Recurring Failures",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_WCDMA_RAN_HANDOVER_SOHO",
+                    "windowTitle": "Soft Handover",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_WCDMA_RAN_HANDOVER_IRAT",
+                    "windowTitle": "IRAT Handover",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_WCDMA_RAN_HANDOVER_IFHO",
+                    "windowTitle": "Inter Frequency Handover",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_WCDMA_RAN_HANDOVER_HSDSCH",
+                    "windowTitle": "HSDSCH Handover",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_LTE_CALL_SETUP_FAILURE",
+                    "windowTitle": "Call Setup Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_LTE_CALL_DROP",
+                    "windowTitle": "Call Drops",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_LTE_RECUR_FAILURES",
+                    "windowTitle": "Recurring Failures",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_LTE_HANDOVER_EXEC_FAILURE",
+                    "windowTitle": "Handover Failure Execution",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_LTE_HANDOVER_PREP_FAILURE",
+                    "windowTitle": "Handover Failure Preparation",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_GSM_CALL_DROPS",
+                    "windowTitle": "Call Drops",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_GSM_DATA_CONN_FAILURE",
+                    "windowTitle": "Data Connection",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_RANKING_CORE",
+                    "windowTitle": "Subscriber",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_SUBSCRIBER_BLOCKED_RANKING",
+                    "windowTitle": "Blocked Voice Calls by Subscriber",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_SUBSCRIBER_DROPPED_RANKING",
+                    "windowTitle": "Dropped Voice Calls by Subscriber",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DATAVOLUME_RANKING_GGSN",
+                    "windowTitle": "GGSN",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DATAVOLUME_RANKING_APN",
+                    "windowTitle": "APN",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DATAVOLUME_RANKING_APN_GROUP",
+                    "windowTitle": "APN Group",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DATAVOLUME_RANKING_TAC",
+                    "windowTitle": "Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DATAVOLUME_RANKING_TERMINAL_GROUP",
+                    "windowTitle": "Terminal Group",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DATAVOLUME_RANKING_IMSI",
+                    "windowTitle": "IMSI",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DATAVOLUME_RANKING_IMSI_GROUP",
+                    "windowTitle": "IMSI Group",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_SUBSCRIBER_CAUSE_CODE_ANALYSIS",
+                    "windowTitle": "Data Connection",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_ENODEB_RANKING_RAN_LTE_CFA_CALL_SETUP",
+                    "windowTitle": "Call Setup Failure by Controller",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_ENODEB_RANKING_RAN_LTE_CFA_CALL_DROP",
+                    "windowTitle": "Call Drops by Controller",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_ENODEB_RANKING_RAN_LTE_HFA_EXEC_FAILURE",
+                    "windowTitle": "Handover Execution by Controller",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_ENODEB_RANKING_RAN_LTE_HFA_PREP_FAILURE",
+                    "windowTitle": "Handover Preparation by Controller",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_ENODEB_RANKING",
+                    "windowTitle": "eNodeB",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "RAN_CFA_CONFIG",
+                    "windowTitle": "Call Failure by Controller",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "RAN_HFA",
+                    "windowTitle": "Handover Failure by Controller",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_ANALYSIS_RAN_WCDMA_CALLFAILURE_MOST_DROPS",
+                    "windowTitle": "Call Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_ANALYSIS_RAN_WCDMA_HFA_SOHO",
+                    "windowTitle": "Handover Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_GROUP_ANALYSIS_RAN_WCDMA_CFA_CALL_DROPS",
+                    "windowTitle": "Call Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_GROUP_ANALYSIS_RAN_WCDMA_HFA_SOHO",
+                    "windowTitle": "Handover Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_CFA_BSC_RANKING",
+                    "windowTitle": "Call Failure by Controller",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_CONNECTION_FAILURE_BSC_RANKING",
+                    "windowTitle": "Connection Failure by Controller",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RNC_RANKING",
+                    "windowTitle": "RNC",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_RNC_BLOCKED_RANKING",
+                    "windowTitle": "Blocked Voice Calls by RNC",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_RNC_DROPPED_RANKING",
+                    "windowTitle": "Dropped Voice Calls by RNC",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_BSC_RANKING",
+                    "windowTitle": "BSC",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_BSC_BLOCKED_RANKING",
+                    "windowTitle": "Blocked Voice Calls by BSC",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_BSC_DROPPED_RANKING",
+                    "windowTitle": "Dropped Voice Calls by BSC",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_CELL_RANKING_RAN_WCDMA_CFA_CONFIG",
+                    "windowTitle": "Call Failure by Access Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_SOURCE_CELL_RANKING_RAN_WCDMA_HFA",
+                    "windowTitle": "Handover Failure by Source Cell",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_TARGET_CELL_RANKING_RAN_WCDMA_HFA",
+                    "windowTitle": "Handover Failure by Target Cell",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_CELL_RANKING_RAN_LTE_CFA_CALL_SETUP",
+                    "windowTitle": "Call Setup Failure by Access Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_CELL_RANKING_RAN_LTE_CFA_CALL_DROP",
+                    "windowTitle": "Call Drops by Access Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_HFA_SOURCE_CELL_RANKING_EXEC",
+                    "windowTitle": "Handover Execution by Source Cell",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_HFA_SOURCE_CELL_RANKING_PREP",
+                    "windowTitle": "Handover Preparation by Source Cell",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_HFA_TARGET_CELL_RANKING_EXEC",
+                    "windowTitle": "Handover Execution by Target Cell",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_HFA_TARGET_CELL_RANKING_PREP",
+                    "windowTitle": "Handover Preparation by Target Cell",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_CFA_CELL_RANKING",
+                    "windowTitle": "Call Failure by Access Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_CELL_RANKING",
+                    "windowTitle": "Access Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_NETWORK_CELL_BLOCKED_RANKING",
+                    "windowTitle": "Blocked Voice Calls by Access Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_NETWORK_CELL_DROPPED_RANKING",
+                    "windowTitle": "Dropped Voice Calls by Access Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_LONG_DURATION_CALLS_RANKING",
+                    "windowTitle": "Long Duration Calls by Subscriber",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_SHORT_DURATION_CALLS_RANKING",
+                    "windowTitle": "Short Duration Calls by Subscriber",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_MS_ORIGINATING_UNANSWERED_CALLS_RANKING",
+                    "windowTitle": "Originating Unanswered Calls by Subscriber",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_MS_TERMINATING_UNANSWERED_CALLS_RANKING",
+                    "windowTitle": "Terminating Unanswered Calls by Subscriber",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CC_CFA_CALL_SETUP",
+                    "windowTitle": "Call Setup Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CC_CFA_CALL_DROPS",
+                    "windowTitle": "Call Drops",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CC_WCDMA_HFA_HANDOVER_TYPE",
+                    "windowTitle": "Handover Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "DC_CFA_CALL_DROPS",
+                    "windowTitle": "Call Drops",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "LTE_CFA_CC_CALL_SETUP_RANKING",
+                    "windowTitle": "Call Setup Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "LTE_CFA_CC_CALL_DROPS_RANKING",
+                    "windowTitle": "Call Drops",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_HFA_CAUSE_CODE_RANKING_EXEC",
+                    "windowTitle": "Handover Execution",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_RAN_LTE_HFA_CAUSE_CODE_RANKING_PREP",
+                    "windowTitle": "Handover Preparation",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_CFA_CC_CALL_SETUP_RANKING",
+                    "windowTitle": "Call Setup Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_CFA_CC_CALL_DROPS_RANKING",
+                    "windowTitle": "Call Drops",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_CAUSE_CODE_RANKING",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_NETWORK_CAUSE_CODE_RANKING",
+                    "windowTitle": "Core CS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_TRACKING_AREA_RAN_LTE_RANKING_CALL_SETUP",
+                    "windowTitle": "Call Setup Failure by Tracking Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_TRACKING_AREA_RAN_LTE_RANKING_CALL_DROP",
+                    "windowTitle": "Call Drops by Tracking Area",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "NETWORK_APN_RANKING",
+                    "windowTitle": "APN",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_MSC_BLOCKED_RANKING",
+                    "windowTitle": "Blocked Voice Calls by MSC",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_MSC_DROPPED_RANKING",
+                    "windowTitle": "Dropped Voice Calls by MSC",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_RANKINGS",
+                    "windowTitle": "Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_TERMINAL_BLOCKED_RANKING",
+                    "windowTitle": "Blocked Voice Calls by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_TERMINAL_DROPPED_RANKING",
+                    "windowTitle": "Dropped Voice Calls by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkCS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_MOST_POPULAR_SUMMARY",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_GA_MOST_POPULAR_SUMMARY",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "CoreNetworkPS"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "NETWORK_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_EVENT_ANALYSIS_WCDMA_CFA_SUMMARY",
+                    "windowTitle": "Call Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "TAC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_EVENT_ANALYSIS_WCDMA_HFA_SUMMARY",
+                    "windowTitle": "Handover Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "TAC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_EVENT_ANALYSIS_LTE_CFA_SUMMARY",
+                    "windowTitle": "Call Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "TAC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_EVENT_ANALYSIS_LTE_HFA_SUMMARY",
+                    "windowTitle": "Handover Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "TAC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_TERMINAL_EVENT_ANALYSIS_CFA_SUMMARY",
+                    "windowTitle": "Call Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "TAC"
+                        ]
+                    },
+                    "excludedDimensions": {
+                        "dimensionId": [
+                            "TACGroup"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    }
+
+                },
+                {
+                    "id": "TERMINAL_EVENT_ANALYSIS",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "TAC"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_TERMINAL_EVENT_ANALYSIS",
+                    "windowTitle": "Core CS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "TAC"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "TERMINAL_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "RAN_WCDMA_TAC_CFA",
+                    "windowTitle": "Call Failure by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "RAN_WCDMA_TAC_HFA",
+                    "windowTitle": "Handover Failure by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork3G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_RANKING_RAN_LTE_CFA_CALL_SETUP",
+                    "windowTitle": "Call Setup Failure by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_RANKING_RAN_LTE_CFA_CALL_DROP",
+                    "windowTitle": "Call Drops by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_RANKING_RAN_LTE_HFA_TAC_EXEC",
+                    "windowTitle": "Handover Execution by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "TERMINAL_RANKING_RAN_LTE_HFA_TAC_PREP",
+                    "windowTitle": "Handover Preparation by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork4G"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "RAN_GSM_TAC_CFA",
+                    "windowTitle": "Call Failure by Terminal",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "RadioNetwork2G"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "RANKINGS_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUB_BI_FAILED_EVENTS_CFA",
+                    "windowTitle": "Call Failure (3G)",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUB_BI_FAILED_EVENTS",
+                    "windowTitle": "Core PS ",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI",
+                            "PTMSI",
+                            "MSISDN"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_SUB_BI_FAILED_EVENTS",
+                    "windowTitle": "Core CS ",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI",
+                            "MSISDN"
+                        ]
+                    },
+                    "windowType": "CHART",
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_CALL_FAILURE_EVENT_ANALYSIS",
+                    "windowTitle": "Call Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_HANDOVER_FAILURE_EVENT_ANALYSIS",
+                    "windowTitle": "Handover Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "3G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "RAN_LTE_CFA_SUMMARY",
+                    "windowTitle": "Call Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "RAN_LTE_HFA",
+                    "windowTitle": "Handover Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "GSM_SUBSCRIBER_SUMMARY_EVENT_ANALYSIS_BY",
+                    "windowTitle": "Call Failure",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "SUBSCRIBER_EVENT_ANALYSIS",
+                    "windowTitle": "Core PS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI",
+                            "PTMSI",
+                            "MSISDN"
+                        ]
+                    },
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                },
+                {
+                    "id": "CS_SUBSCRIBER_EVENT_ANALYSIS",
+                    "windowTitle": "Core CS",
+                    "supportedTechnologies": {
+                        "technology": [
+                            "2G",
+                            "3G",
+                            "4G"
+                        ]
+                    },
+                    "supportedDimensions": {
+                        "dimensionId": [
+                            "IMSI",
+                            "MSISDN"
+                        ]
+                    } ,
+                    "supportedAccessGroups": {
+                        "accessGroup": [
+                            "SUBSCRIBER_TAB"
+                        ]
+                    }
+                }
+            ]
+        },
+        "dimensionMenu": {
+            "menuItem": [
+                {
+                    "name": "Network",
+                    "dimensionIds": {
+                        "dimensionId": [
+                            "RadioNetwork2G",
+                            "RadioNetwork3G",
+                            "RadioNetwork4G",
+                            "CoreNetworkPS",
+                            "CoreNetworkCS"
+                        ]
+                    }
+                },
+                {
+                    "name": "Dimensions",
+                    "dimensionIds": {
+                        "dimensionId": [
+                            "APN",
+                            "BSC",
+                            "CELL",
+                            "SGSN",
+                            "MSC",
+                            "TAC",
+                            "IMSI",
+                            "PTMSI",
+                            "MSISDN",
+                            "TRAC"
+                        ]
+                    }
+                },
+                {
+                    "name": "Dimension Groups",
+                    "dimensionIds": {
+                        "dimensionId": [
+                            "APNGroup",
+                            "BSCGroup",
+                            "CELLGroup",
+                            "SGSNGroup",
+                            "MSCGroup",
+                            "TACGroup",
+                            "IMSIGroup",
+                            "TRACGroup"
+                        ]
+                    }
+                }
+            ]
+        },
+        "workspaceMenu": {
+            "workspaceSubMenu": [
+                {
+                    "name": "QOS",
+                    "windows": {
+                        "windowId": [
+                            "NETWORK_RAN_LTE_CFA_QOS_QCI_SUMM",
+                            "NETWORK_RAN_LTE_HFA_QOS_QCI_SUMM",
+                            "QOS_STATISTICS"
+                        ]
+                    }
+                },
+                {
+                    "name": "Cause Code Analysis",
+                    "windows": {
+                        "windowId": [
+                            "WCDMA_NETWORK_CAUSE_CODE_ANALYSIS",
+                            "WCDMA_HFA_NETWORK_CAUSE_CODE_ANALYSIS",
+                            "NETWORK_CAUSE_CODE_ANALYSIS_LTE_CFA",
+                            "NETWORK_CAUSE_CODE_ANALYSIS_LTE_HFA",
+                            "GSM_NETWORK_DRILL_CAUSE_CODE_ANALYSIS",
+                            "NETWORK_CAUSE_CODE_ANALYSIS",
+                            "GSM_SUBSCRIBER_CAUSE_CODE_ANALYSIS",
+                            "CS_NETWORK_CAUSE_CODE_ANALYSIS"
+                        ]
+                    }
+                },
+                {
+                    "name": "Network Event Analysis",
+                    "windows": {
+                        "windowId": [
+                            "NETWORK_EVENT_ANALYSIS_WCDMA_CFA_CONFIG",
+                            "NETWORK_EVENT_ANALYSIS_WCDMA_HFA",
+                            "NETWORK_RAN_LTE_CFA_SUMMARY",
+                            "NETWORK_RAN_LTE_HFA",
+                            "NETWORK_GSM_EVENT_ANALYSIS_SUMMARY",
+                            "NETWORK_EVENT_ANALYSIS",
+                            "CS_NETWORK_EVENT_ANALYSIS"
+                        ]
+                    }
+                },
+                {
+                    "name": "Roaming by Operator",
+                    "windows": {
+                        "windowId": [
+                            "ROAMING_ANALYSIS_RAN_WCDMA_OPERATOR",
+                            "ROAMING_ANALYSIS_RAN_GSM_OPERATOR",
+                            "ROAMING_BY_OPERATOR_EVENTS",
+                            "ROAMING_BY_OPERATOR_DATAVOL",
+                            "CS_ROAMING_BY_OPERATOR"
+                        ]
+                    }
+                },
+                {
+                    "name": "Roaming by Country",
+                    "windows": {
+                        "windowId": [
+                            "ROAMING_ANALYSIS_RAN_WCDMA_COUNTRY",
+                            "ROAMING_ANALYSIS_RAN_GSM_COUNTRY",
+                            "ROAMING_BY_COUNTRY_EVENTS",
+                            "ROAMING_BY_COUNTRY_DATAVOL",
+                            "CS_ROAMING_BY_COUNTRY"
+                        ]
+                    }
+                },
+                {
+                    "name": "Event Volume",
+                    "windows": {
+                        "windowId": [
+                            "EVENT_VOLUME_LTE_CFA",
+                            "EVENT_VOLUME_LTE_HFA",
+                            "EVENT_VOLUME",
+                            "CS_EVENT_VOLUME"
+                        ]
+                    }
+                },
+                {
+                    "name": "Network Event Volume",
+                    "windows": {
+                        "windowId": [
+                            "NETWORK_EVENT_VOLUME_LTE_CFA",
+                            "NETWORK_EVENT_VOLUME_LTE_HFA",
+                            "NETWORK_EVENT_VOLUME",
+                            "CS_NETWORK_EVENT_VOLUME"
+                        ]
+                    }
+                },
+                {
+                    "name": "Data Volume",
+                    "windows": {
+                        "windowId": [
+                            "DATAVOL_ANALYSIS",
+                            "DATAVOL_ANALYSIS_SUBSCRIBER"
+                        ]
+                    }
+                },
+                {
+                    "name": "Network Data Volume",
+                    "windows": {
+                        "windowId": [
+                            "NETWORK_DATAVOL_ANALYSIS"
+                        ]
+                    }
+                },
+                {
+                    "name": "3G Ranking",
+                    "windows": {
+                        "windowId": [
+                            "SUBSCRIBER_RANKING_CALL_SETUP_FAILURES",
+                            "SUBSCRIBER_RANKING_CALL_DROPS",
+                            "SUBSCRIBER_RANKING_MULTIPLE_RECURRING_FAILURES",
+                            "SUBSCRIBER_WCDMA_RAN_HANDOVER_SOHO",
+                            "SUBSCRIBER_WCDMA_RAN_HANDOVER_IRAT",
+                            "SUBSCRIBER_WCDMA_RAN_HANDOVER_IFHO",
+                            "SUBSCRIBER_WCDMA_RAN_HANDOVER_HSDSCH",
+                            "NETWORK_CELL_RANKING_RAN_WCDMA_CFA_CONFIG",
+                            "NETWORK_SOURCE_CELL_RANKING_RAN_WCDMA_HFA",
+                            "NETWORK_TARGET_CELL_RANKING_RAN_WCDMA_HFA",
+                            "RAN_CFA_CONFIG",
+                            "RAN_HFA",
+                            "RAN_WCDMA_TAC_CFA",
+                            "RAN_WCDMA_TAC_HFA"
+                        ]
+                    }
+                },
+                {
+                    "name": "4G Ranking",
+                    "windows": {
+                        "windowId": [
+                            "SUBSCRIBER_RANKING_LTE_CALL_SETUP_FAILURE",
+                            "SUBSCRIBER_RANKING_LTE_CALL_DROP",
+                            "SUBSCRIBER_RANKING_LTE_RECUR_FAILURES",
+                            "SUBSCRIBER_RANKING_LTE_HANDOVER_EXEC_FAILURE",
+                            "SUBSCRIBER_RANKING_LTE_HANDOVER_PREP_FAILURE",
+                            "NETWORK_ENODEB_RANKING_RAN_LTE_CFA_CALL_SETUP",
+                            "NETWORK_ENODEB_RANKING_RAN_LTE_CFA_CALL_DROP",
+                            "NETWORK_ENODEB_RANKING_RAN_LTE_HFA_EXEC_FAILURE",
+                            "NETWORK_ENODEB_RANKING_RAN_LTE_HFA_PREP_FAILURE",
+                            "NETWORK_CELL_RANKING_RAN_LTE_CFA_CALL_SETUP",
+                            "NETWORK_CELL_RANKING_RAN_LTE_CFA_CALL_DROP",
+                            "NETWORK_RAN_LTE_HFA_SOURCE_CELL_RANKING_EXEC",
+                            "NETWORK_RAN_LTE_HFA_SOURCE_CELL_RANKING_PREP",
+                            "NETWORK_RAN_LTE_HFA_TARGET_CELL_RANKING_EXEC",
+                            "NETWORK_RAN_LTE_HFA_TARGET_CELL_RANKING_PREP",
+                            "NETWORK_TRACKING_AREA_RAN_LTE_RANKING_CALL_SETUP",
+                            "NETWORK_TRACKING_AREA_RAN_LTE_RANKING_CALL_DROP",
+                            "TERMINAL_RANKING_RAN_LTE_CFA_CALL_SETUP",
+                            "TERMINAL_RANKING_RAN_LTE_CFA_CALL_DROP",
+                            "TERMINAL_RANKING_RAN_LTE_HFA_TAC_EXEC",
+                            "TERMINAL_RANKING_RAN_LTE_HFA_TAC_PREP"
+                        ]
+                    }
+                },
+                {
+                    "name": "2G Ranking",
+                    "windows": {
+                        "windowId": [
+                            "SUBSCRIBER_RANKING_GSM_CALL_DROPS",
+                            "SUBSCRIBER_RANKING_GSM_DATA_CONN_FAILURE",
+                            "GSM_CFA_BSC_RANKING",
+                            "GSM_CONNECTION_FAILURE_BSC_RANKING",
+                            "GSM_CFA_CELL_RANKING",
+                            "RAN_GSM_TAC_CFA"
+                        ]
+                    }
+                },
+                {
+                    "name": "Core Ranking",
+                    "windows": {
+                        "windowId": [
+                            "SUBSCRIBER_RANKING_CORE",
+                            "NETWORK_RNC_RANKING",
+                            "NETWORK_BSC_RANKING",
+                            "NETWORK_CELL_RANKING",
+                            "NETWORK_APN_RANKING",
+                            "TERMINAL_RANKINGS",
+                            "CS_MSC_BLOCKED_RANKING",
+                            "CS_MSC_DROPPED_RANKING",
+                            "CS_RNC_BLOCKED_RANKING",
+                            "CS_RNC_DROPPED_RANKING",
+                            "CS_BSC_BLOCKED_RANKING",
+                            "CS_BSC_DROPPED_RANKING",
+                            "CS_NETWORK_CELL_BLOCKED_RANKING",
+                            "CS_NETWORK_CELL_DROPPED_RANKING",
+                            "CS_TERMINAL_BLOCKED_RANKING",
+                            "CS_TERMINAL_DROPPED_RANKING",
+                            "CS_SUBSCRIBER_BLOCKED_RANKING",
+                            "CS_SUBSCRIBER_DROPPED_RANKING",
+                            "CS_LONG_DURATION_CALLS_RANKING",
+                            "CS_SHORT_DURATION_CALLS_RANKING",
+                            "CS_MS_ORIGINATING_UNANSWERED_CALLS_RANKING",
+                            "CS_MS_TERMINATING_UNANSWERED_CALLS_RANKING",
+                            "NETWORK_ENODEB_RANKING"
+                        ]
+                    }
+                },
+                {
+                    "name": "Data Volume Ranking",
+                    "windows": {
+                        "windowId": [
+                            "DATAVOLUME_RANKING_GGSN",
+                            "DATAVOLUME_RANKING_APN",
+                            "DATAVOLUME_RANKING_APN_GROUP",
+                            "DATAVOLUME_RANKING_SGSN",
+                            "DATAVOLUME_RANKING_SGSN_GROUP",
+                            "DATAVOLUME_RANKING_TAC",
+                            "DATAVOLUME_RANKING_TERMINAL_GROUP",
+                            "DATAVOLUME_RANKING_IMSI",
+                            "DATAVOLUME_RANKING_IMSI_GROUP"
+                        ]
+                    }
+                },
+                {
+                    "name": "3G Cause Code Ranking",
+                    "windows": {
+                        "windowId": [
+                            "CC_CFA_CALL_SETUP",
+                            "CC_CFA_CALL_DROPS",
+                            "CC_WCDMA_HFA_HANDOVER_TYPE"
+                        ]
+                    }
+                },
+                {
+                    "name": "3G Disconnection Code Ranking",
+                    "windows": {
+                        "windowId": [
+                            "DC_CFA_CALL_DROPS"
+                        ]
+                    }
+                },
+                {
+                    "name": "4G Cause Code Ranking",
+                    "windows": {
+                        "windowId": [
+                            "LTE_CFA_CC_CALL_SETUP_RANKING",
+                            "LTE_CFA_CC_CALL_DROPS_RANKING",
+                            "NETWORK_RAN_LTE_HFA_CAUSE_CODE_RANKING_EXEC",
+                            "NETWORK_RAN_LTE_HFA_CAUSE_CODE_RANKING_PREP"
+                        ]
+                    }
+                },
+                {
+                    "name": "2G Cause Code Ranking",
+                    "windows": {
+                        "windowId": [
+                            "GSM_CFA_CC_CALL_SETUP_RANKING",
+                            "GSM_CFA_CC_CALL_DROPS_RANKING"
+                        ]
+                    }
+                },
+                {
+                    "name": "Core Cause Code Ranking",
+                    "windows": {
+                        "windowId": [
+                            "NETWORK_CAUSE_CODE_RANKING",
+                            "CS_NETWORK_CAUSE_CODE_RANKING"
+                        ]
+                    }
+                },
+                {
+                    "name": "3G Terminal Analysis",
+                    "windows": {
+                        "windowId": [
+                            "TERMINAL_ANALYSIS_RAN_WCDMA_CALLFAILURE_MOST_DROPS",
+                            "TERMINAL_ANALYSIS_RAN_WCDMA_HFA_SOHO"
+                        ]
+                    }
+                },
+                {
+                    "name": "3G Terminal Group Analysis",
+                    "windows": {
+                        "windowId": [
+                            "TERMINAL_GROUP_ANALYSIS_RAN_WCDMA_CFA_CALL_DROPS",
+                            "TERMINAL_GROUP_ANALYSIS_RAN_WCDMA_HFA_SOHO"
+                        ]
+                    }
+                },
+                {
+                    "name": "3G Terminal Event Analysis",
+                    "windows": {
+                        "windowId": [
+                            "TERMINAL_EVENT_ANALYSIS_WCDMA_CFA_SUMMARY",
+                            "TERMINAL_EVENT_ANALYSIS_WCDMA_HFA_SUMMARY"
+                        ]
+                    }
+                },
+                {
+                    "name": "Core Terminal Analysis",
+                    "windows": {
+                        "windowId": [
+                            "TERMINAL_MOST_POPULAR_SUMMARY"
+                        ]
+                    }
+                },
+                {
+                    "name": "Core Terminal Group Analysis",
+                    "windows": {
+                        "windowId": [
+                            "TERMINAL_GA_MOST_POPULAR_SUMMARY"
+                        ]
+                    }
+                },
+                {
+                    "name": "Core Terminal Event Analysis",
+                    "windows": {
+                        "windowId": [
+                            "TERMINAL_EVENT_ANALYSIS",
+                            "CS_TERMINAL_EVENT_ANALYSIS"
+                        ]
+                    }
+                },
+                {
+                    "name": "4G Terminal Event Analysis",
+                    "windows": {
+                        "windowId": [
+                            "TERMINAL_EVENT_ANALYSIS_LTE_CFA_SUMMARY",
+                            "TERMINAL_EVENT_ANALYSIS_LTE_HFA_SUMMARY"
+                        ]
+                    }
+                },
+                {
+                    "name": "2G Terminal Event Analysis",
+                    "windows": {
+                        "windowId": [
+                            "GSM_TERMINAL_EVENT_ANALYSIS_CFA_SUMMARY"
+                        ]
+                    }
+                },
+                {
+                    "name": "Subscriber Overview",
+                    "windows": {
+                        "windowId": [
+                            "SUB_BI_FAILED_EVENTS_CFA",
+                            "SUB_BI_FAILED_EVENTS",
+                            "CS_SUB_BI_FAILED_EVENTS"
+                        ]
+                    }
+                },
+                {
+                    "name": "3G Event Trace",
+                    "windows": {
+                        "windowId": [
+                            "SUBSCRIBER_CALL_FAILURE_EVENT_ANALYSIS",
+                            "SUBSCRIBER_HANDOVER_FAILURE_EVENT_ANALYSIS",
+                            "WCDMA_UERTT"
+                        ]
+                    }
+                },
+                {
+                    "name": "4G Event Trace",
+                    "windows": {
+                        "windowId": [
+                            "RAN_LTE_CFA_SUMMARY",
+                            "RAN_LTE_HFA"
+                        ]
+                    }
+                },
+                {
+                    "name": "2G Event Trace",
+                    "windows": {
+                        "windowId": [
+                            "GSM_SUBSCRIBER_SUMMARY_EVENT_ANALYSIS_BY"
+                        ]
+                    }
+                },
+                {
+                    "name": "Core Event Trace",
+                    "windows": {
+                        "windowId": [
+                            "SUBSCRIBER_EVENT_ANALYSIS",
+                            "CS_SUBSCRIBER_EVENT_ANALYSIS"
+                        ]
+                    }
+                },
+                {
+                    "name": "KPI",
+                    "windows": {
+                        "windowId": [
+                            "KPI",
+                            "KPI_CS"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

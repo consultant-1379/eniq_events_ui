@@ -1,0 +1,123 @@
+ <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:d="urn:import:com.ericsson.eniq.events.widgets.client.dropdown"
+			 xmlns:e="urn:import:com.ericsson.eniq.events.ui.client.groupmanagement.component"
+             xmlns:g="urn:import:com.google.gwt.user.client.ui"
+             xmlns:tb="urn:import:com.ericsson.eniq.events.widgets.client.textbox"
+        >
+    <ui:with field='resourceBundle'
+             type='com.ericsson.eniq.events.ui.client.groupmanagement.resources.GroupMgmtResourceBundle'/>
+    <ui:style>
+        .wrapper {
+            height: 100%;
+            width: 100%;
+        }
+
+        .body {
+            width: 100%;
+            height: 100%;
+        }
+
+        .body>div {
+            display: table;
+            table-layout: fixed;
+        }
+
+        .liveloadWrapper {
+            width: 270px;
+            height: 100%;
+            float: left;
+        }
+
+        .body>div>div {
+            display: table-row;
+        }
+
+        .newGroupWrapper {
+            width: 485px;
+            height: 100%;
+            float: left;
+            margin-left: 30px;
+        }
+
+        .groupNameBox {
+            width: 240px;
+            float: right;
+            margin-right: 247px;
+        }
+
+        .wizardHolder {
+            float: left;
+            height: 100%;
+            display: block !important;
+        }
+
+		.groupSelectionItem {
+			width: 160px;
+			font-size: 11px;
+		}
+
+		.simpleContainer {
+			width: 100%;
+		}
+    </ui:style>
+    <g:HTMLPanel styleName="{style.wrapper}">
+        <g:HTMLPanel styleName="{resourceBundle.style.container}">
+            <div>
+				<g:HorizontalPanel styleName="{style.simpleContainer}">
+					<d:DropDown defaultText=" - Select Group type - "
+								addStyleNames="{style.groupSelectionItem}"
+								ui:field="groupTypeDropDown">
+					</d:DropDown>
+					<tb:ExtendedTextBox ui:field="groupName"
+										styleName="{resourceBundle.style.textBox}" addStyleNames="{style.groupNameBox}"
+										defaultText="untitled group 1">
+					</tb:ExtendedTextBox>
+				</g:HorizontalPanel>
+				<div class="{resourceBundle.style.separator}"></div>
+			</div>
+            <g:HTMLPanel styleName="{style.body}">
+                <g:HTMLPanel styleName="{style.wizardHolder}" ui:field="wizardHolder"></g:HTMLPanel>
+                <g:HTMLPanel styleName="{style.liveloadWrapper}">
+                    <div>
+                        <div class="{resourceBundle.style.expandableListContainer}">
+                            <e:FilterPanel ui:field="liveloadGroupFilterPanel"/>
+                        </div>
+                    </div>
+                    <div>
+                        <g:HorizontalPanel styleName="{resourceBundle.style.buttonHolder}">
+                            <g:cell horizontalAlignment="ALIGN_LEFT">
+                                <g:Button ui:field="addButton" text="Add" enabled="false"></g:Button>
+                            </g:cell>
+                        </g:HorizontalPanel>
+                    </div>
+                </g:HTMLPanel>
+                <g:HTMLPanel styleName="{style.newGroupWrapper}">
+                    <div>
+                        <div class="{resourceBundle.style.expandableListContainer}">
+                            <e:FilterPanel ui:field="currentGroupFilterPanel"
+                                           header="Current Group"/>
+                        </div>
+                    </div>
+                    <div>
+                        <g:HorizontalPanel styleName="{resourceBundle.style.buttonHolder}">
+                            <g:cell horizontalAlignment="ALIGN_LEFT">
+                                <g:Button ui:field="deleteButton" text="Delete Selected"
+                                          enabled="false"></g:Button>
+                            </g:cell>
+                            <g:cell horizontalAlignment="ALIGN_RIGHT">
+                                <g:Button ui:field="saveAsButton" text="Save As"></g:Button>
+                            </g:cell>
+                            <g:cell horizontalAlignment="ALIGN_RIGHT">
+                                <g:Button ui:field="saveButton" text="Save" enabled="false"></g:Button>
+                            </g:cell>
+                            <g:cell horizontalAlignment="ALIGN_RIGHT">
+                                <g:Button ui:field="cancelButton" text="Cancel"></g:Button>
+                            </g:cell>
+                        </g:HorizontalPanel>
+                    </div>
+                </g:HTMLPanel>
+            </g:HTMLPanel>
+        </g:HTMLPanel>
+    </g:HTMLPanel>
+</ui:UiBinder> 

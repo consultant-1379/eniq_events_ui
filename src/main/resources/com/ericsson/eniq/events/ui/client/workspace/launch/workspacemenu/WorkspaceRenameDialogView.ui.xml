@@ -1,0 +1,76 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			 xmlns:tb="urn:import:com.ericsson.eniq.events.widgets.client.textbox">
+    <ui:style>
+        .wrapper {
+			height: 100%;
+			position: relative;
+			padding: 10px;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			-webkit-user-select: none;
+			-moz-user-select: -moz-none;
+			user-select: none;
+		}
+
+		.inner {
+			height: 100%;
+			position: relative;
+		}
+
+		.workspaceNameBox {
+			width: 100%;
+		}
+
+		.renameWorkspaceNameBoxHolder {
+			padding: 0 10px;
+		}
+
+		.updateButtonHolder {
+			position: absolute;
+			bottom: 0px;
+		}
+
+		.buttonHolder {
+			padding-top: 10px;
+			width: 100%;
+			height: 30px;
+			table-layout: fixed;
+		}
+
+		.errorLabel {
+			display: block;
+			text-align: center;
+			color: red;
+			font-family: Arial, serif;
+			font-size: 12px;
+			font-weight: bold;
+			position: absolute;
+			width: 100%;
+		}
+
+		table.buttonHolder>tbody>tr>td>button {
+			width: 111px;
+		}
+    </ui:style>
+    <g:HTMLPanel styleName="{style.wrapper}">
+        <div class="{style.inner}">
+            <div class="{style.renameWorkspaceNameBoxHolder}">
+                <tb:ExtendedTextBox ui:field="renameWorkspaceName" addStyleNames="{style.workspaceNameBox}"/>
+				<g:Label ui:field="errorLabel" styleName="{style.errorLabel}"/>
+            </div>
+			<g:HorizontalPanel styleName="{style.buttonHolder}"
+							   addStyleNames="{style.updateButtonHolder}">
+                <g:cell horizontalAlignment="ALIGN_CENTER">
+                    <g:Button ui:field="updateButton" text="Update" enabled="false"/>
+                </g:cell>
+                <g:cell horizontalAlignment="ALIGN_CENTER">
+                    <g:Button ui:field="cancelButton" text="Cancel"/>
+                </g:cell>
+            </g:HorizontalPanel>
+        </div>
+    </g:HTMLPanel>
+</ui:UiBinder>

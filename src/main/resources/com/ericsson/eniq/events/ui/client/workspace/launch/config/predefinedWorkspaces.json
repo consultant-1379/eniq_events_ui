@@ -1,0 +1,84 @@
+{
+    "workspaces": [
+        {
+            "id": "PD_ROAMING_BY_OPERATOR",
+            "name": "Packet Roaming by Operator",
+            "workspaceType": "Predefined",
+            "windowPositioning": "tile",
+            "windows": [
+                {
+                    "dimensionId": "CoreNetworkPS",
+                    "pairedSelectionUrl": "",
+                    "primarySelection": "",
+                    "secondarySelection": "",
+                    "timePeriod": "1 hour",
+                    "windowId": "ROAMING_BY_OPERATOR_EVENTS"
+                },
+                {
+                    "dimensionId": "CoreNetworkPS",
+                    "pairedSelectionUrl": "",
+                    "primarySelection": "",
+                    "secondarySelection": "",
+                    "timePeriod": "1 hour",
+                    "windowId": "ROAMING_BY_OPERATOR_DATAVOL"
+                },
+                {
+                    "dimensionId": "CoreNetworkPS",
+                    "pairedSelectionUrl": "",
+                    "primarySelection": "",
+                    "secondarySelection": "",
+                    "timePeriod": "6 hours",
+                    "windowId": "ROAMING_BY_OPERATOR_DATAVOL"
+                },
+                {
+                    "dimensionId": "CoreNetworkPS",
+                    "pairedSelectionUrl": "",
+                    "primarySelection": "",
+                    "secondarySelection": "",
+                    "timePeriod": "6 hours",
+                    "windowId": "ROAMING_BY_OPERATOR_EVENTS"
+                }
+            ]
+        },
+        {
+            "id": "PD_ROAMING_BY_COUNTRY",
+            "name": "Packet Roaming by Country",
+            "workspaceType": "Predefined",
+            "windowPositioning": "tile",
+            "windows": [
+                {
+                    "dimensionId": "CoreNetworkPS",
+                    "pairedSelectionUrl": "",
+                    "primarySelection": "",
+                    "secondarySelection": "",
+                    "timePeriod": "1 hour",
+                    "windowId": "ROAMING_BY_COUNTRY_EVENTS"
+                },
+                {
+                    "dimensionId": "CoreNetworkPS",
+                    "pairedSelectionUrl": "",
+                    "primarySelection": "",
+                    "secondarySelection": "",
+                    "timePeriod": "1 hour",
+                    "windowId": "ROAMING_BY_COUNTRY_DATAVOL"
+                },
+                {
+                    "dimensionId": "CoreNetworkPS",
+                    "pairedSelectionUrl": "",
+                    "primarySelection": "",
+                    "secondarySelection": "",
+                    "timePeriod": "6 hours",
+                    "windowId": "ROAMING_BY_COUNTRY_DATAVOL"
+                },
+                {
+                    "dimensionId": "CoreNetworkPS",
+                    "pairedSelectionUrl": "",
+                    "primarySelection": "",
+                    "secondarySelection": "",
+                    "timePeriod": "6 hours",
+                    "windowId": "ROAMING_BY_COUNTRY_EVENTS"
+                }
+            ]
+        }
+    ]
+}

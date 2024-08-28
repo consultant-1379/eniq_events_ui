@@ -1,0 +1,15 @@
+.noticeMe{
+    border: 2px solid rgba(0,102,179, 1); /*#0066b3;*/
+}
+
+/*This setting is the total time taken to animate the fading of the border around the window
+  If the animation time is changed in EniqWindow.java, then it must also be changed here.
+  The total animation time is 4050ms*/
+.noticeMeAnimation{
+    border: 0px solid rgba(0,102,179, 0); /*#0066b3;*/
+    -webkit-transition: border 50ms ease-out 4s;
+    -moz-transition: border 50ms ease-out 4s;
+    -o-transition: border 50ms ease-out 4s;
+    transition: border 50ms ease-out 4s;
+}
+

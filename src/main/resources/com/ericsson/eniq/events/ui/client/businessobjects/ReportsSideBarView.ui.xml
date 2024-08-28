@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+		xmlns:g='urn:import:com.google.gwt.user.client.ui'
+		xmlns:e="urn:import:com.ericsson.eniq.events.widgets.client.tree"
+		xmlns:b="urn:import:com.ericsson.eniq.events.ui.client.businessobjects">
+    <ui:with field='resourceBundle' type='com.ericsson.eniq.events.ui.client.businessobjects.resources.ReportsSideBarResourceBundle' />
+    <ui:with field='treeResourceBundle' type='com.ericsson.eniq.events.widgets.client.tree.resources.TreeResourceBundle' />
+
+      <g:FlowPanel styleName="{resourceBundle.style.container}" ui:field="container">
+      	<g:Image styleName="{resourceBundle.style.boIcon}" resource="{resourceBundle.boIcon}"></g:Image>
+    	<g:Label styleName="{resourceBundle.style.header}" ui:field="header" text="ENIQ Reports Launch Bar"></g:Label>
+        <g:ScrollPanel styleName="{resourceBundle.style.inner}">
+     		<e:ETree  ui:field="reportsTree" treeResources = "{treeResourceBundle}"></e:ETree>
+        </g:ScrollPanel>
+        <b:BoResizerPanel styleName="{resourceBundle.style.resizer}" ui:field="resizerPanel" title="Drag to resize it.">
+        	<g:Image styleName="{resourceBundle.style.handle}" ui:field="handle"></g:Image>
+        </b:BoResizerPanel>
+        <g:SimplePanel styleName="{resourceBundle.style.footer}"></g:SimplePanel>
+    </g:FlowPanel>
+
+</ui:UiBinder>

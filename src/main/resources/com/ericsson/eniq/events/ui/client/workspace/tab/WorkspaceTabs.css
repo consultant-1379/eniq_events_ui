@@ -1,0 +1,102 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2012 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ * @author ealeerm - Alexey Ermykin
+ * @since 06/2012
+ */
+@external .plusTab, .plusTab:hover, plusTabDisabled;
+.plusTab {
+	width: 32px;
+}
+
+.plusTab:hover {
+	margin-top: 0px;
+	width: 32px;
+}
+
+@sprite .plusTabDisabled .plusTabIcon {
+    gwt-image: 'addWorkspaceInactive';
+    height: 16px;
+    width: 16px;
+    border: 0;
+    margin-left: 3px;
+    margin-top: 3px;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    opacity: 0.4;
+}
+
+@sprite .plusTabIcon {
+    gwt-image: 'addWorkspaceActive';
+	height: 16px;
+	width: 16px;
+	border: 0;
+	margin-left: 3px;
+	margin-top: 3px;
+	position: absolute;
+	top: 3px;
+	left: 5px;
+    cursor: pointer;
+}
+
+@sprite .plusTabIcon:hover {
+	gwt-image: 'addWorkspaceActiveHover';
+}
+
+@sprite .plusTabDisabled .plusTabIcon:hover {
+    gwt-image: 'addWorkspaceInactive';
+}
+
+@sprite .closeTabButton {
+	gwt-image: 'closeActiveTab';
+	height: 16px;
+	width: 16px;
+	border: 0;
+	position: absolute;
+	right: 5px;
+	top: 6px;
+	cursor: pointer;
+    opacity: 0.3;
+}
+
+.x-tab-strip-active .closeTabButton{
+     opacity: 1.0;
+ }
+
+@external .optionsMenu;
+.x-tab-strip-active .optionsMenu{
+    opacity: 1.0;
+    }
+
+@sprite .closeTabButton:hover {
+	gwt-image: 'closeActiveTabHover';
+	height: 16px;
+	width: 16px;
+	border: 0;
+    right: 5px;
+    top: 6px;
+    opacity: 1.0;
+}
+
+@sprite .dirtyWorkspaceIndicator {
+    gwt-image: 'unsavedWorkspaceInactive';
+    display : block;
+    position: absolute;
+    top: 9px;
+    right: 23px;
+}
+
+@external .x-tab-strip-active;
+@sprite .x-tab-strip-active .dirtyWorkspaceIndicator {
+    gwt-image: 'unsavedWorkspaceActive';
+    display : block;
+    position: absolute;
+    top: 9px;
+    right: 23px;
+}
+
+.hideDirtyWorkspace .dirtyWorkspaceIndicator {
+    display: none;
+}

@@ -1,0 +1,43 @@
+/*
+* -----------------------------------------------------------------------
+*     Copyright (C) 2012 LM Ericsson Limited.  All rights reserved.
+* -----------------------------------------------------------------------
+* @author ealeerm - Alexey Ermykin
+* @since 06/2012
+*/
+@def BORDER_RADIUS 8px;
+
+@external .optionsMenu, .open;
+
+@sprite .optionsMenu {
+    gwt-image: 'arrowActive';
+    background-position: top right;
+    background-color: transparent;
+    color: #202f58;
+    cursor: pointer;
+    height: 12px;
+    /*margin: 0 12px;*/
+    padding: 3px 7px 2px;
+    width: 1px;
+	outline: none;
+    opacity: 0.3;
+}
+
+.optionsMenu.open, .optionsMenu:hover {
+    z-index: 5102;
+}
+
+.optionsMenu, .optionsMenu.open, .optionsMenu:hover {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.optionsMenu.open {
+    gwt-image: 'arrowActiveHover';
+}
+
+.optionsMenu:hover {
+    gwt-image: 'arrowActiveHover';
+    opacity: 1.0;
+}

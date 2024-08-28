@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- ######################################
+	Author: eendmcm
+	since:  Apr 2010
+       ######################################-->
+<project name="EniqEventsUI" default="copy.war" basedir=".">
+    <description>
+        Base Ant Build File for ENIQ Events UI
+    </description>
+
+
+    <property file="project_root.properties"/>
+    <property file="${project.root}/eniq_events/build/continuous_integration_build/build.properties"/>
+
+    <!-- #######################################
+    Section: Properties
+    ######################################-->
+    <property name="ui.module.root" value="${eniq_events_vob.root}/eniq_events_ui"/>
+    <property name="ui.war.root" value="${ui.module.root}/web/war"/>
+    <property name="module_3pp" value="${eniq_events_vob.root}/jars"/>
+    <property name="srcpack.dir" value="${ui.module.root}/src/main/java"/>
+    <property name="resourcepack.dir" value="${ui.module.root}/src/main/resources"/>
+    <property name="gwt.dir" value="${module_3pp}/gwt"/>
+    <property name="gxtjars.dir" value="${module_3pp}/gxt"/>
+    <property name="gin.dir" value="${module_3pp}/gin"/>
+    <property name="gwtpresenter.dir" value="${module_3pp}/gwt_presenter/"/>
+    <property name="apache.http.dir" value="${module_3pp}/apache_http/"/>
+    <property name="gxtwar.dir" value="${ui.war.root}/gxt"/>
+    <property name="resources.dir" value="${ui.war.root}/resources"/>
+    <property name="login.dir" value="${ui.war.root}/login"/>
+    <property name="rootcss.file" value="${ui.war.root}/EniqEventsUI.css"/>
+    <property name="rootjsp.file" value="${ui.war.root}/EniqEventsUI.jsp"/>
+    <property name="csvexport.file" value="${ui.war.root}/EniqEventsCSV.jsp"/>
+    <property name="help.set.dir" value="${ui.war.root}/help"/>
+
+    <property name="webxml.file" value="${ui.war.root}/WEB-INF/web.xml"/>
+    <property name="sunwebxml.file" value="${ui.war.root}/WEB-INF/sun-web.xml"/>
+    <property name="zip.file" value="EniqEventsUI.zip"/>
+    <property name="war.file" value="EniqEventsUI.war"/>
+
+    <property name="pack.version" value="5-0-0"/>
+    <property name="pack.name" value="EniqEventsUI"/>
+    <property name="install.dir" value="${ui.module.root}/install"/>
+
+    <!--====================================================================
+         Required by ENIQ platform installer
+     =====================================================================-->
+    <!-- Properties -->
+    <condition property="osfamily-unix">
+        <os family="unix"/>
+    </condition>
+    <condition property="osfamily-windows">
+        <os family="windows"/>
+    </condition>
+
+
+    <target name="precompile"/>
+    <target name="compile" depends="create.war"/>
+    <target name="postcompile"/>
+
+    <!-- #######################################
+       Section: Clean files/folders
+     ######################################-->
+    <target name="clean.all" description="clean all generated artifacts">
+        <delete quiet="true" includeemptydirs="true">
+            <fileset dir="war">
+                <include name="**/*.*"/>
+            </fileset>
+        </delete>
+        <delete quiet="true" includeemptydirs="true">
+            <fileset dir="web">
+                <include name="**/*.*"/>
+            </fileset>
+        </delete>
+        <delete file="${war.file}"/>
+        <delete file="${zip.file}"/>
+    </target>
+
+
+    <!--====================================================================
+        Build war file
+    =====================================================================-->
+    <target name="create.war" description="Create the ENIQ Events Services war file."
+            depends="package-unix,package-windows">
+    </target>
+
+    <target name="package" depends="package-unix,package-windows"
+            description="mvn package"/>
+    <target name="package-unix" if="osfamily-unix">
+        <exec executable="/vobs/ossrc_3pp/freeware/apache_maven/apache-maven-3.0/bin/mvn" failonerror="true">
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-DskipTests=true"/>
+            <arg value="-Dmaven.clean.failOnError=false"/>
+            <arg value="-P"/>
+            <arg value="noPMD,eniq_events_release"/>
+            <arg value="-U"/>
+            <arg value="-f"/>
+            <arg value="/vobs/eniq_events/eniq_events_ui/pom.xml"/>
+        </exec>
+    </target>
+    <target name="package-windows" if="osfamily-windows">
+        <exec executable="cmd" failonerror="true">
+            <arg value="/c"/>
+            <arg value="mvn.bat"/>
+            <arg value="clean"/>
+            <arg value="package"/>
+            <arg value="-DskipTests=true"/>
+            <arg value="-Dmaven.clean.failOnError=false"/>
+            <arg value="-P"/>
+            <arg value="noPMD,eniq_events_release"/>
+            <arg value="-f"/>
+            <arg value="../pom.xml"/>
+            <arg value="-U"/>
+        </exec>
+    </target>
+
+    <!--====================================================================
+          Copy war to install dir
+     =====================================================================-->
+    <target name="copy.war" depends="create.war">
+    </target>
+
+</project>

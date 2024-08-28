@@ -1,0 +1,147 @@
+.ewf-light-Window-Caption {
+	margin-top: 10px;
+	width: 100%;
+	font-family: Arial;
+	font-weight: bold;
+	color: purple;
+	font-size: 13px;
+}
+
+.ewf-light-Window-Content {
+	overflow: auto;
+	color: #000;
+	font-family: Arial;
+	background: #FAFAFA;
+}
+
+/********************************** EProgressBar ***********************************/
+.EProgressBar-shell {
+	textAlign: left;
+	position: relative;
+	height: 11px;
+	width: 321px;
+}
+
+.EProgressBar-bar {
+	background: url(light/EProgressBar/loading_bar_foreground.png) no-repeat;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 2;
+}
+
+.EProgressBar-shadow {
+	background: url(light/EProgressBar/loading_bar_background.png) no-repeat;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+.EProgressBar-text {
+	padding-left: 5px;
+	font-size: 11px;
+	position: absolute;
+	top: 13px;
+	left: 0px
+}
+
+/**********************EIconButton************************/
+.EIconButton {
+	
+}
+
+/* * Button in a normal state*/
+.EIconButton-login_submit,.EIconButton-login_submit-up{
+    border: 1px solid #9a9999;
+    border-radius: 5px;
+    cursor: pointer;
+
+	background-color: #ECECEC;
+	background-image: url('light/icons/arrow_right.png');
+	width: 20px;
+	height: 20px;
+
+	background: url('light/icons/arrow_right.png'),-webkit-gradient(linear, left top, left bottom, from(#ECECEC),to(#A3A3A2) );
+	background: url('light/icons/arrow_right.png'),-moz-linear-gradient(top, #ECECEC, #A3A3A2);
+	background-repeat: no-repeat;
+}
+
+/* *When you click the button */
+.EIconButton-login_submit-down, .EIconButton-login_submit-down-hovering {
+    background-color: #B2B2B1;
+    background: url('light/icons/arrow_right.png'), -webkit-gradient(linear, left top, left bottom, from(#E6E6E6), to(#E4E4E6));
+    background: url('light/icons/arrow_right.png'), -moz-linear-gradient(top, #E6E6E6, #E4E4E6);
+    background-repeat: no-repeat;
+}
+
+/* *When you click the button */
+.EIconButton-login_submit-up-hovering {
+    background-color: #B2B2B1;
+    background: url('light/icons/arrow_right.png'), -webkit-gradient(linear, left top, left bottom, from(#FDFDFD), to(#B2B2B1));
+    background: url('light/icons/arrow_right.png'), -moz-linear-gradient(top, #FDFDFD, #B2B2B1);
+
+    background-repeat: no-repeat;
+}
+
+.EIconButton-login_submit-up-disabled, .EIconButton-login_submit-down-disabled {
+    opacity: 0.35;
+}
+
+/*  Gets rid of the dashed line that appears on buttons in firefox when they are selected */
+.EIconButton-login_submit::-moz-focus-inner {
+	border: 0;
+}
+
+.EIconButton-login_submit:focus {
+	/* Gets rid of browsers predefined selected state */
+	outline: none;
+	-moz-outline: none;
+    border: 1px solid #00a9d4;
+    -moz-box-shadow: inset 0 0 0 1px #00a9d4;
+    -webkit-box-shadow: inset 0 0 0 1px #00a9d4;
+    box-shadow: inset 0 0 0 1px #00a9d4;
+}
+
+.EIconButton-window_manage {
+	height: 27px;
+	width: 44px;
+	background: transparent
+		url(light/ETopToolBar/window_manage_icon_normal.png) no-repeat;
+}
+
+.EIconButton-window_manage:hover {
+	height: 27px;
+	width: 44px;
+	background: transparent
+		url(light/ETopToolBar/window_manage_icon_hover.png) no-repeat;
+}
+
+.EIconButton-window_manage:active {
+	height: 27px;
+	width: 44px;
+	background: transparent
+		url(light/ETopToolBar/window_manage_icon_depressed.png) no-repeat;
+}
+
+.EIconButton-slide_arrow_left {
+	height: 25px;
+	width: 7px;
+	rotation: 180deg;
+	position: left;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	filter: progid :       DXImageTransform.Microsoft.BasicImage (     
+		 rotation =  
+		    2 );
+	background: transparent url(light/ETopToolBar/arrow_slide.png) no-repeat;
+}
+
+.EIconButton-slide_arrow_right {
+	height: 25px;
+	width: 7px;
+	background: transparent url(light/ETopToolBar/arrow_slide.png) no-repeat;
+}

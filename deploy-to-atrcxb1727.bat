@@ -1,0 +1,1 @@
+mvn package cargo:redeploy -Peniq_events_release -Dglassfish.hostname=atrcxb1727

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="QRank6 rules">
+
+    <description>
+        This ruleset contains QRank level 6 related rules as detailed in 7/0363-FCP 103 5028 Uen Rev. PD1
+    </description>
+
+    <!-- In GWT it's ok to instantiate in loop -->
+    <!--<rule ref="rulesets/optimizations.xml/AvoidInstantiatingObjectsInLoops" >
+            <priority>4</priority>
+        </rule>-->
+
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <priority>4</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/ConstructorCallsOverridableMethod">
+        <priority>4</priority>
+    </rule>
+
+</ruleset>
+

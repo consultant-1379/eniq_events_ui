@@ -1,0 +1,51 @@
+<project name="eniqui" basedir="." default="install">
+
+		<taskdef name="INIGet" classname="com.distocraft.dc5000.install.ant.INIGet"/>
+		<taskdef name="trivialxml" classname="com.ericsson.eniq.install.tools.TrivialXMLTask"/>
+		<taskdef name="forcedelete" classname="com.distocraft.dc5000.install.ant.ForceDeleteFile"/>
+
+		<property name="dir.exists" value="false"/>
+		<property name="rootDir" value="${dc.glassfish.dir}"/>
+		<property name="asinstalldir" value="${rootDir}/glassfishv3/glassfish"/>
+
+		<property name="app.module.war" value="EniqEventsUI.war"/>
+		<property name="module.name" value="EniqEventsUI"/>
+
+		<property name="domain.name" value="domain1"/>
+		<property name="eniq.events.app.backup.dir" value="${asinstalldir}/domains/${domain.name}/eniq-events-applications-backup"/>
+		<property name="glassfish.autodeploy.dir" value="${asinstalldir}/domains/${domain.name}/autodeploy"/>
+
+	
+	<!-- Check that the /eniq/glassfish/glassfishv3/glassfish directory exists -->
+	<target name="dir-check">
+			<echo message="Checking that the ${asinstalldir} exists..." />
+			<available file="${asinstalldir}" property="isFileAvail"></available>
+			<fail unless="isFileAvail" message="The ${asinstalldir} directory does not exist!"></fail>
+    </target>
+	
+		 
+	<!-- Make a backup directory of the war so it can be put back in case of failure -->
+	<target name="backup-installed-wars" depends="" description="Make a copy of the already installed wars">
+		<mkdir dir="${eniq.events.app.backup.dir}"/>
+		<echo message="Making a backup of the ${module.name}..." />
+		<echo message="The current war file ${app.module.war} will be copied to the ${eniq.events.app.backup.dir} as a backup of the current installed version"/>
+	    <copy overwrite="true" failonerror="false" file="${glassfish.autodeploy.dir}/${app.module.war}" toFile="${eniq.events.app.backup.dir}/${app.module.war}"/>
+		<forcedelete file="${glassfish.autodeploy.dir}/${app.module.war}*"/>
+	</target>
+
+	<!-- Deploy UI war by copying the war to the glassfish autodeploy directory -->
+	<target name="deploy-war" depends="dir-check" description="Deploy the application by copying the war to the glassfish autodeploy directory">
+		    <echo message="Deploying ${module.name} to the glassfish autodeploy directory..." />
+		    <copy overwrite="true" failonerror="true" file="${dc.installer.dir}/tmp/install/${app.module.war}" toFile="${glassfish.autodeploy.dir}/${app.module.war}"/>
+  	</target>
+
+	
+	<target name="install">
+		<antcall target="deploy-war"/>
+	</target>
+	
+	<target name="update" depends="backup-installed-wars">
+		<antcall target="deploy-war"/>
+	</target>
+	
+</project>

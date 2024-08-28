@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ENIQ Events UI Continuous Integration Build" default="ci.build">
+	<description>
+		Base Ant Build File for ENIQ Events - UI
+	</description>
+
+	<!-- seem to need to import these here, even though its imported in the build.xml file below -->
+	<property name="base.continuous.integration.build.files" value="../../../build/continuous_integration_build/"/>
+	<property file="${base.continuous.integration.build.files}/project_root.properties"/>
+	<property file="${base.continuous.integration.build.files}/build.properties"/>
+	<property file="${base.continuous.integration.build.files}/preferences.properties"/>
+
+	<import file="${base.continuous.integration.build.files}/base_continuous_integration_build.xml"/>
+
+	<property name="module.name" value="eniq_events_ui"/>
+
+	<path id="module.specific.classpath">
+		<fileset dir="${module_3pp}/gin" includes="*.jar"/>
+		<fileset dir="${module_3pp}/gwt" includes="*.jar"/>
+		<fileset dir="${module_3pp}/gwt_presenter" includes="*.jar"/>		
+		<fileset dir="${module_3pp}/gxt" includes="*.jar"/>
+		<fileset dir="${module_3pp}/apache_http" includes="*.jar"/>
+		<fileset dir="${eniq_common_utils}" includes="**/*.jar" />
+		<fileset dir="${eniq_repository}" includes="**/*.jar" />
+		<path refid="spring.libs"/>
+	</path>
+
+	<property name="module.specific.test.code.folder.name" value="java"/>
+
+	<target name="ci.build" depends="clean.all">
+		<antcall target="ci.build.for.module"/>
+	</target>
+
+	<target name="coverage.report.only">
+		<antcall target="coverage.report.only.for.module"/>
+	</target>
+
+	<target name="pmd.html">
+		<antcall target="pmd.html.for.module"/>
+	</target>
+
+	<target name="pmd.for.this.module" depends="set.up.properties">
+		<antcall target="pmd"/>
+	</target>
+
+</project>

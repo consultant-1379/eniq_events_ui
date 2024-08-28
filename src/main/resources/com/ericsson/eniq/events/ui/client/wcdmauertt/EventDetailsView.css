@@ -1,0 +1,41 @@
+@external summaryGrid, oddRow, evenRow;
+
+.summaryGrid{
+    background-color:white;
+    table-layout: fixed;
+    width:100%;
+}
+
+.summaryGridRow{
+    vertical-align: top;
+}
+
+.gridLabel{
+    padding-left: 2px;
+    font-family: arial;
+    font-size:12px;
+    color:#333333;
+    padding-top:1px;
+    padding-bottom:1px;
+    user-select:text;
+    -webkit-user-select:text;
+    -moz-user-select:text;
+}
+
+.oddRow{
+    background: #f2f5f8;
+}
+
+.tabText {
+    text-indent: 20px;
+}
+
+.windowTitle {
+    color: #333333;
+    display: block;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0;
+    text-align: center;
+}

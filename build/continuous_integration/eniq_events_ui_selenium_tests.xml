@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ENIQ Events UI Selenium Test Build and Run" default="run.selenium.tests">
+	<description>
+		Ant Build File to compile and run selenium test cases for ENIQ Events UI
+	</description>
+	
+	<property name="base.continuous.integration.build.files" value="../../../build/continuous_integration_build/"/>
+	<property file="../project_root.properties"/>
+	<property file="${base.continuous.integration.build.files}/build.properties"/>	
+	<property name="selenium.tests.code" value="${eniq_events_vob.root}/eniq_events_ui/src/test/selenium"/>
+	<property name="selenium.resources.dir" value="${selenium.tests.code}/resources"/>
+	<property name="selenium.build.output" value="${eniq_events_vob.root}/eniq_events_ui/build/continuous_integration/seleniumBuildOutput/"/>
+	<property name="selenium.tests.classes" value="${selenium.build.output}/classes"/>
+	<property name="eniq.events.ui.3pp.jars" value="${eniq_events_vob.root}/jars/"/>
+	<property name="selenium.tests.report" value="${selenium.build.output}/junit_report"/>
+	<property name="selenium.tests.html.report" value="${selenium.build.output}/junit_html"/>
+	<property name="selenium.jars" value="${eniq.events.ui.3pp.jars}/selenium/"/>
+	<property name="ant_contrib.jar" value="${ossrc_3pp}/freeware/ant_contrib"/>
+		
+	<path id="selenium.tests.classpath">
+		<fileset dir="${eniq.events.ui.3pp.jars}/apache_commons/" includes="*.jar"/>
+		<fileset dir="${eniq.events.ui.3pp.jars}/jconn/" includes="*.jar"/>
+		<fileset dir="${eniq.events.ui.3pp.jars}/json/" includes="*.jar"/>
+		<fileset dir="${eniq.events.ui.3pp.jars}/junit/" includes="*.jar"/>
+		<fileset dir="${eniq.events.ui.3pp.jars}/spring" includes="*.jar"/>
+		<fileset dir="${selenium.jars}/selenium-java-client-driver/" includes="*.jar"/>
+	</path>
+	
+	<target name="clean.classes">
+		<delete dir="${selenium.tests.classes}"/>
+	</target>
+	
+	<target	name="compile.selenium.tests" description="Compile the selenium test cases">
+	     <mkdir dir="${selenium.tests.classes}"/>       	 
+	     <javac srcdir="${selenium.tests.code}" destdir="${selenium.tests.classes}"
+	            failonerror="true"
+	            debug="true"
+	            optimize="off" 
+	            deprecation="off"
+	     		classpathRef="selenium.tests.classpath">	       
+	     </javac>
+	     <antcall target="copy.selenium.resource.files"/>
+	</target>
+	
+	<target name="copy.selenium.resource.files">
+		<copy todir="${selenium.tests.classes}">
+			<fileset dir="${selenium.resources.dir}">
+			  	<include name="*.xml"/>
+		  		<include name="*.properties"/>				
+			</fileset>
+		</copy>		
+	</target>
+	
+	<target name="run.selenium.testcases" depends="compile.selenium.tests" description="run the compiled selenium tests">				
+		<mkdir dir="${selenium.tests.report}"/>
+		<junit printsummary="on" fork="yes" maxmemory="1024m" forkmode="perBatch" failureproperty="junit_test_failed"	haltonfailure="no">
+			<sysproperty key="eniq.events.vob.root" value="${eniq_events_vob.root}"/>
+			<batchtest todir="${selenium.tests.report}">
+			   <fileset	dir="${selenium.tests.classes}">
+				   <include	name="**/AllTestSuite.class" />
+				   <exclude	name="**/*$*.class"	/>			   
+				</fileset>
+			</batchtest>
+			<classpath location="${selenium.tests.classes}" />			
+			<classpath refid="selenium.tests.classpath" />
+			<formatter type="xml" />
+		</junit>		
+		<!-- not failing if junit tests fail - hudson will deal with this-->
+		<echo message="outputting xml test reports to ${selenium.tests.report}"/>
+	</target>	
+	 
+	<target name="selenium.tests.html.report.only" description="output the junit report for the selenium tests in html">
+		<mkdir dir="${selenium.tests.html.report}"/>		
+		<junitreport todir="${selenium.tests.html.report}">
+			 <fileset dir="${selenium.tests.report}">
+			    <include name="TEST-*.xml"/>
+			  </fileset>				 
+			  <report format="frames" todir="${selenium.tests.html.report}"/>
+		</junitreport>
+	</target>
+	
+	<taskdef resource="net/sf/antcontrib/antlib.xml">
+        <classpath>
+            <fileset dir="${ant_contrib.jar}" includes="**/*.jar"/>
+        </classpath>
+    </taskdef>
+
+	
+	<target name="start.selenium.server">
+		<forget>
+			<!-- using the fork property set to true below - but if you're running this script in windows, you will need to set the fork to false, otherwise
+			the selenium server isn't stopped/killed after the test run, and subsequent test runs will fail -->
+			<java jar="${selenium.jars}/selenium-server/selenium-server-standalone-2.0a4.jar"
+		 		fork="true"/>
+		 </forget>
+	</target>
+	
+	<target name="run.selenium.tests">
+		<antcall target="clean.classes"/>
+		<antcall target="compile.selenium.tests"/>
+		<antcall target="start.selenium.server"/>
+		<antcall target="run.selenium.testcases"/>
+	</target>
+	
+	<target name="create.selenium.test.jar" depends="clean.classes,compile.selenium.tests">
+		<jar jarfile="selenium_events_tests.jar" basedir="${selenium.tests.classes}">
+			<manifest>
+				<attribute name="Main-Class" value="com.ericsson.eniq.events.ui.selenium.tests.SeleniumTestSuite"/>
+				<attribute name="Class-Path" value=". selenium_events_tests_lib/commons-codec-1.4.jar selenium_events_tests_lib/commons-net-3.0.1.jar selenium_events_tests_lib/poi-3.7-20101029.jar selenium_events_tests_lib/jconn3.jar selenium_events_tests_lib/org-json-parser.jar selenium_events_tests_lib/junit-4.8.1.jar selenium_events_tests_lib/selenium-java-2.0a4.jar selenium_events_tests_lib/org.springframework.aop-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.asm-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.aspects-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.beans-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.context.support-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.context-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.core-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.expression-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.instrument.tomcat-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.instrument-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.jdbc-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.jms-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.orm-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.oxm-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.test-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.transaction-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.web.portlet-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.web.servlet-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.web.struts-3.0.2.RELEASE.jar selenium_events_tests_lib/org.springframework.web-3.0.2.RELEASE.jar selenium_events_tests_lib/com.springsource.org.apache.commons.logging-1.1.1.jar selenium_events_tests_lib/com.springsource.org.hibernate-3.3.1.GA.jar"/>
+			</manifest>
+		</jar>
+		<delete dir="selenium_events_tests_lib"/>
+		<mkdir dir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/apache_commons/commons-codec-1.4.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/apache_commons/commons-net-3.0.1.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/apache_commons/poi-3.7-20101029.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/jconn/jconn3.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/json/org-json-parser.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/junit/junit-4.8.1.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${selenium.jars}/selenium-java-client-driver/selenium-java-2.0a4.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.aop-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.asm-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.aspects-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.beans-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.context.support-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.context-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.core-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.expression-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.instrument.tomcat-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.instrument-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.jdbc-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.jms-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.orm-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.oxm-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.test-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.transaction-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.web.portlet-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.web.servlet-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.web.struts-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/org.springframework.web-3.0.2.RELEASE.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/com.springsource.org.apache.commons.logging-1.1.1.jar" todir="selenium_events_tests_lib"/>
+		<copy file="${eniq.events.ui.3pp.jars}/spring/com.springsource.org.hibernate-3.3.1.GA.jar" todir="selenium_events_tests_lib"/>
+	</target>
+</project>

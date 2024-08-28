@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="QRank5 rules">
+
+    <description>
+        This ruleset contains QRank level 5 related rules as detailed in 7/0363-FCP 103 5028 Uen Rev. PD2
+    </description>
+
+    <rule ref="rulesets/strings.xml/StringInstantiation">
+        <priority>3</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/FinalFieldCouldBeStatic">
+        <priority>3</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/InstantiationToGetClass">
+        <priority>3</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/ImmutableField">
+        <priority>3</priority>
+    </rule>
+
+    <rule ref="rulesets/design.xml/UseSingleton">
+        <priority>3</priority>
+    </rule>
+
+</ruleset>
+

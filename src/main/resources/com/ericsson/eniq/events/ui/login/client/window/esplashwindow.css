@@ -1,0 +1,19 @@
+
+.ewf-light-Window-TopBar-splash {
+	height: 43px;
+	cursor: auto;	
+}
+
+.collapsiblePanel {
+	width: 100%;
+	height: 0;
+	\-moz-transition: literal("height 500ms linear 50ms");
+	\-webkit-transition: literal("height 500ms linear 50ms");
+	transition: literal("height 500ms linear 50ms ");
+	overflow: hidden;
+	position: relative;
+}
+
+.collapsiblePanel-expanded {
+	height: 82px;
+}

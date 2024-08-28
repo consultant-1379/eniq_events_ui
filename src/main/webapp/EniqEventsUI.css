@@ -1,0 +1,1382 @@
+/* Set branding images to body element */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f7f7f7;
+    background-image: url("./resources/images/whiteTheme/top_gradient.png"), url("./resources/images/whiteTheme/ENIQ_text.png");
+    background-position: left top, left bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 3px, 160px 107px;
+}
+body.eniq {
+    background-image: url("./resources/images/whiteTheme/top_gradient.png"), url("./resources/images/whiteTheme/ENIQ_text.png") !important;
+    background-position: left top, left bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 3px, 160px 107px;
+}
+
+div {
+    outline: none !important;
+}
+
+/*Ericsson logo top left with background & bottom border*/
+.floatLogo {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 57px !important;
+    height: 35px !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+    z-index: 1;
+}
+
+.fakeTabBackground {
+    position: absolute;
+    width: 100%;
+    top: 3px;
+    height: 30px;
+    background-image: url(./resources/images/whiteTheme/tabs/Tab_Support_Bar.png) !important;
+}
+
+.x-tab-panel-header-plain .x-tab-scroller-left, .x-tab-scroller-right {
+    top: -2px;
+    height: 32px !important;
+    z-index: 50;
+}
+
+.x-tab-scroller-left {
+    background-image:url(./resources/images/whiteTheme/tabs/scroll-left.png) !important;
+    border-bottom: none;
+    opacity: 0.8;
+}
+
+.x-tab-scroller-right {
+    background-image:url(./resources/images/whiteTheme/tabs/scroll-right.png) !important;
+    border-bottom: none;
+    margin-right: 8px;
+    opacity: 0.8;
+}
+
+.x-tab-scrolling .x-tab-strip-wrap {
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+/*Tabs and  and Tab support Bar*/
+.x-tab-panel-header-plain .x-tab-strip-top {
+    border: 0;
+}
+
+.x-tab-strip-spacer, .xtb-sep {
+    display: none !important;
+}
+
+.x-tab-panel-body, ul.x-tab-strip-top {
+    border-width: 0;
+    background-color: transparent;
+}
+
+.x-border-layout-ct {
+    background-color: transparent;
+}
+
+.x-tab-left, .x-tab-right {
+    height: 25px !important;
+    _width: 10px !important;
+}
+
+.x-tab-right {
+    margin-bottom: -1px !important;
+    margin-left: -4px !important;
+    margin-right: -6px !important;
+}
+
+.x-tab-strip-inner {
+    _width: 65px !important;
+    height: 25px !important;
+}
+
+.x-tab-strip span.x-tab-strip-text {
+    font-family: "Arial";
+    font-size: 11px;
+    font-weight: 400;
+    padding: 7px 15px 15px 12px !important;
+}
+
+.x-tab-strip-active span.x-tab-strip-text {
+    font-weight: 400 !important;
+}
+
+.x-tab-strip-top .x-tab-left {
+    margin-left: 14px;
+}
+
+.x-tab-strip-top .x-tab-strip-inner {
+    margin-right: 14px;
+}
+
+.x-tab-panel-header-plain .x-tab-strip-spacer {
+    border: none !important;
+    border-width: thin;
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+}
+
+.x-tab-panel-header {
+    margin-top: 3px;
+    padding-top: 4px !important;
+    margin-right: 160px;
+    margin-left: 57px; /* LG CHANGE was margin*/
+    height: 26px !important;
+    width: auto !important;
+}
+
+.headerPnl {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    z-index: 1;
+}
+
+ul.x-tab-strip li {
+    z-index: 10 !important;
+    margin-left: -1px !important;
+}
+
+.x-component.x-tab-strip-active {
+    z-index: 11 !important;
+}
+
+.x-grid3-scroller, .x-btn, .button, div#selenium_tag_PropertiesWindow .x-window-bwrap .x-window-ml .x-window-mr .x-window-mc .x-window-body .x-panel-mc .x-toolbar-right {
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.button{
+    margin: 10px 5px 19px !important;
+}
+
+div#DASHBOARD_TAB .x-toolbar-right {
+    padding-right: 8px;
+}
+
+div#DASHBOARD_TAB .x-toolbar-left {
+    padding-left: 2px;
+}
+
+/***Main body with Content Panel
+
+/**Styles to added images to background - globes/text logo/icon - added in onResize() injavascript when html page loads*/
+/**widths as percentage allows resize not to effect aspect*/
+.Desktop_Globes {
+    position: fixed;
+    right: 5px;
+    top: 40px;
+    width: 30%;
+    height: auto;
+}
+
+.Desktop_ELogo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 4%;
+    height: auto;
+}
+
+.Desktop_Product {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 10%;
+    height: auto;
+}
+
+/***Windows*/
+.x-window-header-text {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+
+    font-size: 11px;
+    font-family: "Arial";
+}
+
+.x-toolbar {
+    border: none;
+    padding: 1px;
+    height: 37px;
+    width: auto !important;
+    /* !important is needed, as it is set by inline style in element and should be overwritten */
+    border-bottom: 1px solid #dddadd;
+    background-color: #ffffff;
+}
+
+.x-toolbar-ct {
+    margin-top: 8px;
+}
+
+.dialogBox {
+    z-index: 20000; /*must be above 10000  */
+}
+
+.dialogBox, .x-window, .x-info {
+    border-radius: 10px;
+    padding: 1px;
+}
+
+.x-info .x-toolbar-ct, .x-window .x-toolbar-ct {
+    margin-top: 0;
+}
+
+.x-window .x-toolbar {
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 26px;
+}
+
+.x-resizable-handle-east, .x-resizable-handle-west {
+    width: 1px;
+}
+
+.x-resizable-handle-north, .x-resizable-handle-south {
+    height: 1px;
+}
+
+.x-window-ml, .x-window-tl, .x-window-bl {
+    padding-left: 0px;
+}
+
+.x-window-mr, .x-window-tr, .x-window-br {
+    padding-right: 0px;
+}
+
+.x-panel-mr, .x-panel-tr, .x-panel-br {
+    padding-right: 6px;
+}
+
+.x-panel-tl, .x-panel-ml, .x-panel-bl {
+    padding-left: 6px;
+}
+
+.x-info-ml, .x-info-mr, .x-info-tr, .x-info-tl, .x-info-br, .x-info-bl {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.x-info-mc .x-info-body {
+    border: 0px !important;
+    border-style: none !important;
+    font-family: arial !important;
+    font-size: 11px !important;
+    font-style: normal !important;
+}
+
+.x-info-header {
+    font-family: arial !important;
+    font-size: 11px !important;
+    font-style: normal !important;
+}
+
+.x-window-tl .x-window-header {
+    padding-top: 3px;
+}
+
+.x-info-tc, .x-window-tc {
+    height: 20px;
+    padding: 3px 10px 1px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.x-window-bbar .x-toolbar-ct, .x-window-bbar .x-small-editor .x-toolbar .x-toolbar-layout-ct, .x-window-mc .x-window-tbar, .x-window-mc .x-window-bbar {
+    border: none !important;
+}
+
+.x-window-bbar .x-toolbar {
+    border-radius: 0px 0px 10px 10px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding: 3px 8px 3px;
+    height: 21px !important;
+}
+
+.x-window-bc .x-window-footer {
+    font-size: 0;
+    line-height: 0;
+    padding-bottom: 1px !important;
+}
+
+/*Paging on toolbar at bottom*/
+.my-paging-display {
+    font-weight: bold !important;
+    font-size: large;
+    margin-right: 5px !important;
+}
+
+.my-paging-text {
+    font-weight: bolder !important;
+    font-size: smaller;
+}
+
+.gwt-TextBox {
+    text-align: center !important;
+    font-weight: bold !important;
+}
+
+/* Icons for window corners,Icons on the launch menu, and drop down buttons */
+/*.packetSwitch {
+    background-image: url(./resources/images/packetSwitch.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.circuitSwitch {
+    background: url(./resources/images/circuitSwitch.png) no-repeat 0px 3px;
+}*/
+
+
+.roamingCountry {
+    background-image: url(./resources/images/globe-16x16.png);
+    background-repeat: no-repeat;
+}
+
+/*.roamingOperator {
+    background-image: url(./resources/images/Econ_blue_1.png);
+    background-repeat: no-repeat;
+}*/
+
+
+.analysisEvent {
+    background-image: url(./resources/images/Analysis_event.png);
+    background-repeat: no-repeat;
+}
+
+.analysisTerminalGroup {
+    background-image: url(./resources/images/Analysis_terminalgroup.png);
+    background-repeat: no-repeat;
+}
+
+.analysisTerminal {
+    background-image: url(./resources/images/Analysis_terminal.png);
+    background-repeat: no-repeat;
+}
+
+.analysisRoaming {
+    background-image: url(./resources/images/Analysis_roaming.png);
+    background-repeat: no-repeat;
+}
+
+.recurringError {
+    background-image: url(./resources/images/recur_err_event.png);
+    background-repeat: no-repeat;
+}
+
+.kpiButton {
+    background-image: url(./resources/images/Kpi.png);
+    background-repeat: no-repeat;
+}
+
+.ccButton {
+    background-image: url(./resources/images/cause_code.png);
+    background-repeat: no-repeat;
+}
+
+.sccButton {
+    background-image: url(./resources/images/subcause_code.png);
+    background-repeat: no-repeat;
+}
+
+/*chnage window icons here*/
+
+.rankingBSC {
+    background-image: url(./resources/images/BSC.png);
+    background-repeat: no-repeat;
+}
+
+.rankingMSC {
+    background-image: url(./resources/images/MSC.png);
+    background-repeat: no-repeat;
+}
+
+.rankingCell {
+    background-image: url(./resources/images/Ranking_cell.png);
+    background-repeat: no-repeat;
+}
+
+.rankingSubscriber {
+    background-image: url(./resources/images/Ranking_subscriber.png);
+    background-repeat: no-repeat;
+}
+
+.rankingTerminal {
+    background-image: url(./resources/images/Ranking_terminal.png);
+    background-repeat: no-repeat;
+}
+
+.rankingAPN {
+    background-image: url(./resources/images/Ranking_apn.png);
+    background-repeat: no-repeat;
+}
+
+.rankingCauseCode {
+    background-image: url(./resources/images/Ranking_causecode.png);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+.analysisCausecode {
+    background-image: url(./resources/images/Analysis_causecode.png);
+    background-repeat: no-repeat;
+}
+
+.eventVolume {
+    background-image: url(./resources/images/Event_volume.png);
+    background-repeat: no-repeat;
+}
+
+.excTacBtnIcon {
+    background-image: url(./resources/images/Icon_viewlog_16.png);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+.imsiIcon {
+    background-image: url(./resources/images/User_m_blue.png);
+    background-repeat: no-repeat;
+}
+
+.msisdnIcon {
+    background-image: url(./resources/images/msisdnIcon.png);
+    background-repeat: no-repeat;
+}
+
+.subscriberOverView {
+    background-image: url(./resources/images/subs_overview.png);
+    background-repeat: no-repeat;
+}
+
+.ptIMSI {
+    background-image: url(./resources/images/User_m_blue_PTIMSI.png);
+    background-repeat: no-repeat;
+}
+
+.analysisQOS {
+    background-image: url(./resources/images/QOS_statistics.png);
+    background-repeat: no-repeat;
+}
+
+.dashboard {
+    background-image: url(./resources/images/dashboardIcon.png);
+    background-repeat: no-repeat;
+}
+
+.x-form-field-wrap {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+}
+
+.lastRefreshLabel {
+    margin-right: 15px;
+    font-weight: bold !important;
+    font-size: large;
+    margin-left: 20px !important;
+}
+
+.network_node {
+    background-image: url(./resources/images/Network_node.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.network_node_wcdma {
+    background-image: url(./resources/images/Network_node_wcdma.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.network_node_lte {
+    background-image: url(./resources/images/Network_node_lte.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.APN_node {
+    background-image: url(./resources/images/APN.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.BSC_node {
+    background-image: url(./resources/images/BSC.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.CELL_node {
+    background-image: url(./resources/images/CELL.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.SGSN_node {
+    background-image: url(./resources/images/SGSN.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.MSC_node {
+    background-image: url(./resources/images/MSC.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.TRAC_node {
+    background-image: url(./resources/images/TRAC.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.mobile_phone {
+    background-image: url(./resources/images/Mobilephone.png);
+    background-repeat: no-repeat;
+}
+
+.group_sgsn {
+    background-image: url(./resources/images/group_sgsn.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.group_imsi {
+    background-image: url(./resources/images/group_imsi.png);
+    background-repeat: no-repeat;
+}
+
+.group_cell {
+    background-image: url(./resources/images/group_cell.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.group_trac {
+    background-image: url(./resources/images/group_trac.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.group_bsc {
+    background-image: url(./resources/images/group_bsc.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.group_terminal {
+    background-image: url(./resources/images/group_terminal.png);
+    background-repeat: no-repeat;
+}
+
+.group_apn {
+    background-image: url(./resources/images/group_apn.png);
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+}
+
+.group_msc {
+    background-image: url(./resources/images/group_msc.png);
+    background-repeat: no-repeat;
+}
+
+.group_plmn {
+    background-image: url(./resources/images/group_plmn.png);
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toolbar_toggleToGridbtn {
+    background-image: url(./resources/images/Grid.png);
+
+
+
+
+
+
+
+
+}
+
+.toolbar_toggleToGraphbtn {
+    background-image: url(./resources/images/Bar_Chart.png);
+}
+
+
+
+
+
+.x-form-clear-trigger {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.x-panel-bwrap {
+    height: 100%;
+}
+
+.gwt-DialogBox {
+    width: 400px;
+}
+
+.dialogVPanel {
+    margin: 5px;
+}
+
+#dateTimeFilterMenu .x-menu-list-item-indent {
+    padding-left: 4px !important;
+}
+
+/*Time Dialog - to allow changing of time constraints*/
+.rdTimeRange>label, .rdDateTimeRange>label {
+    margin-left: 5px;
+}
+
+.timeParameterCombo {
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.timeParameterCombo>tbody>tr>td:first-child {
+    width: 38px;
+}
+
+.timeParameterCombo>tbody>tr>td:first-child+td {
+    width: 170px;
+}
+
+.date-picker-btn {
+    cursor: pointer !important;
+    background: transparent !important;
+}
+
+.date-picker-btn td {
+    padding: 0;
+}
+
+.date-picker-btn button {
+    border: none;
+}
+
+.ext-webkit .date-picker-btn .x-btn-text {
+    font-size: 14px !important;
+}
+
+.ext-webkit .date-picker-item .x-form-field-wrap .x-form-trigger {
+    margin-left: -3px !important;
+}
+
+.date-picker-fbar .x-toolbar-ct {
+    padding-right: 21px;
+}
+
+.date-picker-item {
+    background-image: none !important;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.date-time-field .date-picker-btn {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    top: 0;
+}
+
+.date-picker-ctl {
+    width: 198px !important;
+}
+
+/*Grid Styles*/
+.gridToolbar {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.x-grid3-row {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.x-grid3-header {
+    border: hidden;
+}
+
+.x-grid3-hd-inner {
+    font-weight: 500;
+}
+
+.gridCellLinkCodeRed, .gridCellLinkCodeAmber {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.gridCellPlainCodeAmber, .gridCellPlainCodeRed {
+    font-weight: bold;
+}
+
+.about .gwt-Label {
+    font: 10px arial, helvetica, sans-serif;
+    text-align: left;
+    color: #333333;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+/*Live load Drop Down Boxes*/
+.x-liveload {
+    width: 425px !important;
+    margin-left: 5px;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.x-liveload-ft {
+    border-width: 1px;
+    border-style: solid;
+    border-top: 0px;
+    padding: 2px;
+    width: auto;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.x-liveload-ft .x-toolbar {
+    height: 29px;
+    background-color: transparent !important;
+}
+
+.x-toolbar-ct .x-toolbar-ct, .x-liveload-ft .x-toolbar-ct {
+    margin-top: 0px;
+}
+
+.x-liveload-item {
+    height: 18px;
+    padding-left: 5px;
+    vertical-align: middle;
+    font-family: arial;
+    font-size: 12px;
+    border-bottom: none;
+}
+
+.x-liveload-inner {
+    width: auto !important;
+    white-space: nowrap;
+    border-style: solid !important;
+    border-width: 1px !important;
+    overflow: auto !important;
+    overflow-x: scroll !important;
+    padding: 2px 2px 1px !important;
+}
+
+/*** Dropdowns for Menus/dropdowns/combos/liveload **/
+.x-menu {
+    width: auto !important;
+    background-image: none;
+    border-radius: 2px 2px 6px 6px;
+    border-width-left: 1px;
+    border-width-right: 1px;
+    border-width-bottom: 1px;
+}
+
+.x-menu-list {
+    opacity: 0.9;
+    background: transparent;
+}
+
+/* Combo ..drop down menu */
+/*Combo Menu*/
+.x-combo-list {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0px 0px 6px 6px;
+    -moz-border-radius: 0px 0px 6px 6px;
+}
+
+/*Buttons with Icons, Textboxes ..form elements*/
+.x-panel-btns {
+    overflow: hidden;
+    padding: 1px !important;
+}
+
+.x-btn-text {
+    font-family: Arial, sans-serif !important;
+    font-size: 11px !important;
+    outline: none !important;
+    -moz-outline: none;
+}
+
+.x-btn-text-icon .x-btn-text, .x-btn-arrow .x-btn-text {
+    text-align: left;
+}
+
+/*table layout for buttons with Icons/dropdowns*/
+.x-btn-tl, .x-btn-tr, .x-btn-tc, .x-btn-ml, .x-btn-mr, .x-btn-mc, .x-btn-bl, .x-btn-br, .x-btn-bc {
+    background-image: none !important;
+    background-colour: transparent !important;
+    outline: none !important;
+    -moz-outline: none !important;
+}
+
+.x-combo-list, .x-form-field {
+    font: 11px arial;
+    color: #333333;
+}
+
+/*Trigger - is the drop down arrow on the search boxes in the toolbar*/
+.ext-gecko .x-form-text, .ext-ie8 .x-form-text, .ext-strict .ext-gecko .x-small-editor .x-form-text {
+    box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2) inset;
+    border-color: #9A9999;
+    border-width: 1px;
+}
+
+.ext-strict .ext-gecko .x-small-editor .x-form-text, .ext-strict .x-form-text {
+    height: 16px !important;
+}
+
+.ext-strict .ext-gecko .x-small-editor .x-form-field-wrap .x-form-trigger {
+    height: 20px !important;
+}
+
+.x-form-field-wrap .x-form-trigger {
+    background-position: 0 0;
+    width: 26px;
+    height: 20px !important; /* need important for chrome */
+    border-width: 0px;
+}
+
+.x-form-field-wrap .x-form-trigger-click, .x-form-field-wrap .x-form-trigger-over {
+    background-position: 0 0;
+}
+
+.x-form-text, textarea.x-form-field {
+    border-radius: 6px !important;
+}
+
+/* TO DO REMOVE THIS SELENIUM */
+#selenium_tag_searchField .x-form-text, #selenium_tag_groupComboBox .x-form-text, #timeRangeComp .x-form-text, #selenium_tag_time .x-form-text, #selenium_tag_fromDate .x-form-text, #selenium_tag_toDate .x-form-text, #selenium_tag_fromTime .x-form-text, #selenium_tag_toTime .x-form-text, #DASHBOARD_TAB .x-form-text, .date-picker-item .x-form-text, .kpiConfigTimeComboBox .x-form-text, .groupTypeComboBox .x-form-text {
+    border-right-width: 0px;
+    border-radius: 6px 0px 0px 6px !important;
+}
+
+/* TO DO REMOVE THIS SELENIUM */
+#selenium_tag_typesCombo-input {
+    border-radius: 6px !important;
+    margin-right: 5px;
+    width: 160px !important;
+}
+
+.pairsearchTypeCombo {
+    width: 170px !important;
+}
+
+/*Drop down arrow on the dropdowns (Select Input  and Data/Voice)*/
+.x-btn-mc em.x-btn-arrow {
+    padding-left: 5px;
+    height: 18px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+.x-btn-icon-small-left .x-btn-text .x-btn-image {
+    margin-left: 5px;
+}
+
+.x-btn-noicon .x-btn-small .x-btn-arrow .x-btn-text, .x-btn-text-icon .x-btn-icon-small-left .x-btn-text {
+    top: 1px;
+    margin-right: 15px;
+    padding-left: 23px;
+}
+
+/* Launch Button */
+.launch .x-btn-mc em.x-btn-arrow {
+    width: 65px;
+}
+
+.launch .x-btn-mc em.x-btn-arrow .x-btn-text {
+    padding-left: 5px;
+}
+
+#btnNav .x-btn-text {
+    padding-left: 0px;
+}
+
+/* ************************************************************************** */
+.x-form-radio {
+    top: 10px !important;
+}
+
+.ext-webkit .x-form-check-wrap input.x-form-radio:focus {
+    outline: none !important;
+    /* !important needed here, as gxt also has it */
+}
+
+/*Items disabled on toolbar*/
+.x-toolbar .x-item-disabled * {
+    opacity: .9 !important;
+    color: #999988 !important;
+}
+
+/***Toolbar Breadcrum menu*/
+.breadCrumb-selected {
+    background-image: url(./resources/images/breadcrumbMarker.png);
+    background-repeat: no-repeat;
+}
+
+.x-navmenu-list {
+    background: transparent;
+    border: 0 none;
+    overflow: hidden;
+    overflow-y: hidden;
+    position: relative;
+    padding: 0;
+}
+
+.x-navmenu-list-item {
+    white-space: nowrap;
+    display: block;
+    font: normal 11px tahoma, arial, sans-serif;
+    padding: 1px;
+}
+
+.x-navmenu-list-item-indent {
+    padding-left: 0;
+}
+
+/**Wizard overLay*/
+.wizard {
+    position: relative;
+    z-index: 100;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-width: 1px;
+}
+
+.wizard_shadow {
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.12);
+}
+
+.wizard-top {
+    border-bottom-style: none !important;
+    border-top-style: none !important;
+    width: 100% !important;
+}
+
+.wizard-content {
+    border-width: thin !important;
+}
+
+.wizard-top-body {
+    width: 100% !important;
+    padding-left: 20px;
+    height: auto !important;
+    border-style: none;
+}
+
+.wizard-top-body-graph {
+    height: 50px !important;
+}
+
+.wizard-content-body {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.mainWizardPanel {
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.wizard-top-body input[type="radio"] {
+    margin-top: 15px !important;
+    margin-right: 15px !important;
+    top: 0 !important;
+}
+
+.wizard-top-body .x-form-group {
+    height: 30px !important;
+    margin-bottom: 10px !important;
+}
+
+.wizard-content-body input[type="checkbox"], .wizard-top-body input[type="checkbox"] {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    margin-right: 10px !important;
+}
+
+.wizard-content-body label, .chk-all label {
+    font-size: 11px !important;
+    font-weight: normal;
+    font-family: arial, verdana, sans-serif !important;
+    vertical-align: 2px !important;
+    padding-bottom: 10px !important;
+}
+
+.chk-all label {
+    font-weight: bold !important;
+}
+
+.wizard-content-body .gwt-CheckBox {
+    width: 90px !important;
+    height: 30px !important;
+    display: inline-block;
+}
+
+.wizard-content-body .gwt-CheckBox, .wizard-content-body-large .gwt-CheckBox {
+    width: 210px !important;
+    padding-left: 20px;
+}
+
+.wizard-top .x-panel-header {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    font-size: 11px !important;
+    font-family: arial, verdana, sans-serif !important;
+}
+
+.wizard-content-body .x-table-layout-cell {
+    height: 30px;
+    padding-top: 10px;
+}
+
+.wizard-content-body .gwt-CheckBox-disabled, .chk-all-disabled, .wizard-top-expand-fade {
+    opacity: 0.3;
+    filter: alpha(opacity = 30);
+}
+
+/*** Dash Boards / Portlets **/
+.dashboardPorletOwner, .dashboardMapPanel {
+    padding: 0 !important;
+}
+
+.dashboardPorlet {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/**Tooltips**/
+.x-tip .x-tip-mc {
+    padding: 1px !important;
+}
+
+.cancelMask {
+    width: 50px !important;
+    height: 18px !important;
+    cursor: pointer !important;
+    font-size: 10.5px !important;
+    font-family: "Arial" !important;
+    background: #FFFFFF !important;
+    border: 1px solid !important;
+    margin-top: 5px !important;
+    margin-left: 28px !important;
+    outline: none !important;
+    padding: 0 0 2px !important;
+}
+
+.winbody_open {
+    position: relative;
+}
+
+/*Prevent the Ctrl+A select all on the workspace*/
+.x-btn-text-icon, #selenium_tag_MultiWinSelectComponent, .headerPnl, .centerPanelBackground .x-panel-body-noheader, .x-toolbar-ct, .x-toolbar-left, .x-toolbar, .x-window-tbar .x-toolbar-cell .x-btn, .x-toolbar .x-toolbar-cell, .Desktop_Globes, .Desktop_ELogo, .Desktop_Product, .date-picker-btn, .date-picker-item {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+}
+
+/* Tab and respective tab panel has to be 100% high */
+.tabComponent {
+    position: relative;
+}
+
+.tabComponent, .tabContentPanel, .tabContentPanel>.x-panel-bwrap>.x-panel-body {
+    height: 100%;
+    background-color: transparent;
+}
+
+/* Enable text selection on textboxes - as it is diabled everywhere */
+.x-toolbar .x-toolbar-cell .x-form-field .x-form-text {
+    user-select: text !important;
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+}
+
+/*Calendar*/
+.x-date-menu {
+    border-radius: 6px;
+}
+
+.x-date-days {
+    background-color: #BFBFBF;
+    border-top: 1px solid #E6E6E6 !important;
+}
+
+.x-date-days td {
+    background: none !important;
+    background-color: #BFBFBF;
+    color: #333333;
+    font-family: arial;
+    font-size: 11px;
+}
+
+td.x-date-mp-month a, td.x-date-mp-year a {
+    color: #333333;
+}
+
+td.x-date-mp-sel a {
+    background-image: none;
+    background-color: #eeeeee;
+    border-color: #b1b1b1;
+}
+
+.x-date-mp {
+    border-radius: 6px;
+}
+
+.x-date-middle, .x-date-left, .x-date-right {
+    background: #BFBFBF;
+    background: -moz-linear-gradient(center top, #E3E3E2, #BFBFBF);
+    background: -webkit-linear-gradient(center top, #E3E3E2, #BFBFBF);
+    background: linear-gradient(center top, #E3E3E2, #BFBFBF);
+    border-bottom-color: #B0AFAF;
+}
+
+.x-date-mp-ybtn a.x-date-mp-prev, .x-date-left-icon {
+    background-position: 0 0;
+    background-image: url(resources/images/whiteTheme/calendar/arrow_left.png);
+    height: 17px;
+    width: 17px;
+}
+
+.x-date-mp-ybtn a.x-date-mp-prev:active, .x-date-left-icon:active {
+    background-position: 0 0;
+    background-image: url(resources/images/whiteTheme/calendar/arrow_left_click.png);
+}
+
+.x-date-mp-ybtn a.x-date-mp-prev:hover, .x-date-left-icon:hover {
+    background-position: 0 0;
+    background-image: url(resources/images/whiteTheme/calendar/arrow_left_hover.png);
+}
+
+.x-date-mp-ybtn a.x-date-mp-next, .x-date-right-icon {
+    background-position: 0 0;
+    background-image: url(resources/images/whiteTheme/calendar/arrow_right.png);
+    height: 17px;
+    width: 17px;
+}
+
+.x-date-mp-ybtn a.x-date-mp-next:active, .x-date-right-icon:active {
+    background-position: 0 0;
+    background-image: url(resources/images/whiteTheme/calendar/arrow_right_click.png);
+}
+
+.x-date-mp-ybtn a.x-date-mp-next:hover, .x-date-right-icon:hover {
+    background-position: 0 0;
+    background-image: url(resources/images/whiteTheme/calendar/arrow_right_hover.png);
+}
+
+.x-date-middle .x-btn .x-btn-text {
+    color: #333333;
+}
+
+.x-date-middle .x-btn-noicon .x-btn-small .x-btn-text, .x-date-middle .x-btn-text-icon .x-btn-icon-small-left .x-btn-text {
+    padding-left: 12px;
+}
+
+.x-date-mp-btns td, .x-date-bottom {
+    background: #EFF0F0;
+    background: linear-gradient(center top, #EFF0F0, #FFFFFF) repeat scroll 0 0 transparent !important;
+    background: -moz-linear-gradient(center top, #EFF0F0, #FFFFFF) repeat scroll 0 0 transparent !important;
+    background: -webkit-linear-gradient(center top, #EFF0F0, #FFFFFF) repeat scroll 0 0 transparent !important;
+    border-top-color: #CFCECE;
+}
+
+.x-date-inner .x-date-today a {
+    border-color: #b1b1b1;
+    background-color: #eeeeee;
+    background-image: none;
+    color: #333333;
+}
+
+.x-date-bottom .x-btn-noicon .x-btn-small .x-btn-text, .x-date-bottom .x-btn-text-icon .x-btn-icon-small-left .x-btn-text {
+    margin: 0px;
+    padding: 0px;
+    height: 22px;
+    width: 70px !important;
+}
+
+/*Dropdown with calendar*/
+.x-date-middle .x-btn-mc em.x-btn-arrow {
+    width: 110px !important;
+}
+
+.x-date-mp-btns button {
+    width: 70px !important;
+}
+
+/*Bug Fix for webkit*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .x-btn-text .x-btn-image {
+        margin-left: 0px !important;
+    }
+}
+
+/* Fix for dashboard time component Today button removal */
+.dashboardDatePicker>table:first-child+div+table {
+    display: none;
+}
+
+/** Style for the default/prompt text of a text box **/
+input.defaultText {
+    color: #7f7f7f !important;
+}
+
+/*.olControlOverviewMapMinimizeButton {
+	top: 0 !important;
+	right: 200px !important;
+}
+
+.olControlOverviewMapMaximizeButton {
+	top: 0 !important;
+}
+
+.olControlOverviewMapContainer {
+	top: 0 !important;
+}
+
+.olControlOverviewMapElement {
+	padding: 10px 10px 10px 10px !important;
+	background-color: #ffffff !important;
+	border-left: 1px solid #a3a3a3 !important;
+	border-bottom: 1px solid #a3a3a3 !important;
+	border-radius: 0 0 0 1em !important;
+}*/
+
+/*Corners of business objects reports*/
+#BUSINESS_OBJECTS_TAB  .x-window-body {
+    border-radius: 0px 0px 10px 10px;
+}
+
+.x-grid3-cell-inner {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+}
+
+/** To override GXT disabling **/
+.enableCursor, .enableCursor img {
+    cursor: pointer !important;
+}
+#loading {
+    background-color: white;
+    border-radius: 10px;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 20001;
+    border: 1px solid #ccc;
+    height: 95px;
+    width: 275px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin-left: -137px;
+    margin-top: -47px;
+}
+
+#loading .background {
+    margin: 30px;
+    background-image: url('./resources/images/whiteTheme/OSS_text2.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    top: -3px;
+}
+
+#loading .indicatorBackground {
+    background-image:
+        url('./resources/images/whiteTheme/nightRiderBackground.png');
+    background-repeat: no-repeat;
+    left: -5px;
+    position: relative;
+    top: 20px;
+}
+
+#loading .loadingMsg {
+    font: normal 10px arial, tahoma, sans-serif;
+    margin-top: 14px;
+}
+
+/*NB required to keep loading mask displayed until everything is loaded*/
+.loadingDisplay{
+    display:block !important;
+}
+
+/*prevent overiding widths on resizing columns*/
+.ext-strict .x-grid3-cell-inner{
+    width: auto !important;
+}

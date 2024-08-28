@@ -1,0 +1,106 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:eniq="urn:import:com.ericsson.eniq.events.ui.client.kpi.widget">
+	<ui:with field='buttonResources'
+		type='com.ericsson.eniq.events.ui.client.kpi.resources.IButtonResourceBundle' />
+	<ui:with field='kpiResourceBundle'
+		type='com.ericsson.eniq.events.ui.client.kpi.resources.KpiResourceBundle' />
+	<ui:style>
+		.topCorner {
+			position: relative;
+			top: 0px;
+			display: block;
+		}
+		
+		.bottomCorner {
+			display: block;
+			position: relative;
+		}
+		
+		.container {
+			user-select: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			margin-top: -125px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 33px;
+            z-index: 20000;
+		}
+		
+		.background {
+			background-color: #FFFFFF;
+			border-left: 1px solid #BDBDBD;
+			position: relative;
+			height: 196px
+		}
+		
+		.critical {
+			top: -17px;
+			left: 3px;
+		}
+		
+		.major {
+			top: -28px;
+			left: 3px;
+		}
+		
+		.minor {
+			top: -39px;
+			left: 3px;
+		}
+		
+		.warning {
+			top: -50px;
+			left: 3px;
+		}
+		
+		.config {
+			padding-bottom: 5px;
+			position: relative;
+			top: -50px;
+			z-index: 99;
+		}
+		
+		.cornerImage {
+			display: block;
+		}
+		
+		.configImage {
+			position: relative;
+			left: 10px;
+			cursor: pointer;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.container}">
+		<g:FlowPanel styleName="{style.topCorner}">
+			<g:Image styleName="{style.cornerImage}" resource="{kpiResourceBundle.topImage}" />
+		</g:FlowPanel>
+		<g:FlowPanel styleName="{style.background}">
+			<eniq:IndicatorButton ui:field="criticalPanel"
+				addStyleNames="{style.critical}" buttonResources="{buttonResources}"
+				iconType="critical">
+			</eniq:IndicatorButton>
+			<eniq:IndicatorButton ui:field="majorPanel"
+				addStyleNames="{style.major}" buttonResources="{buttonResources}"
+				iconType="major">
+			</eniq:IndicatorButton>
+			<eniq:IndicatorButton ui:field="minorPanel"
+				addStyleNames="{style.minor}" buttonResources="{buttonResources}"
+				iconType="minor">
+			</eniq:IndicatorButton>
+			<eniq:IndicatorButton ui:field="warningPanel"
+				addStyleNames="{style.warning}" buttonResources="{buttonResources}"
+				iconType="warning">
+			</eniq:IndicatorButton>
+			<g:FlowPanel styleName="{style.config}">
+				<g:Image ui:field="configImage" styleName="{style.configImage}"
+					resource="{kpiResourceBundle.configImage}" />
+			</g:FlowPanel>
+		</g:FlowPanel>
+		<g:FlowPanel styleName="{style.bottomCorner}">
+			<g:Image styleName="{style.cornerImage}" resource="{kpiResourceBundle.bottomImage}" />
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

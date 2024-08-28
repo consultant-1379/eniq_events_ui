@@ -1,0 +1,66 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:e="urn:import:com.ericsson.eniq.events.widgets.client.textbox">
+	<ui:style>
+		.container {
+			-webkit-user-select: none;
+			-moz-user-select: -moz-none;
+			user-select: none;
+			height: 100%;
+			width: 100%;
+			display: table;
+			table-layout: fixed;
+		}
+		
+		.container>div {
+			display: table-row;
+		}
+		
+		.container>div:LAST-CHILD {
+			height: 40px;
+		}
+		
+		.scrollPanel {
+			position: absolute !important;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 40px;
+		}
+		
+		.buttonHolder {
+			height: 40px;
+			vertical-align: middle;
+			height: 100%;
+			width: 100%;
+		}
+		
+		.wsButton {
+			width: 100px;
+		}
+		
+		.launchPanel {
+			width: 100%;
+			padding: 5px 0px;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.container}">
+		<div>
+			<g:ScrollPanel styleName="{style.scrollPanel}">
+				<g:VerticalPanel ui:field="launchPanel" styleName="{style.launchPanel}"></g:VerticalPanel>
+			</g:ScrollPanel>
+		</div>
+		<div>
+			<g:HorizontalPanel styleName="{style.buttonHolder}" spacing="10">
+				<g:cell horizontalAlignment="ALIGN_RIGHT">
+					<g:Button ui:field="launchBtn" addStyleNames="{style.wsButton}"
+						text="Update" enabled="true" />
+				</g:cell>
+				<g:cell horizontalAlignment="ALIGN_LEFT">
+					<g:Button ui:field="cancelBtn" addStyleNames="{style.wsButton}"
+						text="Close Workspace" enabled="true" />
+				</g:cell>
+			</g:HorizontalPanel>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder> 

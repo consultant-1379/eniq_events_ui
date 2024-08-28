@@ -1,0 +1,159 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:e="urn:import:com.ericsson.eniq.events.ui.login.client.component"
+	xmlns:t="urn:import:com.ericsson.eniq.events.ui.login.client.component.einputbox"
+	xmlns:w="urn:import:com.ericsson.eniq.events.ui.login.client.window">
+
+	<ui:style>
+		/** Positioning of Components specific to the Login View **/
+		.floatLeft {
+			float: left;
+		}
+		
+		.progressBar {
+			float: left;
+			margin-top: 20px;
+		}
+		
+		.marginLeft {
+			margin-left: 10px;
+		}
+		
+		.capsLockHolder {
+			width: 32px;
+			height: 10px;
+			float: left
+		}
+		
+		.loginFieldContainer {
+			margin-bottom: 4px;
+			margin-top: 16px;
+			position: relative;		
+		}
+		
+		.loginSubmitButton {
+			margin-top: 0px;
+			margin-left: 10px;
+			float:left;
+		}		
+		
+		.passwordFieldContainer {
+			margin-bottom: 2px;
+			margin-top: 2px;
+			position: relative;
+		}
+		
+		.changePasswordContainer {
+			width: 384px;
+		}
+		
+		.navigationContainer {
+			text-align: center;
+			width: 100%;
+			height: 14px;
+		}
+		
+		.pageHolder {
+			width: 22px;
+			margin: auto;
+		}
+		
+		.changePasswordMessageLabel {
+			left: -50%;
+			position: relative;
+			float: left;
+		}
+	</ui:style>
+	<g:HTMLPanel ui:field="windowContent">
+		<g:FlowPanel ui:field="upperSplashContainer">
+			<g:HTMLPanel>
+				<g:HTMLPanel styleName="upperSplashPanel" ui:field="upperSplashPanel">
+					<div class="logoPanel">
+						<g:HTMLPanel styleName="tradeMarkPanel" ui:field="tradeMarkPanel"></g:HTMLPanel>
+						<g:HTMLPanel styleName="eniqPanel" ui:field="eniqPanel"></g:HTMLPanel>
+					</div>
+					<!--<g:HTMLPanel styleName="globesPanel" ui:field="globesPanel" />-->
+					<e:EProgressBar ui:field="progressBar" min="0" max="100" incrementSpeed="2" 
+						width="400px" height="30px" addStyleNames='{style.progressBar}' />
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+		</g:FlowPanel>
+
+		<e:ETabPanel ui:field="tabPanel" width="384px">
+			<e:Tab text="User Login">
+				<g:HTMLPanel styleName="{style.loginFieldContainer}">
+					<div class="{style.capsLockHolder}">
+						<g:Label styleName="capslockon" ui:field="capsLockOn1"
+							visible="false" />
+					</div>
+					<t:ETextBox ui:field="usernameField" prompt="user name..."
+						focus="true" addStyleNames='{style.floatLeft}' />
+					<t:EPasswordTextBox ui:field="passwordField"
+						userPrompt="password..." addStyleNames='{style.floatLeft}, {style.marginLeft}' />
+					<e:EIconButton ui:field="loginButton"
+						addStyleNames='{style.loginSubmitButton}' />
+					<g:Label ui:field="loginMessageLabel" />
+				</g:HTMLPanel>
+			</e:Tab>
+			<e:Tab text="Change Password">
+				<g:HTMLPanel styleName="{style.passwordFieldContainer}">
+					<div class="{style.changePasswordContainer}">
+						<div class="{style.navigationContainer}">
+							<div class="{style.pageHolder}">
+								<g:Label ui:field="navigationPage1" styleName="navigationOn"></g:Label>
+								<g:Label ui:field="navigationPage2" styleName="navigationOff"></g:Label>
+							</div>
+						</div>
+						<g:HTMLPanel ui:field="passwordEntryForm" styleName="passwordEntryForm">
+							<div class="{style.capsLockHolder}">
+								<g:Label styleName="capslockon" ui:field="capsLockOn2"
+									visible="false" />
+							</div>
+							<t:ETextBox ui:field="usernameChangePassword" prompt="user name..."
+								focus="true" addStyleNames='{style.floatLeft}' />
+							<t:EPasswordTextBox ui:field="oldPassword"
+								userPrompt="old password..." addStyleNames='{style.floatLeft}, {style.marginLeft}' />
+							<e:EIconButton ui:field="loginButtonOldPasswordEntered"
+								addStyleNames='{style.loginSubmitButton}' />
+							<g:SimplePanel ui:field="changePasswordPageSeparator"
+								styleName="changePasswordPageSeparator"></g:SimplePanel>
+							<div class="{style.capsLockHolder}">
+								<g:Label styleName="capslockon" ui:field="capsLockOn3"
+									visible="false" />
+							</div>
+							<t:EPasswordTextBox ui:field="newPassword"
+								userPrompt="new password..." addStyleNames='{style.floatLeft}' />
+							<t:EPasswordTextBox ui:field="confirmPassword"
+								userPrompt="confirm new password..."
+								addStyleNames='{style.floatLeft} , {style.marginLeft}' />
+							<e:EIconButton ui:field="loginButtonChangePassword"
+								addStyleNames='{style.loginSubmitButton}' />
+						</g:HTMLPanel>
+					</div>
+					<div
+						style="width: 100%; height: 13px; position: relative;">
+						<div
+							style="position:relative; left:50%; float:left;">
+							<g:HTML ui:field="changePasswordMessageLabel" styleName="gwt-Label"
+								addStyleNames='{style.changePasswordMessageLabel}'>
+							</g:HTML>
+							<g:HTML ui:field="passwordHelpIndicator"
+								addStyleNames="passwordHelpIndicator passwordHelpIndicator-light"></g:HTML>
+						</div>
+					</div>
+				</g:HTMLPanel>
+			</e:Tab>
+		</e:ETabPanel>
+		<g:FlowPanel ui:field="lowerSplashContainer">
+			<g:HTMLPanel styleName="lowerSplashPanel" ui:field="lowerSplashPanel">
+				<div class="copyrightLabel">
+				<p ui:field="versionLabel">
+				</p>	
+				<p ui:field="copyrightLabel">			
+				</p>
+			</div>	
+			</g:HTMLPanel>
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

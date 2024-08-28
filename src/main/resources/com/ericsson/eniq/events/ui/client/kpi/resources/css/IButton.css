@@ -1,0 +1,110 @@
+@external criticalNotificationSeverity;
+@external majorNotificationSeverity;
+@external minorNotificationSeverity;
+@external warningNotificationSeverity;
+
+@sprite .criticalNotificationSeverity {
+    gwt-image: "criticalImageClicked";
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+}
+
+@sprite .majorNotificationSeverity {
+    gwt-image: "majorImageClicked";
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+}
+
+@sprite .minorNotificationSeverity {
+    gwt-image: "minorImageClicked";
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+}
+
+@sprite .warningNotificationSeverity {
+    gwt-image: "warningImageClicked";
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+
+}
+
+.container {
+    background: transparent;
+    position: relative;
+    left: 0px;
+    height: 58px;
+    width: 29px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.image {
+    margin-left: 6px;
+    margin-top: 13px
+}
+
+.label {
+    color: #333333;
+    font-family: arial;
+    font-size: 9px;
+    margin-right: 2px;
+    text-align: right;
+}
+
+@sprite .buttonHover:hover {
+    gwt-image: "hoverImage";
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 58px;
+}
+
+@sprite .buttonActive {
+    gwt-image: "activeImage";
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 58px;
+}
+
+@sprite .buttonActiveLaunched {
+    gwt-image: "activeLaunchedImage";
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 58px;
+}
+
+.popup {
+    border-radius: 10px;
+    border: 1px solid #bdbdbd;
+    background-color: white;
+}
+
+.popupImage {
+    float: left;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+.popupTitle {
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    float: left;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+.breachesLabel {
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    margin-left: 60px;
+    clear: both;
+}
+
+.percentLabel {
+    font-size: 7px;
+}

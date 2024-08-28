@@ -1,0 +1,39 @@
+/************************************* ETabBar *****************************************/
+
+.eTabBar {
+}
+
+.eTabBar .gwt-TabBarItem {
+	height: 25px;
+	text-align: center;
+	outline: none;
+}
+
+.eTabBar .gwt-TabBarItem-selected {
+}
+
+.eTabBar .gwt-TabBarItem-selected .gwt-Label {
+	font-size: 11px;
+}
+
+.eTabBar .gwt-Label {
+	width: 147px;
+	font-family: Arial;
+	font-size: 11px;
+	font-style: normal;
+	padding-top: 10px;
+	cursor: pointer;
+}
+
+/************************************* ETabPanel *****************************************/
+
+ .eTabPanel .gwt-TabPanelBottom {
+    padding: 0 !important;
+} 
+
+/************************************* tablayoutpanel **********************************/
+
+gwt-TabLayoutPanelTab gwt-TabLayoutPanelTab-selected {
+
+}
+

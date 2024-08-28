@@ -1,0 +1,12 @@
+.portlets-panel {
+    padding: 0 4px 0;
+}
+
+.portlets-column-holder, .portlets-column {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.portlets-column.emptyTable {
+    border-bottom: 30px solid transparent;
+}

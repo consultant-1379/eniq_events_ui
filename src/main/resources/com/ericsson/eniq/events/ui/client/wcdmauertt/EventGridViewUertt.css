@@ -1,0 +1,214 @@
+    /*added for UERTT styling*/
+
+    .vline{
+        border-right: 1px solid black;
+    }
+    .uerttLabelStyleName
+    {
+        border-color: #202F58;
+        border-style: solid;
+        background-color: #202F58;
+        width: 100%;
+        height: 100%;
+        text-decoration-style: solid;
+        color: #F5F5F5;
+        text-align: center;
+        font-weight: bold;
+    }
+    .uerttGridStyle {
+        border-spacing: 0;
+        float: none;
+        padding-left: 30px;
+        padding-right: 20px;
+        padding-top: 0;
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+    }
+    .messageRRCStyle
+    {    background-color: #89ba17;
+        background: #89ba17;
+        text-decoration-style: solid;
+        text-align: center;
+        font-size: smaller;
+    }
+    .messageRANAPStyle
+    {   background-color: #8f3f7b;
+        background: #8f3f7b;
+        text-decoration-style: solid;
+        text-align: center;
+        font-size: smaller;
+
+    }
+    .messageNBAPStyle
+    {   background-color: #00a9d4;
+        background: #00a9d4;
+        text-decoration-style: solid;
+        text-align: center;
+        font-size: x-small;
+    }
+    .messageRNSAPStyle
+    {   background-color: #f08a00;
+        background: #f08a00;
+        text-decoration-style: solid;
+        text-align: center;
+        font-size: x-small;
+    }
+    .messageRRCStyleAndVline
+    {
+        border-right: 1px solid black;
+        background-color: #89ba17;
+        background: #89ba17;
+        text-decoration-style: solid;
+        text-align: center;
+        font-size: smaller;
+    }
+    .messageRANAPStyleAndVline
+    {
+        border-right: 1px solid black;
+        background-color: #8f3f7b;
+        background: #8f3f7b;
+        text-decoration-style: solid;
+        text-align: center;
+        font-size: smaller;
+    }
+    .messageNBAPStyleAndVline
+    {
+        border-right: 1px solid black;
+        background-color: #00a9d4;
+        background: #00a9d4;
+        text-decoration-style: solid;
+        text-align: center;
+        font-size: x-small;
+    }
+    .messageRNSAPStyleAndVline
+    {
+        border-right: 1px solid black;
+        background-color: #f08a00;
+        background: #f08a00;
+        text-decoration-style: solid;
+        text-align: center;
+        font-size: x-small;
+    }
+    .aranapAndArrowLeft{
+        border-color: #fff #8f3f7b #fff #8f3f7b;
+        float: right;
+        border-width: 32px 25px 32px 0px;
+        line-height: 0px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+    }
+    .arrcAndArrowLeft{
+        border-color: #fff #89ba17 #fff #89ba17;
+        float: right;
+        border-width: 32px 25px 32px 0px;
+        line-height: 0px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+    }
+    .anbapAndArrowLeft{
+        border-color: #fff #00a9d4 #fff #00a9d4;
+        float: right;
+        border-width: 32px 25px 32px 0px;
+        line-height: 0px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+    }
+    .arnsapAndArrowLeft{
+        border-color: #fff #f08a00 #fff #f08a00;
+        float: right;
+        border-width: 32px 25px 32px 0px;
+        line-height: 0px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+    }
+    .arrcAndArrowRight
+    {
+        border-color: #fff #89ba17 #fff #89ba17;
+        float: left;
+        border-width: 32px 0px 32px 25px;
+        line-height: 0px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+    }
+    .aranapAndArrowRight
+    {
+        border-color: #fff #8f3f7b #fff #8f3f7b;
+        float: left;
+        border-width: 32px 0px 32px 25px;
+        line-height: 0px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+    }
+    .arnsapAndArrowRight
+    {
+        border-color: #fff #f08a00 #fff #f08a00;
+        float: left;
+        border-width: 32px 0px 32px 25px;
+        line-height: 0px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+    }
+    .anbapAndArrowRight
+    {
+        border-color: #fff #00a9d4 #fff #00a9d4;
+        float: left;
+        border-width: 32px 0px 32px 25px;
+        line-height: 0px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+    }
+    .uerttCellStyle{
+        padding-top: 5px;
+    }
+    .uerttGridStyleHeader {
+        border-spacing: 0;
+        float: none;
+        height: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 20px;
+        text-align: center;
+        vertical-align: middle;
+        width: 100%;
+    }
+    .timeStampTextStyle
+    {
+        text-align: center;
+        text-decoration-style: solid;
+        font-size: x-small;
+    }
+    .arrowSelectionCss
+    {
+        width: 10px;
+    }
+    .uerttCellStyleAndVline
+    {
+        padding-top: 5px;
+        border-right: 1px solid black;
+    }
+    .toolbar {
+        padding: 6px;
+        height: 30px;
+        width: 100%;
+        background-color: #BFBFBF;
+        border-bottom: 1px solid #E6E6E6;
+        border-top: 1px solid #e6e6e6;
+    }
+    .footer{
+        background-color: #E3E3E3;
+        background-image: -moz-linear-gradient(center top , #EFF0F0 0%, #FFFFFF 100%);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top: 1px solid #CFCECE;
+        height: 20px;
+        width: 100%;
+    }

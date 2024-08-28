@@ -1,0 +1,15 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2011 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ */
+@sprite .requestIndicator {
+	gwt-image: "triangleDown";
+	float: left;
+	margin-left: 20px;
+	margin-top: 4px;
+}
+
+@sprite .triangleUp {
+	gwt-image: "triangleUp";
+}

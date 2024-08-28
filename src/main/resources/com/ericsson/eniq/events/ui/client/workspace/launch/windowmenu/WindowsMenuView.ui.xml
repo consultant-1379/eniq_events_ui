@@ -1,0 +1,171 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:ee="urn:import:com.ericsson.eniq.events.ui.client.workspace.launch.windowmenu"
+	xmlns:comp="urn:import:com.ericsson.eniq.events.widgets.client.suggestbox"
+	xmlns:d="urn:import:com.ericsson.eniq.events.widgets.client.dropdown"
+	xmlns:tb="urn:import:com.ericsson.eniq.events.widgets.client.textbox"
+	xmlns:td="urn:import:com.ericsson.eniq.events.widgets.client.dropdown.time">
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.ui.client.workspace.launch.WorkspaceLaunchMenuResourceBundle' />
+	<ui:style>
+		.container {
+			display: table;
+			table-layout: fixed;
+		}
+		
+		.container>div {
+			display: table-row;
+		}
+		
+		.container>div:FIRST-CHILD {
+			height: 178px;
+			position: relative;
+		}
+		
+		.container>div:LAST-CHILD {
+			height: 43px;
+		}
+		
+		.windowsFilter {
+			height: 100%;
+			position: relative;
+			width: 100%;
+		}
+		
+		.windowAnalysisContainer {
+			border: 1px solid #C7C7C7;
+			display: table-cell;
+			height: 100%;
+			position: relative;
+		}
+		
+		.selectionItem {
+			width: 100% !important;
+			margin-top: 22px;
+			font-size: 11px;
+		}
+		
+		.launchButtonHolder {
+			margin-top: 20px;
+			width: 100%;
+            margin-bottom: 18px;
+		}
+		
+		.launchButton {
+			width: 100px;
+			position: relative;
+		}
+		
+		.launchButton>img {
+			position: absolute;
+			top: 0px;
+			left: 2px;
+		}
+		
+		.groupSuggestBox {
+			width: 207px;
+		}
+		
+		.timeSelectionDropDown {
+			margin-top: 10px;
+		}
+		
+		.maskHolder {
+			height: 80px;
+			position: absolute !important;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+            background-color: white;
+            opacity: 1 !important;
+		}
+		
+		.topPanel {
+			position: relative;
+		}
+		
+		.maxWindows {
+			color: #333333;
+			font-family: Arial, serif;
+			font-size: 10px;
+			position: absolute;
+			width: 200px;
+            margin-top: 3px;
+            margin-left: 5px;
+		}
+
+        .maxWindowsWarning{
+            position: absolute;
+            display: none;
+        }
+
+        .maxWindowsWarningIcon{
+            margin-left: 10px;
+            margin-top: 1px;
+        }
+	</ui:style>
+
+	<g:HTMLPanel ui:field="container" styleName="{style.container}">
+		<div>
+			<div class="{style.topPanel}">
+				<td:DropDownTimeComponent ui:field="timeSelectionDropDown"
+					addStyleNames="{style.selectionItem} {style.timeSelectionDropDown}" />
+				<d:DropDown defaultText=" - select dimension - "
+					addStyleNames="{style.selectionItem}"
+					ui:field="dimensionDropDown">
+				</d:DropDown>
+				<tb:ExtendedTextBox
+					addStyleNames="{resourceBundle.workspaceLaunchStyle.hideSelectionItem} {style.selectionItem}"
+					ui:field="textEntryBox"/>
+				<comp:ExtendedSuggestBoxWithButton
+					ui:field="primaryLiveload" enabled="false"
+					popupStyleName="{resourceBundle.workspaceLaunchStyle.liveloadPopup}"
+					addStyleNames="{style.selectionItem}">
+				</comp:ExtendedSuggestBoxWithButton>
+				<d:DropDown
+					addStyleNames="{resourceBundle.workspaceLaunchStyle.hideSelectionItem} {style.selectionItem}"
+					ui:field="pairedSuggestBox">
+				</d:DropDown>
+				<g:HTMLPanel ui:field="maskHolder"
+					addStyleNames="{style.maskHolder} {resourceBundle.workspaceLaunchStyle.hideSelectionItem}" />
+				<g:HorizontalPanel ui:field="groupPanel"
+					addStyleNames="{style.selectionItem} {resourceBundle.workspaceLaunchStyle.hideSelectionItem}">
+					<g:cell>
+						<d:DropDown addStyleNames="{style.groupSuggestBox}"
+							ui:field="groupSuggestBox"></d:DropDown>
+					</g:cell>
+					<g:cell>
+						<g:ToggleButton ui:field="groupInfoToggleButton"
+							addStyleNames="{resourceBundle.workspaceLaunchStyle.groupInfoToggle}">
+							<g:upFace image="{resourceBundle.groupInfo}" />
+							<g:downFace image="{resourceBundle.groupInfoOn}"></g:downFace>
+						</g:ToggleButton>
+					</g:cell>
+				</g:HorizontalPanel>
+
+				<comp:ExtendedSuggestBoxWithButton
+					ui:field="secondaryLiveload" enabled="false" popupStyleName="{resourceBundle.workspaceLaunchStyle.liveloadPopup}" addStyleNames="{style.selectionItem}"></comp:ExtendedSuggestBoxWithButton>
+			</div>
+		</div>
+		<div>
+			<div class="{style.windowAnalysisContainer}">
+				<ee:WindowFilterPanel ui:field="windowFilterPanel"
+					header="Analysis Windows"
+                addStyleNames="{style.windowsFilter} {resourceBundle.workspaceLaunchStyle.windowFilterPanelDisabled}" />
+			</div>
+		</div>
+		<div>
+            <g:HorizontalPanel ui:field="maxWindowsLabel" styleName="{style.maxWindowsWarning}">
+                <g:Image resource="{resourceBundle.warningIcon}" styleName="{style.maxWindowsWarningIcon}" />
+                <g:Label styleName="{style.maxWindows}">Exceeds Recommended Windows (4)</g:Label>
+            </g:HorizontalPanel>
+			<g:HorizontalPanel styleName="{style.launchButtonHolder}">
+				<g:cell horizontalAlignment="ALIGN_CENTER">
+					<g:Button ui:field="launchBtn"
+						addStyleNames="{style.launchButton}" text="Launch" enabled="false" />
+				</g:cell>
+			</g:HorizontalPanel>
+		</div>
+	</g:HTMLPanel>
+</ui:UiBinder>

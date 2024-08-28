@@ -1,0 +1,99 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:d="urn:import:com.ericsson.eniq.events.widgets.client.dropdown"
+	xmlns:tb="urn:import:com.ericsson.eniq.events.widgets.client.textbox"
+	xmlns:comp="urn:import:com.ericsson.eniq.events.widgets.client.suggestbox"
+	xmlns:td="urn:import:com.ericsson.eniq.events.widgets.client.dropdown.time">
+	<ui:with field='resourceBundle'
+		type='com.ericsson.eniq.events.ui.client.workspace.launch.WorkspaceLaunchMenuResourceBundle' />
+	<ui:style>
+		.container {
+			-webkit-user-select: none;
+			-moz-user-select: -moz-none;
+			user-select: none;
+			height: 50px;
+			color: #333333;
+			font-family: "Arial";
+			font-size: 11px;
+			white-space: nowrap;
+		}
+		
+		.selectionItem {
+			width: 170px;
+		}
+		
+		.groupSuggestBox {
+			width: 140px;
+		}
+		
+		.maskHolder {
+			position: absolute !important;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+		}
+		
+		.windowTitle {
+			
+		}
+		
+		.dimensionName {
+			float: left;
+			font-weight: bold;
+			margin-left: 25px;
+			padding-right: 3px;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.container}">
+		<g:HTMLPanel ui:field="maskHolder"
+			addStyleNames="{style.maskHolder} {resourceBundle.workspaceLaunchStyle.hideSelectionItem}" />
+		<g:Label ui:field="dimensionLabel" styleName="{style.dimensionName}"></g:Label>
+		<g:Label ui:field="windowTitle" styleName="{style.windowTitle}"></g:Label>
+		<g:HorizontalPanel spacing="5">
+			<g:cell verticalAlignment="ALIGN_MIDDLE">
+				<g:CheckBox ui:field="launchCheckBox" value="true"></g:CheckBox>
+			</g:cell>
+			<g:cell verticalAlignment="ALIGN_MIDDLE">
+				<td:DropDownTimeComponent ui:field="timeSelectionDropDown"
+					addStyleNames="{style.selectionItem}" />
+			</g:cell>
+			<g:cell verticalAlignment="ALIGN_MIDDLE">
+				<g:FlowPanel>
+					<tb:ExtendedTextBox
+						addStyleNames="{resourceBundle.workspaceLaunchStyle.hideSelectionItem} {style.selectionItem}"
+						ui:field="textEntryBox">
+					</tb:ExtendedTextBox>
+					<comp:ExtendedSuggestBoxWithButton
+						ui:field="primaryLiveload" enabled="true"
+						popupStyleName="{resourceBundle.workspaceLaunchStyle.liveloadPopup}"
+						addStyleNames="{style.selectionItem} {resourceBundle.workspaceLaunchStyle.hideSelectionItem}"></comp:ExtendedSuggestBoxWithButton>
+					<d:DropDown
+						addStyleNames="{resourceBundle.workspaceLaunchStyle.hideSelectionItem} {style.selectionItem}"
+						ui:field="pairedSuggestBox"></d:DropDown>
+					<g:HorizontalPanel ui:field="groupPanel"
+						addStyleNames="{style.selectionItem} {resourceBundle.workspaceLaunchStyle.hideSelectionItem}">
+						<g:cell>
+							<d:DropDown addStyleNames="{style.groupSuggestBox}"
+								ui:field="groupSuggestBox"></d:DropDown>
+						</g:cell>
+						<g:cell>
+							<g:ToggleButton ui:field="groupInfoToggleButton"
+								addStyleNames="{resourceBundle.workspaceLaunchStyle.groupInfoToggle}">
+								<g:upFace image="{resourceBundle.groupInfo}" />
+							</g:ToggleButton>
+						</g:cell>
+
+					</g:HorizontalPanel>
+				</g:FlowPanel>
+			</g:cell>
+			<g:cell verticalAlignment="ALIGN_MIDDLE">
+				<comp:ExtendedSuggestBoxWithButton
+					ui:field="secondaryLiveload" enabled="true"
+					addStyleNames="{style.selectionItem} {resourceBundle.workspaceLaunchStyle.hideSelectionItem}"></comp:ExtendedSuggestBoxWithButton>
+			</g:cell>
+
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

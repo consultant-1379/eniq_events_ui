@@ -1,0 +1,129 @@
+.gwt-TabPanelBottom .gwt-Label {
+	height: 13px;
+	text-align: center;
+	clear: left;
+}
+
+.gwt-TabPanelBottom .gwt-Label .error {
+	
+}
+
+.passwordEntryForm {
+	left: 0px;
+	position: relative;
+ 	\-moz-transition: literal("left 0.3s linear 0s");
+	\-webkit-transition: literal("left 0.3s linear 0s");
+	transition: literal("left 0.3s linear 0s");
+	width: 760px;
+	height: 24px;
+}
+
+.passwordEntryForm-show {
+	left: -402px;
+}
+
+.capslockon {
+	width: 14px;
+	height: 14px;
+	margin-left: 9px;
+	margin-top: 0px;
+}
+
+.changePasswordPageSeparator {
+	margin-left: 47px;
+	float: left;
+}
+
+.upperSplashPanel {
+	width: 400px;
+	height: 261px;
+}
+
+.lowerSplashPanel {
+	height: 84px;
+	width: 400px;
+}
+
+.copyrightLabel {
+	margin: 0 0 0 45px;
+	padding-top: 28px;
+	text-align: left;
+}
+
+.logoPanel {
+	width: 190px;
+	float: left;
+}
+
+.tradeMarkPanel {
+	width: 39px;
+	height: 49px;
+	float: left;
+	margin-left: 25px;
+    margin-top: 3px;
+    margin-bottom: -3px;
+}
+
+.globesPanel {
+	float: right;
+	height: 230px;
+	left: 232px;
+	margin-top: -23px;
+	position: absolute;
+	width: 190px;
+}
+
+.eniqPanel {
+	width: 150px;
+	height: 76px;
+	float: left;
+	margin-left: 45px;
+	margin-top: 50px;
+}
+
+.mainHorizontalPanel {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.loginWindow {
+	left: 50%  !important;
+	margin-left: -222px;
+	margin-top: -252px;
+	position: absolute;
+	top: 50% !important;
+	width: 444px;
+}
+
+.navigationOn {
+	float: left;
+}
+
+.navigationOff {
+	float: left;
+}
+
+.passwordHelpIndicator {
+    float: left;
+    left: -50%;
+    margin-left: 10px;
+    margin-top: 1px;
+    overflow: hidden;
+    position: relative;	
+    display:none;
+}
+
+.gwt-PopupPanel {
+	background:none !important;
+	border: 0px !important;
+	margin: 0px !important;
+	spacing: 0px;
+}
+
+.popupContent
+{
+	user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:-moz-none;
+}

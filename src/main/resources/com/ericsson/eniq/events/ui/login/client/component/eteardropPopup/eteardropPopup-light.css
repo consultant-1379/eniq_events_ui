@@ -1,0 +1,46 @@
+/*************************** TearDrop PopUp - Borders white theme*****************************/
+
+@sprite .ETeardropPopup-Border-tl-light 
+{
+	gwt-image: 'tl_light';
+}
+
+@sprite .ETeardropPopup-Border-t-light 
+{
+	gwt-image: 't_light';
+}
+
+@sprite .ETeardropPopup-Border-tr-light {
+	gwt-image: 'tr_light';
+}
+
+@sprite .ETeardropPopup-Border-teardrop-light {
+	gwt-image: 't_drop_light';
+}
+
+@sprite .ETeardropPopup-Border-l-light {
+	gwt-image: 'l_light';
+}
+
+@sprite .ETeardropPopup-Border-r-light {
+	gwt-image: 'r_light';
+}
+
+@sprite .ETeardropPopup-Border-bl-light {
+	gwt-image: 'bl_light';
+}
+
+@sprite .ETeardropPopup-Border-b-light {
+	gwt-image: 'b_light';
+}
+
+@sprite .ETeardropPopup-Border-br-light {
+	gwt-image: 'br_light';
+}
+
+/***** Center Content of PopUp Panel *********/
+
+.ETeardropPopup-Text-light
+{
+	background:white;
+}

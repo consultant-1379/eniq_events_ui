@@ -1,0 +1,15 @@
+/*
+ * -----------------------------------------------------------------------
+ *     Copyright (C) 2011 LM Ericsson Limited.  All rights reserved.
+ * -----------------------------------------------------------------------
+ */
+
+@sprite .infoIcon {
+    gwt-image: 'inActive';
+    margin-top: -5px;
+    margin-right: 8px;
+}
+
+@sprite .glow {
+    gwt-image: 'active';
+}
